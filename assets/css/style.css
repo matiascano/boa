@@ -1,0 +1,280 @@
+/**
+* RESET
+*/
+
+*{
+	box-sizing: border-box;
+	font: inherit;
+	margin:0;
+	padding:0;
+}
+
+html{
+	color-scheme:  light;
+    hanging-punctuation: first last;
+}
+
+body{
+	min-height: 100vh;
+    overflow: scroll;
+}
+
+h1, h2, h3, h4, h5, h6{
+	text-wrap: balance;
+}
+
+p{
+	max-width: 75ch;
+	text-wrap: pretty;
+}
+
+img, figure, svg, video{
+	display: block;
+	max-width: 100%;
+}
+
+/*Estilos particulares*/
+
+:root{
+    --secondary-50:#FFF3B5;/*principal*/
+    --secondary-100:#f1e5a9;
+    --secondary-200:#dccf97;
+    --secondary-300:#c1b280;
+    --secondary-400:#a29366;
+    --secondary-500:#83734b;
+    --secondary-600:#675633;
+    --secondary-700:#4f3e1e;
+    --secondary-800:#3e2c10;
+    --secondary-900:#39250c;
+    --primary-50:#e2e8e0;
+    --primary-100:#b5c4ad;
+    --primary-200:#94a786;
+    --primary-300:#788c61;
+    --primary-400:#566d37;
+    --primary-500:#2B4600; /*principal*/
+    --primary-600:#223700;
+    --primary-700:#192500;
+    --primary-800:#101600;
+    --primary-900:#0d1000;
+    --info:#5bc0de;
+    --success:#5cb85c;
+    --warning:#f0ad4e;
+    --danger:#d9534f;
+    --white:#f5f5f5;
+    --black:#0a0a0a;
+
+    --radius: .5rem;
+}
+
+body{
+    background-color: var(--primary-50);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16pt;
+}
+
+button,
+select,
+input[type='submit'],
+input[type='reset'],
+input[type='button'],
+input[type='checkbox'],
+input[type='range'],
+input[type='radio'] {
+  cursor: pointer;
+}
+
+input,
+select {
+  display: block;
+}
+
+[type='checkbox'],
+[type='radio'] {
+  display: initial;
+}
+
+input, button, select, textarea {
+  color: var(--black);
+  background-color: var(--white);
+  font-family: inherit;
+  font-size: 1rem;
+  margin-right:  1rem;
+  margin-bottom: 1rem;
+  padding: .5rem 1rem;
+  border: none;
+  border-radius: var(--radius);
+  outline: none;
+}
+  
+  
+
+/*Navbar*/
+
+.menuPrincipal{
+    align-items: center;
+    background-color: var(--primary-500);
+    color:var(--secondary-50);
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+.menuPrincipal__leftWrapper{
+    display: flex;
+    flex-direction: row;
+    gap:1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.menuPrincipal__logo{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.menuPrincipal__back{
+    color:var(--secondary-50)
+}
+
+.menuPrincipal__wrappItems{
+    background-color: var(--primary-200);
+    position: absolute;
+    top:0;
+    right: -450px;
+    padding:4rem 1rem 2rem;
+    height: 100dvh;
+    opacity: 0;
+    z-index: 2;
+    transition: opacity 500ms ease-in-out;
+}
+
+
+.menuPrincipal__wrappItems[data-state="open"]{
+    opacity: 1;
+    right:0;
+}
+
+.menuPrincipal__items{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    list-style: none;
+}
+
+.menuPrincipal__link{
+    color: var(--pri)
+}
+
+.menuPrincipal__controlClose,
+.menuPrincipal__controlOpen{
+    padding:.5rem;
+    background-color: transparent;
+    border:none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.menuPrincipal__controlOpen{
+    color:var(--secondary-50)
+}
+
+.menuPrincipal__controlClose{
+    top:1rem;
+    right:2rem;
+    position: absolute;
+}
+
+.menuPrincipal__select{
+    padding:.5rem 1rem;
+    max-width:100%;
+    border-radius: var(--radius);
+    margin:0;
+}
+
+
+
+@media screen and (min-width: 600px) {
+    
+    .menuPrincipal{
+        padding: 2rem
+    }
+    
+}
+
+
+@media screen and (min-width: 768px) {
+
+
+    .menuPrincipal__wrappItems{
+        display: flex;
+        gap:1rem;
+        font-size: 1rem;
+        flex-direction: row;
+        background-color: transparent;
+        position: relative;
+        right: 0;
+        padding:0;
+        height: auto;
+        opacity: 1;
+        transition: none;
+    }
+
+    .menuPrincipal__items{
+        flex-direction: row;
+    }
+
+    .menuPrincipal__link{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:.5rem;
+        text-decoration: none;
+    }
+
+    .menuPrincipal__icon {
+        font-size: 2rem;
+    }
+    
+}
+
+
+/*Utilidades*/
+
+.u-hidde{
+    visibility: hidden;
+}
+
+.u-hiddeMobile{
+    display:none;
+}
+
+.u-viewMobile{
+    display: block;
+}
+
+
+@media screen and (min-width: 600px) {
+    
+    .u-hiddeTablet{
+        display:none;
+    }
+
+    .u-viewTablet{
+        display: block;
+    }
+    
+    
+}
+
+
+@media screen and (min-width: 768px) {
+
+    .u-hiddeDesktop{
+        display:none;
+    }
+
+    .u-viewDesktop{
+        display: block;
+    }
+    
+}
