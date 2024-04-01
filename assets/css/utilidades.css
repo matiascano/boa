@@ -1,0 +1,40 @@
+/*Utilidades*/
+
+.u-hidde{
+    visibility: hidden;
+}
+
+.u-hiddeMobile{
+    display:none;
+}
+
+.u-viewMobile{
+    display: block;
+}
+
+
+@media screen and (min-width: 600px) {
+    
+    .u-hiddeTablet{
+        display:none;
+    }
+
+    .u-viewTablet{
+        display: block;
+    }
+    
+    
+}
+
+
+@media screen and (min-width: 768px) {
+
+    .u-hiddeDesktop{
+        display:none;
+    }
+
+    .u-viewDesktop{
+        display: block;
+    }
+    
+}
