@@ -1,5 +1,5 @@
 
-# BOA
+# 🐍 BOA
 
 Proyecto para el curso de **Fullstack Node JS** en **Codo a codo**. Comisión 24140 - Grupo 14.
 
