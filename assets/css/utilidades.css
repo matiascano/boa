@@ -12,6 +12,13 @@
     display: block;
 }
 
+.u-onlyOCR{
+    width:1px;
+    height: 1px;
+    position: absolute;
+    margin-left:-1000000px;
+}
+
 
 @media screen and (min-width: 600px) {
     
