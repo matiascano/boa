@@ -75,10 +75,11 @@
 }
 
 .menuPrincipal__select{
-    padding:.5rem 1rem;
+    padding:.2em .4em;
     max-width:100%;
     border-radius: var(--radius);
     margin:0;
+    font-size: .8rem;
 }
 
 
@@ -86,7 +87,7 @@
 @media screen and (min-width: 600px) {
     
     .menuPrincipal{
-        padding: 2rem
+        padding: 1rem 2rem
     }
     
 }
@@ -119,10 +120,11 @@
         align-items: center;
         gap:.5rem;
         text-decoration: none;
+        font-size: .8rem;
     }
 
     .menuPrincipal__icon {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     
 }
