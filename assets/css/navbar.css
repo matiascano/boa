@@ -29,8 +29,8 @@
 .menuPrincipal__wrappItems{
     background-color: var(--primary-200);
     position: absolute;
-    top:0;
-    right: -450px;
+    right:0;
+    top: -200vh;
     padding:4rem 1rem 2rem;
     height: 100dvh;
     opacity: 0;
@@ -41,7 +41,7 @@
 
 .menuPrincipal__wrappItems[data-state="open"]{
     opacity: 1;
-    right:0;
+    top:0;
 }
 
 .menuPrincipal__items{

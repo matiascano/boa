@@ -12,7 +12,7 @@
 
 .filters__item{
     padding: .5em 1em;
-    background-color: var(--primary-900);
+    background-color: var(--secondary-900);
     border-radius: var(--radius);
     flex: 0 0 auto; 
 }
