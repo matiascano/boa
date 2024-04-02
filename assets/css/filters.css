@@ -3,10 +3,8 @@
     display: flex;
    flex-wrap: nowrap;
    overflow-x: auto;
-   justify-content: center;
    gap:1rem;
    scrollbar-width: none;
-   scroll-snap-align: center;
    width: 100%;
 }
 
