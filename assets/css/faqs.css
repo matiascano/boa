@@ -1,0 +1,10 @@
+.faqs{
+    margin-inline:auto;
+    width: 80vw;
+}
+
+.faqs__title{
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
