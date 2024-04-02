@@ -1,37 +1,38 @@
 
 :root{
-    --secondary-50:#FFF3B5;/*principal*/
-    --secondary-100:#f1e5a9;
-    --secondary-200:#dccf97;
-    --secondary-300:#c1b280;
-    --secondary-400:#a29366;
-    --secondary-500:#83734b;
-    --secondary-600:#675633;
-    --secondary-700:#4f3e1e;
-    --secondary-800:#3e2c10;
-    --secondary-900:#39250c;
-    --primary-50:#e2e8e0;
-    --primary-100:#b5c4ad;
-    --primary-200:#94a786;
-    --primary-300:#788c61;
-    --primary-400:#566d37;
-    --primary-500:#2B4600; /*principal*/
-    --primary-600:#223700;
-    --primary-700:#192500;
-    --primary-800:#101600;
-    --primary-900:#0d1000;
+
     --info:#5bc0de;
     --success:#5cb85c;
     --warning:#f0ad4e;
     --danger:#d9534f;
-    --white:#f5f5f5;
-    --black:#0a0a0a;
+
+    --primary-50: #f7f7fe;
+    --primary-100: #dadafc;
+    --primary-200: #bcbdf9;
+    --primary-300: #9ea0f6;
+    --primary-400: #8183f4;
+    --primary-500: #6366f1;
+    --primary-600: #5457cd;
+    --primary-700: #4547a9;
+    --primary-800: #363885;
+    --primary-900: #282960;
+
+    --secondary-50: #f9fafb;
+    --secondary-100: #f3f4f6;
+    --secondary-200: #e5e7eb;
+    --secondary-300: #d1d5db;
+    --secondary-400: #9ca3af;
+    --secondary-500: #6b7280;
+    --secondary-600: #4b5563;
+    --secondary-700: #374151;
+    --secondary-800: #1f2937;
+    --secondary-900: #111827;
 
     --radius: .5rem;
 }
 
 body{
-    background-color: var(--primary-50);
+    background-color: var(--primary-100);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 16pt;
     overflow-x: hidden;
@@ -63,8 +64,8 @@ select {
 }
 
 input, button, select, textarea {
-  color: var(--black);
-  background-color: var(--white);
+  color: var(--primary-900);
+  background-color: var(--secondary-50);
   font-family: inherit;
   font-size: 1rem;
   margin-right:  1rem;

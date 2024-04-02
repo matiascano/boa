@@ -7,7 +7,7 @@
 
   .card{
     border-radius: var(--radius);
-    background-color: var(--white);
+    background-color: var(--secondary-50);
     overflow: hidden;
   }
 
