@@ -1,6 +1,7 @@
 .footerPrincipal{
     background-color: var(--primary-900);
     padding:3rem;
+    margin-top:auto;
 }
 
 .footerPrincipal__text{
