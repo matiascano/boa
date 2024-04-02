@@ -1,0 +1,26 @@
+.mapHome{
+    aspect-ratio: 16/3;
+}
+
+.mapHome > :first-child {
+    width: 100%;
+  }
+  .mapHome > img {  
+    height: auto;
+  } 
+  @supports (--custom:property) {
+    .mapHome {
+      position: relative;
+    }
+    .mapHome::before {
+      content: "";
+      display: block;
+      padding-bottom: calc(100% / (16/3));
+    }  
+    .mapHome > :first-child {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+    }  
+  }
