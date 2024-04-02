@@ -48,6 +48,10 @@ input[type='radio'] {
   cursor: pointer;
 }
 
+strong{
+  font-weight: 700;
+}
+
 input,
 select {
   display: block;
