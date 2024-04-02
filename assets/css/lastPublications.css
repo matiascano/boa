@@ -1,0 +1,11 @@
+.lastPublications{
+    max-width:1200px;
+    margin-inline:auto;
+    padding-block: 2rem;
+}
+
+.lastPublications__title{
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
