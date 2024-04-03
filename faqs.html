@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boa - Buscador de ofertas accesible</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <nav class="menuPrincipal">
+        <a href="#" class="menuPrincipal__back u-hidde u-hiddeDesktop"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+        <div class="menuPrincipal__leftWrapper">
+            <h1 class="menuPrincipal__logo">BOA</h1>
+            <select name="ciudad" id="ciudad" class="menuPrincipal__select">
+                <option value="Mar del Plata" selected>Mar del Plata</option>
+                <option value="Mar del Plata" >Miramar</option>
+                <option value="Mar del Plata" >Cariló</option>
+                <option value="Mar del Plata" >Pinamar</option>
+                <option value="Mar del Plata" >San Bernardo</option>
+            </select>
+        </div>
+        <button id="btnOpen" class="menuPrincipal__controlOpen u-hiddeDesktop" aria-expanded="false" aria-labelledby="nav-label"><i class="fa fa-bars" aria-hidden="true"></i></button>
+        <div class="menuPrincipal__wrappItems" data-state="close" role="dialog">
+            <button id="btnClose" class="menuPrincipal__controlClose u-hiddeDesktop"  aria-label="Close"><i class="fa fa-close" aria-hidden="true"></i></button>
+            <ul class="menuPrincipal__items">
+                <li class="menuPrincipal__item">
+                    <a href="./index.html" class="menuPrincipal__link"><i class="menuPrincipal__icon fa fa-home" aria-hidden="true"></i> Inicio</a>
+                </li>
+                <li class="menuPrincipal__item">
+                    <a href="./mapa.html" class="menuPrincipal__link"><i class="menuPrincipal__icon fa fa-map-marker" aria-hidden="true"></i> Mapa de ofertas</a>
+                </li>
+                <li class="menuPrincipal__item">
+                    <a href="./faqs.html" class="menuPrincipal__link"><i class="menuPrincipal__icon fa fa-question" aria-hidden="true"></i> Preguntas frecuentes</a>
+                </li>
+                <li class="menuPrincipal__item">
+                    <a href="./registro.html" class="menuPrincipal__link"><i class="menuPrincipal__icon fa fa-user-plus" aria-hidden="true"></i> Registrarse</a>
+                </li>
+                <li class="menuPrincipal__item">
+                    <a href="./login.html" class="menuPrincipal__link"><i class="menuPrincipal__icon fa fa-sign-in" aria-hidden="true"></i> Ingresar</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <header class="headerPrincipal">
+        <h2 class="headerPrincipal__title">¿Qué estás buscando?</h2>
+        <form action="./resultados.html" class="searchFrom">
+            <label for="busqueda" class="searchFrom__label u-onlyOCR">Campo de búsqueda</label>
+            <input id="busqueda" name="busqueda" class="searchFrom__input" placeholder="Ej.: Tienda Los gallegos" type="text">
+        </form>
+        <section class="filters">
+            <span class="filters__item">Filtro 1</span>
+            <span class="filters__item">Filtro 2</span>
+            <span class="filters__item">Filtro 3</span>
+            <span class="filters__item">Filtro 4</span>
+            <span class="filters__item">Filtro 5</span>
+            <span class="filters__item">Filtro 6</span>
+        </section>
+    </header>
+    <main>
+        <section class="faqs">
+            <h2 class="faqs__title">Preguntas Frecuentes</h2>
+            <div class="accordion">
+                <details class="accordion__item">
+                    <summary class="accordion__title">Pregunta 1</summary>
+                    <div class="accordion__description"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum pariatur repellat excepturi autem dolorum consequuntur, eos nisi vel suscipit expedita placeat iste fugiat, voluptatum ut reprehenderit provident corrupti fuga sed.</p></div>
+                    </details>
+                <details class="accordion__item">
+                    <summary class="accordion__title">Pregunta 2</summary>
+                    <p class="accordion__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non autem minima, debitis cumque accusantium fuga eveniet id iusto officia quisquam beatae unde quasi a vero consectetur suscipit optio voluptas delectus?</p>
+                </details>
+            </div>
+        </section>
+    </main>
+    <footer class="footerPrincipal">
+        <p class="footerPrincipal__text">Hecho por el <strong>equipo 14</strong> para Codo a Codo.</p>
+    </footer>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
