@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boa - Buscador de ofertas accesible</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <nav class="menuPrincipal">
+        <a href="#" class="menuPrincipal__back u-hiddeDesktop"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+        <div class="menuPrincipal__leftWrapper">
+            <h1 class="menuPrincipal__logo">BOA</h1>
+        </div>
+        <button id="btnOpen" class="menuPrincipal__controlOpen u-hiddeDesktop" aria-expanded="false" aria-labelledby="nav-label"><i class="fa fa-bars" aria-hidden="true"></i></button>
+        <div class="menuPrincipal__wrappItems" data-state="close" role="dialog">
+            <button id="btnClose" class="menuPrincipal__controlClose u-hiddeDesktop"  aria-label="Close"><i class="fa fa-close" aria-hidden="true"></i></button>
+            <ul class="menuPrincipal__items">
+                <li class="menuPrincipal__item">
+                    <a href="./back.html" class="menuPrincipal__link"><i class="menuPrincipal__icon fa fa-building" aria-hidden="true"></i> Agregar comercio</a>
+                </li>
+                <li class="menuPrincipal__item">
+                    <a href="./index.html" class="menuPrincipal__link"><i class="menuPrincipal__icon fa fa-sign-out" aria-hidden="true"></i> Salir</a>
+                </li>
+                <li class="menuPrincipal__item">
+                    <span class="menuPrincipal__link"><i class="menuPrincipal__icon fa fa-user" aria-hidden="true"></i> Matíass Cano</span>
+                </li>
+        </div>
+    </nav>
+    <main class="mainBack">
+
+    <aside class="asideBack">
+        <h2 class="asideBack__title">Comercios</h2>
+            <article class="card card--xs">
+                <header class="card__header">
+                    <img src="./assets/img/logoLoveMyGift.webp" alt="Logo de Love My Gift" class="card__image">
+                </header>
+                <div class="card__container">
+                    <div class="card__body">
+                        <h3 class="card__title">Title del card</h3>
+                    </div>
+                </div>
+            </article>
+            <article class="card card--xs">
+                <header class="card__header">
+                    <img src="./assets/img/logoLoveMyGift.webp" alt="Logo de Love My Gift" class="card__image">
+                </header>
+                <div class="card__container">
+                    <div class="card__body">
+                        <h3 class="card__title">Title del card</h3>
+                    </div>
+                </div>
+            </article>
+            <article class="card card--xs">
+                <header class="card__header">
+                    <img src="./assets/img/logoLoveMyGift.webp" alt="Logo de Love My Gift" class="card__image">
+                </header>
+                <div class="card__container">
+                    <div class="card__body">
+                        <h3 class="card__title">Title del card</h3>
+                    </div>
+                </div>
+            </article>
+    </aside>
+        <div class="commerceBack">
+            <div class="commerceBack__header">
+                <h2 class="commerceBack__title">Cargar comercio</h2>
+                <a class="commerceBack__preview" title="Previsualizar" href="./comercio.html"><i class="fa fa-eye" aria-hidden="true"></i></a>
+            </div>
+            <form action="#" class="form commerceProfile">
+                <div class="form__block">
+                    <label class="form__label" for="name">Nombre del comercio</label>
+                    <input type="text" name="name" id="name" class="form__input" required>
+                    <div class="form__textHelp">Este es un texto de ayuda</div>
+                </div>
+                <div class="form__block">
+                    <label class="form__label" for="profileImg">Imagen de perfil</label>
+                    <input type="file" name="profileImg" id="profileImg" class="form__input" required>
+                    <div class="form__textHelp">Este es un texto de ayuda</div>
+                </div>
+                <div class="form__block">
+                    <label class="form__label" for="headerImg">Imagen de encabezado</label>
+                    <input type="file" name="headerImg" id="headerImg" class="form__input">
+                    <div class="form__textHelp">Este es un texto de ayuda</div>
+                </div>
+                <div class="form__block">
+                    <label class="form__label" for="category">Categoría</label>
+                    <select name="category" id="category">
+                        <option value="Cat1">Categoría 1</option>
+                        <option value="Cat2">Categoría 2</option>
+                        <option value="Cat3">Categoría 3</option>
+                        <option value="Cat4">Categoría 4</option>
+                    </select>
+                    <div class="form__textHelp">Este es un texto de ayuda</div>
+                </div>
+                <div class="form__block">
+                    <label class="form__label" for="accessibility">Accesibilidad</label>
+                    <select name="accessibility" id="accessibility">
+                        <option value="Acc1">Accesibilidad 1</option>
+                        <option value="Acc2">Accesibilidad 2</option>
+                        <option value="Acc3">Accesibilidad 3</option>
+                        <option value="Acc4">Accesibilidad 4</option>
+                    </select>
+                    <div class="form__textHelp">Este es un texto de ayuda</div>
+                </div>
+                <div class="form__block">
+                    <label class="form__label" for="menu">Menues aptos</label>
+                    <select name="menu" id="menu">
+                        <option value="menu1">Menú 1</option>
+                        <option value="menu2">Menú 2</option>
+                        <option value="menu3">Menú 3</option>
+                        <option value="menu4">Menú 4</option>
+                    </select>
+                    <div class="form__textHelp">Multiple selección. Sólo si es gastronmico el local.</div>
+                </div>
+                <div class="form__block">
+                    <label class="form__label" for="mail">Email</label>
+                    <input type="email" name="mail" id="mail" class="form__input" required>
+                    <div class="form__textHelp">Este es un texto de ayuda</div>
+                </div>
+                <div class="form__block">
+                    <label class="form__label" for="description">Descripción</label>
+                    <textarea name="description" id="description" rows="5"></textarea>
+                    <div class="form__textHelp">Este es un texto de ayuda</div>
+                </div>
+                <button class="form__button form__button--primary" type="submit">Publicar comercio</button>
+                <button class="form__button form__button--secondary" type="button">Cargar ofertas</button>
+                <button class="form__button form__button--tertiary" type="button">Eliminar</button>
+            </form>
+        </div>
+    </main>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

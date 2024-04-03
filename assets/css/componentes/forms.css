@@ -35,3 +35,9 @@
     background-color: transparent;
     color: var(--primary-900);
 }
+
+.form__button--tertiary{
+    background-color: transparent;
+    border-color: transparent;
+    color: var(--primary-900);
+}

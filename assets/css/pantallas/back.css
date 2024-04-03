@@ -1,0 +1,75 @@
+.mainBack{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.asideBack{
+    height: auto;
+    background-color: var(--primary-200);
+    padding:1rem;
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    width: 100%;
+}
+
+.asideBack__title{
+    text-align: center;
+    margin:0;
+}
+
+.commerceBack{
+    padding:1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap:1rem
+}
+
+.commerceBack__title{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.commerceBack__header{
+    margin-bottom: .5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.commerceBack__preview{
+    font-size: 1.2rem;
+    color: var(--primary-900)
+}
+
+@media screen and (min-width: 768px) {
+    
+    .mainBack{
+        flex-direction: row;
+        align-items: stretch;
+    }
+    
+    .asideBack{
+        width:400px
+    }
+
+    .commerceBack{
+        padding:1rem 2rem;
+        width: 100%;
+    } 
+
+    .commerceBack__header{
+        margin-bottom: 1rem;
+    }
+
+    .commerceBack__preview{
+        font-size: 2rem;
+    }
+
+    .commerceProfile{
+        width:80%;
+        margin-inline: auto;
+    }
+}

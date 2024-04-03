@@ -82,3 +82,36 @@
         text-align: right;
         width: 100%;
       }
+
+      /*extra small*/
+
+    .card--xs{
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: normal;
+      gap:.5rem;
+    }
+
+    .card--xs .card__container{
+      width:100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding:.8rem 0;
+    }
+
+    .card--xs .card__container *{
+      margin:0;
+      font-size: .8rem;
+    }
+
+    .card--xs .card__image{
+      aspect-ratio: 1/1;
+      max-height: 60px;
+      object-fit:cover;
+    }
+
+    .card--xs .card__category{
+      text-align: right;
+      width: 100%;
+    }
