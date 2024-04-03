@@ -22,6 +22,11 @@
     font-weight: 700;
 }
 
+.menuPrincipal__logoLink{
+    text-decoration: none;
+    color:var(--secondary-50)
+}
+
 .menuPrincipal__back{
     color:var(--secondary-50)
 }

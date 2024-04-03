@@ -2,6 +2,7 @@
 @import url(./reset.css);
 @import url(./base.css);
 @import url(./utilidades.css);
+@import url(./animaciones.css);
 
 /*Compontes*/
 @import url(./componentes/navbar.css);
