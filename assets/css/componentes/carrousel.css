@@ -1,0 +1,39 @@
+.carrousel{
+    display: flex;
+    flex-direction: row;
+   flex-wrap: nowrap;
+   overflow-x: auto;
+   gap:1rem;
+   scrollbar-width: none;
+   width: 100%;
+   padding: 1rem 0 2rem 1rem;
+}
+
+.carrousel article{
+    flex-grow: 0;
+     flex-shrink: 0;
+     flex-basis: 70%;
+}
+
+@media screen and (min-width: 600px) {
+    
+    .carrousel article{
+        flex-grow: 0;
+         flex-shrink: 0;
+         flex-basis: 45%;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .carrousel{
+        width:100vw;
+        margin-inline: auto;
+        padding:1rem;
+    }
+    .carrousel article{
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 32%;
+    }
+}

@@ -1,0 +1,121 @@
+.comercios{
+    margin-bottom: 2rem;
+}
+
+.comercio{
+    margin:0;
+}
+
+.comercio__header{
+
+}
+
+.comercio__photo{
+    aspect-ratio: 6/2;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.comercio__profile{
+    width:150px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: -95px auto 2rem;
+}
+
+.comercio__logo{
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    width:100%;
+}
+
+.comercio__title{
+    font-weight: 700;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.comercio__subtitle{
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.comercio__h3{
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.comercio__links{
+    display: flex;
+    gap:2rem;
+    list-style: none;
+    justify-content: center;
+    width: 100%;
+    margin-inline: auto;
+}
+
+.comercio__link{
+    text-decoration: none;
+    color: var(--secondary-900)
+}
+
+.comercio__services{
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    width:90vw;
+    margin: 2rem auto;
+}
+
+.comercio__body, 
+.comercio__footer{
+    width:90vw;
+    margin: 2rem auto;
+}
+
+@media screen and (min-width: 768px) {
+    
+    .comercio__footer{
+        display: flex;
+        width: 90vw;
+        margin-inline:auto;
+        gap:1rem
+    }
+    
+    .comercio__details, .comercio__near{
+        width: 45vw;
+        align-self:flex-start;
+    }
+
+    .comercio__h3 {
+        margin-top: 0;
+    }
+
+    .comercio__near{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .comercio__near .cards{
+        align-items: flex-end;
+        padding:0;
+        margin:0;
+    }
+
+    .comercio__subtitle{
+        margin-bottom: .6rem;
+    }
+
+    .mapHome{
+        aspect-ratio: 6/4;
+        margin-bottom: 2rem;
+    }
+}

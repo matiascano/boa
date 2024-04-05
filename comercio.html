@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boa - Buscador de ofertas accesible</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <nav class="menuPrincipal">
+        <a href="#" class="menuPrincipal__back u-hiddeDesktop"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+        <div class="menuPrincipal__leftWrapper">
+            <h1 class="menuPrincipal__logo gelatina"><a class="menuPrincipal__logoLink" href="./index.html">BOA</a></h1>
+            <select name="ciudad" id="ciudad" class="menuPrincipal__select">
+                <option value="Mar del Plata" selected>Mar del Plata</option>
+                <option value="Mar del Plata" >Miramar</option>
+                <option value="Mar del Plata" >Cariló</option>
+                <option value="Mar del Plata" >Pinamar</option>
+                <option value="Mar del Plata" >San Bernardo</option>
+            </select>
+        </div>
+        <button id="btnOpen" class="menuPrincipal__controlOpen u-hiddeDesktop" aria-expanded="false" aria-labelledby="nav-label"><i class="fa fa-bars" aria-hidden="true"></i></button>
+        <div class="menuPrincipal__wrappItems" data-state="close" role="dialog">
+            <button id="btnClose" class="menuPrincipal__controlClose u-hiddeDesktop"  aria-label="Close"><i class="fa fa-close" aria-hidden="true"></i></button>
+            <ul class="menuPrincipal__items">
+                <li class="menuPrincipal__item">
+                    <a href="./index.html" class="menuPrincipal__link"><i class="menuPrincipal__icon fa fa-home" aria-hidden="true"></i> Inicio</a>
+                </li>
+                <li class="menuPrincipal__item">
+                    <a href="./mapa.html" class="menuPrincipal__link"><i class="menuPrincipal__icon fa fa-map-marker" aria-hidden="true"></i> Mapa de ofertas</a>
+                </li>
+                <li class="menuPrincipal__item">
+                    <a href="./faqs.html" class="menuPrincipal__link"><i class="menuPrincipal__icon fa fa-question" aria-hidden="true"></i> Preguntas frecuentes</a>
+                </li>
+                <li class="menuPrincipal__item">
+                    <a href="./registro.html" class="menuPrincipal__link"><i class="menuPrincipal__icon fa fa-user-plus" aria-hidden="true"></i> Registrarse</a>
+                </li>
+                <li class="menuPrincipal__item">
+                    <a href="./login.html" class="menuPrincipal__link"><i class="menuPrincipal__icon fa fa-sign-in" aria-hidden="true"></i> Ingresar</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--
+    <header class="headerPrincipal">
+        <h2 class="headerPrincipal__title">¿Qué estás buscando?</h2>
+        <form action="./resultados.html" class="searchFrom">
+            <label for="busqueda" class="searchFrom__label u-onlyOCR">Campo de búsqueda</label>
+            <input id="busqueda" name="busqueda" class="searchFrom__input" placeholder="Ej.: Tienda Los gallegos" type="text">
+        </form>
+    </header>-->
+    <main>
+        <section class="comercios">
+            <article class="comercio">
+                <header class="comercio__header">
+                    <img src="./assets/img/coffeeShop.webp" alt="foto de una cafetería" class="comercio__photo">
+                    <div class="comercio__profile u-shadow">
+                        <img src="./assets/img/logoStarbucks.webp" alt="Logo de starbucks">
+                    </div>
+                    <h2 class="comercio__title">Starbucks <span class="badge">Cafetería</span></h2>
+                    <ul class="comercio__services">
+                        <li class="cardSmall__service"><i class="fa fa-american-sign-language-interpreting" aria-hidden="true"></i></li>
+                        <li class="cardSmall__service"><i class="fa fa-braille" aria-hidden="true"></i></li>
+                        <li class="cardSmall__service"><i class="fa fa-blind" aria-hidden="true"></i></li>
+                    </ul>
+                </header>
+                <section class="comercios__ofertas">
+
+                    <h3 class="comercio__subtitle">Ofertas</h3>
+                    <div class="carrousel carrousel--noTablet">
+                        <article class="cardSmall">
+                            <header class="cardSmall__header">
+                                <img src="./assets/img/logoLoveMyGift.webp" alt="Logo de Love My Gift" class="cardSmall__image">
+                            </header>
+                            <div class="cardSmall__container">
+                                <div class="cardSmall__body">
+                                    <h3 class="cardSmall__title">Title del card</h3>
+                                    <p class="cardSmall__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                                <footer class="cardSmall__footer">
+                                    <p class="cardSmall__price">$999.999.999,99</p>
+                                </footer>
+                            </div>
+                        </article>
+                        <article class="cardSmall">
+                            <header class="cardSmall__header">
+                                <img src="./assets/img/logoLoveMyGift.webp" alt="Logo de Love My Gift" class="cardSmall__image">
+                            </header>
+                            <div class="cardSmall__container">
+                                <div class="cardSmall__body">
+                                    <h3 class="cardSmall__title">Title del card</h3>
+                                    <p class="cardSmall__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                                <footer class="cardSmall__footer">
+                                    <p class="cardSmall__price">$999.999.999,99</p>
+                                </footer>
+                            </div>
+                        </article>
+                        <article class="cardSmall">
+                            <header class="cardSmall__header">
+                                <img src="./assets/img/logoLoveMyGift.webp" alt="Logo de Love My Gift" class="cardSmall__image">
+                            </header>
+                            <div class="cardSmall__container">
+                                <div class="cardSmall__body">
+                                    <h3 class="cardSmall__title">Title del card</h3>
+                                    <p class="cardSmall__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                                <footer class="cardSmall__footer">
+                                    <p class="cardSmall__price">$999.999.999,99</p>
+                                </footer>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+                <div class="comercio__body">
+                    <h3 class="comercio__subtitle">Sobre Starbucks</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla pellentesque dignissim enim sit amet venenatis urna. Lacus laoreet non curabitur gravida arcu ac tortor dignissim convallis. Tellus elementum sagittis vitae et leo duis. Eu consequat ac felis donec et odio pellentesque. Aliquam etiam erat velit scelerisque in dictum. Platea dictumst quisque sagittis purus sit amet volutpat. Cras fermentum odio eu feugiat pretium nibh ipsum. Commodo viverra maecenas accumsan lacus vel facilisis volutpat est velit. Quam nulla porttitor massa id neque aliquam vestibulum morbi blandit. Lacinia quis vel eros donec ac odio tempor. Id eu nisl nunc mi ipsum faucibus vitae aliquet. Sit amet consectetur adipiscing elit duis tristique sollicitudin nibh sit. Cursus metus aliquam eleifend mi in. Hac habitasse platea dictumst vestibulum.</p>
+                    <p>Convallis tellus id interdum velit laoreet id. Eu lobortis elementum nibh tellus molestie nunc non blandit. Sed elementum tempus egestas sed sed risus pretium quam. Mollis nunc sed id semper risus. Non tellus orci ac auctor augue. Quis eleifend quam adipiscing vitae proin. At augue eget arcu dictum varius duis at consectetur lorem. Sit amet volutpat consequat mauris nunc. Ligula ullamcorper malesuada proin libero. Id venenatis a condimentum vitae sapien pellentesque. Nulla porttitor massa id neque aliquam vestibulum. Sed elementum tempus egestas sed. Volutpat consequat mauris nunc congue. Vulputate ut pharetra sit amet aliquam id diam. Id diam vel quam elementum pulvinar etiam non quam. Eget velit aliquet sagittis id consectetur purus ut faucibus. Rhoncus dolor purus non enim praesent. Dignissim convallis aenean et tortor at. Nisl pretium fusce id velit ut. In hendrerit gravida rutrum quisque non tellus orci ac auctor.</p>
+                </div>
+                <footer class="comercio__footer">
+                    <div class="comercio__details">
+                        <h3 class="comercio__subtitle">Zona</h3>
+                        <section class="mapHome">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7340.572030008748!2d-57.55728491365686!3d-38.00039396292633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9584dc023c3ed125%3A0x91c12ebdbae37e3a!2sLove%20My%20Gift!5e0!3m2!1sen!2sar!4v1712060874445!5m2!1sen!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </section>
+                        <h3 class="comercio__h3">Contacto</h3>
+                        <ul class="comercio__links">
+                            <li class="comercio__linksItem"><a href="#" title="vistar sitio web" class="comercio__link"><i class="fa fa-laptop" aria-hidden="true"></i> Sitio web</a></li>
+                            <li class="comercio__linksItem"><a href="#" title="llmar por teléfono" class="comercio__link"><i class="fa fa-phone" aria-hidden="true"></i> Teléfono</a></li>
+                            <li class="comercio__linksItem"><a href="#" title="enviar un email" class="comercio__link"><i class="fa fa-envelope" aria-hidden="true"></i> E-mail</a></li>
+                        </ul>
+                    </div>
+                    <div class="comercio__near">
+                        <h3 class="comercio__h3">Comercios cercanos</h3>
+                        <div class="cards">
+                        <article class="cardSmall">
+                            <header class="cardSmall__header">
+                                <img src="./assets/img/logoLoveMyGift.webp" alt="Logo de Love My Gift" class="cardSmall__image">
+                            </header>
+                            <div class="cardSmall__container">
+                                <div class="cardSmall__body">
+                                    <p class="cardSmall__category">Categoría</p>
+                                    <h3 class="cardSmall__title">Title del card</h3>
+                                </div>
+                                <footer class="cardSmall__footer">
+                                    <ul class="cardSmall__services">
+                                        <li class="cardSmall__service"><i class="fa fa-american-sign-language-interpreting" aria-hidden="true"></i></li>
+                                        <li class="cardSmall__service"><i class="fa fa-braille" aria-hidden="true"></i></li>
+                                        <li class="cardSmall__service"><i class="fa fa-blind" aria-hidden="true"></i></li>
+                                    </ul>
+                                </footer>
+                            </div>
+                        </article>
+                        <article class="cardSmall">
+                            <header class="cardSmall__header">
+                                <img src="./assets/img/logoLoveMyGift.webp" alt="Logo de Love My Gift" class="cardSmall__image">
+                            </header>
+                            <div class="cardSmall__container">
+                                <div class="cardSmall__body">
+                                    <p class="cardSmall__category">Categoría</p>
+                                    <h3 class="cardSmall__title">Title del card</h3>
+                                </div>
+                                <footer class="cardSmall__footer">
+                                    <ul class="cardSmall__services">
+                                        <li class="cardSmall__service"><i class="fa fa-american-sign-language-interpreting" aria-hidden="true"></i></li>
+                                        <li class="cardSmall__service"><i class="fa fa-braille" aria-hidden="true"></i></li>
+                                        <li class="cardSmall__service"><i class="fa fa-blind" aria-hidden="true"></i></li>
+                                    </ul>
+                                </footer>
+                            </div>
+                        </article>
+                        <article class="cardSmall">
+                            <header class="cardSmall__header">
+                                <img src="./assets/img/logoLoveMyGift.webp" alt="Logo de Love My Gift" class="cardSmall__image">
+                            </header>
+                            <div class="cardSmall__container">
+                                <div class="cardSmall__body">
+                                    <p class="cardSmall__category">Categoría</p>
+                                    <h3 class="cardSmall__title">Title del card</h3>
+                                </div>
+                                <footer class="cardSmall__footer">
+                                    <ul class="cardSmall__services">
+                                        <li class="cardSmall__service"><i class="fa fa-american-sign-language-interpreting" aria-hidden="true"></i></li>
+                                        <li class="cardSmall__service"><i class="fa fa-braille" aria-hidden="true"></i></li>
+                                        <li class="cardSmall__service"><i class="fa fa-blind" aria-hidden="true"></i></li>
+                                    </ul>
+                                </footer>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                </footer>
+            </article>
+        </section>
+    </main>
+    <footer class="footerPrincipal">
+        <p class="footerPrincipal__text">Hecho por el <strong>equipo 14</strong> para Codo a Codo.</p>
+    </footer>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
