@@ -14,3 +14,10 @@
     border-radius: var(--radius);
     flex: 0 0 auto; 
 }
+
+@media screen and (min-width: 600px) {
+    .filters{
+        flex-wrap: wrap;
+    justify-content: center;
+    }
+}
