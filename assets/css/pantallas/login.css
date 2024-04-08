@@ -24,3 +24,8 @@
     color:var(--primary-900)
 }
 
+@media screen and (min-width: 600px){
+    .login{
+        margin-block: 2rem;
+    }
+}
