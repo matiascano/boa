@@ -6,8 +6,10 @@
     margin:0;
 }
 
-.comercio__header{
-
+.comercio__cards{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
 }
 
 .comercio__photo{
@@ -78,7 +80,7 @@
 
 .comercio__body, 
 .comercio__footer{
-    width:90vw;
+    max-width:1000px;
     margin: 2rem auto;
 }
 
@@ -105,6 +107,8 @@
         flex-direction: column;
         align-items: flex-end;
     }
+
+  
 
     .comercio__near .cards{
         align-items: flex-end;
