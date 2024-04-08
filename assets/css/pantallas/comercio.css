@@ -71,7 +71,9 @@
     display: flex;
     gap: 1rem;
     width:90vw;
-    margin: 2rem auto;
+    margin-inline: auto;
+    margin-bottom: 2rem;
+    justify-content: center;
 }
 
 .comercio__body, 
