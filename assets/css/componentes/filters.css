@@ -8,11 +8,8 @@
    width: 100%;
 }
 
-.filters__item:hover{
-    background-color: var(--primary-700);
-}
-
 .filters__item{
+    transition: background-color 300ms ease;
     text-decoration: none;
     color: inherit;
     margin:0;
@@ -20,6 +17,10 @@
     border-radius: var(--radius);
     flex: 0 0 auto; 
     font-size: .9rem;
+}
+
+.filters__item:hover{
+    background-color: var(--primary-700);
 }
 
 .filters__item::after{
