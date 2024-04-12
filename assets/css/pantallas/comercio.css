@@ -78,42 +78,31 @@
     justify-content: center;
 }
 
-.comercio__body, 
-.comercio__footer{
+.comercio__body{
     max-width:1000px;
     margin: 2rem auto;
 }
 
+.comercio__footer{
+    display: grid;
+    grid-template-columns:1fr;
+    gap:1rem;
+    padding: 1rem;
+}
+
 @media screen and (min-width: 768px) {
-    
+
     .comercio__footer{
-        display: flex;
-        width: 90vw;
-        margin-inline:auto;
-        gap:1rem
+        grid-template-columns: 2fr 1fr;
     }
     
     .comercio__details, .comercio__near{
-        width: 45vw;
+        width: 100%;
         align-self:flex-start;
     }
 
     .comercio__h3 {
         margin-top: 0;
-    }
-
-    .comercio__near{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-    }
-
-  
-
-    .comercio__near .cards{
-        align-items: flex-end;
-        padding:0;
-        margin:0;
     }
 
     .comercio__subtitle{
