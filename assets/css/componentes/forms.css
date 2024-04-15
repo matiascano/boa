@@ -11,7 +11,9 @@
     margin-bottom: 2rem;
 }
 
-.form__input{
+.form__input, 
+.form__textarea, 
+.form__select {
     margin:0;
     border: 2px solid var(--primary-900);
 }
