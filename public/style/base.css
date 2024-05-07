@@ -1,31 +1,72 @@
 :root{
 
-    --info:#5bc0de;
-    --success:#5cb85c;
-    --warning:#f0ad4e;
-    --danger:#d9534f;
+  --accent: #dba507;
 
-    --primary-50: #f7f7fe;
-    --primary-100: #dadafc;
-    --primary-200: #bcbdf9;
-    --primary-300: #9ea0f6;
-    --primary-400: #8183f4;
-    --primary-500: #6366f1;
-    --primary-600: #5457cd;
-    --primary-700: #4547a9;
-    --primary-800: #363885;
-    --primary-900: #282960;
+    --primary-50: #ffffff;
+    --primary-100: #e2ebfe;
+    --primary-200: #c5d8fc;
+    --primary-300: #a9c4f9;
+    --primary-400: #8daff5;
+    --primary-500: #729bf1;
+    --primary-600: #5886ec;
+    --primary-700: #3d70e7;
+    --primary-800: #2358e1;
+    --primary-900: #073bda;
 
-    --secondary-50: #f9fafb;
-    --secondary-100: #f3f4f6;
-    --secondary-200: #e5e7eb;
-    --secondary-300: #d1d5db;
-    --secondary-400: #9ca3af;
-    --secondary-500: #6b7280;
-    --secondary-600: #4b5563;
-    --secondary-700: #374151;
-    --secondary-800: #1f2937;
-    --secondary-900: #111827;
+    --secondary-50: #f8f9fa;
+    --secondary-100: #e9ecef;
+    --secondary-200: #dee2e6;
+    --secondary-300: #ced4da;
+    --secondary-400: #adb5bd;
+    --secondary-500: #868e96;
+    --secondary-600: #6c757d;
+    --secondary-700: #495057;
+    --secondary-800: #343a40;
+    --secondary-900: #212529;
+
+    --success-50: #dff0d8;
+    --success-100: #d0e9c6;
+    --success-200: #bce4b3;
+    --success-300: #a8d9a8;
+    --success-400: #91c090;
+    --success-500: #78b77e;
+    --success-600: #5f9c5f;
+    --success-700: #468d48;
+    --success-800: #2f803f;
+    --success-900: #1b6025;
+
+    --warning-50: #fcf8e3;
+    --warning-100: #faf2cc;
+    --warning-200: #f7ecb5;
+    --warning-300: #f5e79e;
+    --warning-400: #f2e18b;
+    --warning-500: #eecc68;
+    --warning-600: #d9b046;
+    --warning-700: #b7862e;
+    --warning-800: #936f1b;
+    --warning-900: #7a5e0b;
+
+    --danger-50: #f2dede;
+    --danger-100: #ebcccc;
+    --danger-200: #e0b8b8;
+    --danger-300: #d69f9f;
+    --danger-400: #ce8686;
+    --danger-500: #c45e5e;
+    --danger-600: #a83e3e;
+    --danger-700: #8a2d2d;
+    --danger-800: #701414;
+    --danger-900: #591212;
+
+    --info-50: #d9edf7;
+    --info-100: #b9def0;
+    --info-200: #9acfe9;
+    --info-300: #81c6f1;
+    --info-400: #6ab7e9;
+    --info-500: #53a7d9;
+    --info-600: #3c8db2;
+    --info-700: #297ca3;
+    --info-800: #1c6e7a;
+    --info-900: #0f5161;
 
     --radius: .5rem;
 
