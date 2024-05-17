@@ -7,7 +7,7 @@
       "headerImage": "https://dummyimage.com/1920x600",
       "headerImageAltText": "Cozy coffee shop",
       "category": "Coffee Shop",
-      "accessibility": ["Braille", "dog friendly", "wheelchair accessible"],
+      "accessibility": ["braille", "dog friendly", "wheelchair accessible"],
       "menu": ["gluten free", "vegan", "diabetic"],
       "province": "Buenos Aires",
       "city": "La Plata",
