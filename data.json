@@ -5,31 +5,31 @@
       "slug": "coffee-haven",
       "profileImage": "https://dummyimage.com/300x300",
       "headerImage": "https://dummyimage.com/1920x600",
-      "headerImageAltText": "Cozy coffee shop",
-      "category": "Coffee Shop",
+      "headerImageAltText": "Cafetería acogedora",
+      "category": "Cafetería",
       "accessibility": ["braille", "dog friendly", "wheelchair accessible"],
       "menu": ["gluten free", "vegan", "diabetic"],
       "province": "Buenos Aires",
       "city": "La Plata",
-      "address": "123 Main Street",
+      "address": "123 Calle Principal",
       "site": "https://coffeehaven.com",
       "instagram": "coffeehaven",
-      "email": "contact@coffeehaven.com",
-      "description": "<p>Welcome to Coffee Haven, where every cup tells a story.</p>",
+      "email": "contacto@coffeehaven.com",
+      "description": "<p>Bienvenidos a Coffee Haven, donde cada taza cuenta una historia.</p>",
       "offers": 2,
       "offersData": [
         {
           "offerImage": "https://dummyimage.com/300x300",
-          "offerImageAltText": "Specialty Coffee",
-          "offerTitle": "Specialty Coffee",
-          "offerDescription": "Enjoy our finest selection of specialty coffees.",
+          "offerImageAltText": "Café de especialidad",
+          "offerTitle": "Café de especialidad",
+          "offerDescription": "Disfruta de nuestra mejor selección de cafés de especialidad.",
           "offerPrice": 4.99
         },
         {
           "offerImage": "https://dummyimage.com/300x300",
-          "offerImageAltText": "Vegan Pastry",
-          "offerTitle": "Vegan Pastry",
-          "offerDescription": "Delicious and healthy vegan pastries.",
+          "offerImageAltText": "Pastelería vegana",
+          "offerTitle": "Pastelería vegana",
+          "offerDescription": "Deliciosos y saludables pasteles veganos.",
           "offerPrice": 2.99
         }
       ]
@@ -40,38 +40,38 @@
       "slug": "tea-treats",
       "profileImage": "https://dummyimage.com/300x300",
       "headerImage": "https://dummyimage.com/1920x600",
-      "headerImageAltText": "Cozy tea shop",
-      "category": "Tea Shop",
+      "headerImageAltText": "Tienda de té acogedora",
+      "category": "Tienda de Té",
       "accessibility": ["Braille", "dog friendly", "wheelchair accessible"],
       "menu": ["gluten free", "vegan", "diabetic"],
       "province": "Córdoba",
       "city": "Córdoba",
-      "address": "456 Elm Street",
+      "address": "456 Calle Elm",
       "site": "https://teaandtreats.com",
       "instagram": "teaandtreats",
-      "email": "contact@teaandtreats.com",
-      "description": "<p>Tea & Treats offers a tranquil environment to enjoy your favorite teas and sweets.</p>",
+      "email": "contacto@teaandtreats.com",
+      "description": "<p>Tea & Treats ofrece un ambiente tranquilo para disfrutar de tus tés y dulces favoritos.</p>",
       "offers": 3,
       "offersData": [
         {
           "offerImage": "https://dummyimage.com/300x300",
-          "offerImageAltText": "Green Tea",
-          "offerTitle": "Green Tea",
-          "offerDescription": "Refreshing and healthy green tea.",
+          "offerImageAltText": "Té verde",
+          "offerTitle": "Té verde",
+          "offerDescription": "Refrescante y saludable té verde.",
           "offerPrice": 3.99
         },
         {
           "offerImage": "https://dummyimage.com/300x300",
-          "offerImageAltText": "Vegan Brownie",
-          "offerTitle": "Vegan Brownie",
-          "offerDescription": "Decadent vegan brownie made with organic ingredients.",
+          "offerImageAltText": "Brownie vegano",
+          "offerTitle": "Brownie vegano",
+          "offerDescription": "Delicioso brownie vegano hecho con ingredientes orgánicos.",
           "offerPrice": 2.49
         },
         {
           "offerImage": "https://dummyimage.com/300x300",
-          "offerImageAltText": "Fruit Tart",
-          "offerTitle": "Fruit Tart",
-          "offerDescription": "Delicious tart filled with fresh fruits.",
+          "offerImageAltText": "Tarta de frutas",
+          "offerTitle": "Tarta de frutas",
+          "offerDescription": "Deliciosa tarta llena de frutas frescas.",
           "offerPrice": 4.49
         }
       ]
@@ -82,24 +82,24 @@
       "slug": "bakery-bliss",
       "profileImage": "https://dummyimage.com/300x300",
       "headerImage": "https://dummyimage.com/1920x600",
-      "headerImageAltText": "Artisan bakery",
-      "category": "Bakery",
+      "headerImageAltText": "Panadería artesanal",
+      "category": "Panadería",
       "accessibility": ["Braille", "dog friendly", "wheelchair accessible"],
       "menu": ["gluten free", "vegan", "diabetic"],
       "province": "Santa Fe",
       "city": "Rosario",
-      "address": "789 Maple Avenue",
+      "address": "789 Avenida Maple",
       "site": "https://bakerybliss.com",
       "instagram": "bakerybliss",
-      "email": "contact@bakerybliss.com",
-      "description": "<p>Bakery Bliss brings you the finest artisan breads and pastries.</p>",
+      "email": "contacto@bakerybliss.com",
+      "description": "<p>Bakery Bliss te trae los mejores panes y pasteles artesanales.</p>",
       "offers": 1,
       "offersData": [
         {
           "offerImage": "https://dummyimage.com/300x300",
-          "offerImageAltText": "Sourdough Bread",
-          "offerTitle": "Sourdough Bread",
-          "offerDescription": "Freshly baked sourdough bread.",
+          "offerImageAltText": "Pan de masa madre",
+          "offerTitle": "Pan de masa madre",
+          "offerDescription": "Pan de masa madre recién horneado.",
           "offerPrice": 5.99
         }
       ]
@@ -110,31 +110,31 @@
       "slug": "gourmet-delights",
       "profileImage": "https://dummyimage.com/300x300",
       "headerImage": "https://dummyimage.com/1920x600",
-      "headerImageAltText": "Fine dining restaurant",
-      "category": "Restaurant",
+      "headerImageAltText": "Restaurante de alta cocina",
+      "category": "Restaurante",
       "accessibility": ["Braille", "dog friendly", "wheelchair accessible"],
       "menu": ["gluten free", "vegan", "diabetic"],
       "province": "Mendoza",
       "city": "Mendoza",
-      "address": "1010 Pine Street",
+      "address": "1010 Calle Pine",
       "site": "https://gourmetdelights.com",
       "instagram": "gourmetdelights",
-      "email": "contact@gourmetdelights.com",
-      "description": "<p>Experience the finest dining at Gourmet Delights.</p>",
+      "email": "contacto@gourmetdelights.com",
+      "description": "<p>Vive la mejor experiencia gastronómica en Gourmet Delights.</p>",
       "offers": 2,
       "offersData": [
         {
           "offerImage": "https://dummyimage.com/300x300",
-          "offerImageAltText": "Gourmet Dinner",
-          "offerTitle": "Gourmet Dinner",
-          "offerDescription": "Enjoy a gourmet dinner prepared by our top chefs.",
+          "offerImageAltText": "Cena gourmet",
+          "offerTitle": "Cena gourmet",
+          "offerDescription": "Disfruta de una cena gourmet preparada por nuestros mejores chefs.",
           "offerPrice": 49.99
         },
         {
           "offerImage": "https://dummyimage.com/300x300",
-          "offerImageAltText": "Wine Tasting",
-          "offerTitle": "Wine Tasting",
-          "offerDescription": "Sample the finest wines from our cellar.",
+          "offerImageAltText": "Degustación de vinos",
+          "offerTitle": "Degustación de vinos",
+          "offerDescription": "Prueba los mejores vinos de nuestra bodega.",
           "offerPrice": 29.99
         }
       ]
@@ -145,38 +145,38 @@
       "slug": "pizza-paradise",
       "profileImage": "https://dummyimage.com/300x300",
       "headerImage": "https://dummyimage.com/1920x600",
-      "headerImageAltText": "Cozy pizzeria",
-      "category": "Pizzeria",
+      "headerImageAltText": "Pizzería acogedora",
+      "category": "Pizzería",
       "accessibility": ["Braille", "dog friendly", "wheelchair accessible"],
       "menu": ["gluten free", "vegan", "diabetic"],
       "province": "Buenos Aires",
       "city": "Buenos Aires",
-      "address": "2020 Oak Street",
+      "address": "2020 Calle Oak",
       "site": "https://pizzaparadise.com",
       "instagram": "pizzaparadise",
-      "email": "contact@pizzaparadise.com",
-      "description": "<p>Pizza Paradise offers the best pizzas in town with a wide range of toppings.</p>",
+      "email": "contacto@pizzaparadise.com",
+      "description": "<p>Pizza Paradise ofrece las mejores pizzas de la ciudad con una amplia variedad de toppings.</p>",
       "offers": 3,
       "offersData": [
         {
           "offerImage": "https://dummyimage.com/300x300",
-          "offerImageAltText": "Margherita Pizza",
-          "offerTitle": "Margherita Pizza",
-          "offerDescription": "Classic Margherita pizza with fresh ingredients.",
+          "offerImageAltText": "Pizza Margherita",
+          "offerTitle": "Pizza Margherita",
+          "offerDescription": "Clásica pizza Margherita con ingredientes frescos.",
           "offerPrice": 8.99
         },
         {
           "offerImage": "https://dummyimage.com/300x300",
-          "offerImageAltText": "Pepperoni Pizza",
-          "offerTitle": "Pepperoni Pizza",
-          "offerDescription": "Spicy pepperoni pizza for meat lovers.",
+          "offerImageAltText": "Pizza de pepperoni",
+          "offerTitle": "Pizza de pepperoni",
+          "offerDescription": "Pizza de pepperoni picante para los amantes de la carne.",
           "offerPrice": 9.99
         },
         {
           "offerImage": "https://dummyimage.com/300x300",
-          "offerImageAltText": "Vegan Pizza",
-          "offerTitle": "Vegan Pizza",
-          "offerDescription": "Delicious pizza with vegan cheese and toppings.",
+          "offerImageAltText": "Pizza vegana",
+          "offerTitle": "Pizza vegana",
+          "offerDescription": "Deliciosa pizza con queso vegano y toppings.",
           "offerPrice": 10.99
         }
       ]
@@ -187,447 +187,425 @@
       "slug": "burger-bistro",
       "profileImage": "https://dummyimage.com/300x300",
       "headerImage": "https://dummyimage.com/1920x600",
-      "headerImageAltText": "Modern burger joint",
-      "category": "Fast Food",
+      "headerImageAltText": "Moderna hamburguesería",
+      "category": "Comida rápida",
       "accessibility": ["Braille", "dog friendly", "wheelchair accessible"],
       "menu": ["gluten free", "vegan", "diabetic"],
       "province": "Buenos Aires",
-      "city": "San Isidro",
-      "address": "3030 Birch Street",
+      "city": "Mar del Plata",
+      "address": "3030 Calle Birch",
       "site": "https://burgerbistro.com",
       "instagram": "burgerbistro",
-      "email": "contact@burgerbistro.com",
-      "description": "<p>Burger Bistro serves gourmet burgers with a modern twist.</p>",
+      "email": "contacto@burgerbistro.com",
+      "description": "<p>Burger Bistro, donde cada hamburguesa es una obra de arte.</p>",
       "offers": 2,
       "offersData": [
         {
           "offerImage": "https://dummyimage.com/300x300",
-          "offerImageAltText": "Classic Burger",
-          "offerTitle": "Classic Burger",
-          "offerDescription": "Juicy beef burger with all the classic toppings.",
+          "offerImageAltText": "Hamburguesa clásica",
+          "offerTitle": "Hamburguesa clásica",
+          "offerDescription": "Jugosa hamburguesa clásica con queso, lechuga y tomate.",
           "offerPrice": 7.99
         },
         {
           "offerImage": "https://dummyimage.com/300x300",
-          "offerImageAltText": "Vegan Burger",
-          "offerTitle": "Vegan Burger",
-          "offerDescription": "Delicious vegan burger with plant-based patty.",
+          "offerImageAltText": "Hamburguesa vegana",
+          "offerTitle": "Hamburguesa vegana",
+          "offerDescription": "Deliciosa hamburguesa vegana hecha con ingredientes frescos.",
           "offerPrice": 8.49
         }
       ]
     },
     {
         "id": 7,
-        "name": "Tea Time Lounge",
-        "slug": "tea-time-lounge",
-        "profileImage": "https://dummyimage.com/300x300",
-        "headerImage": "https://dummyimage.com/1920x600",
-        "headerImageAltText": "Relaxing tea lounge",
-        "category": "Tea Shop",
-        "accessibility": ["Wheelchair accessible", "family friendly"],
-        "menu": ["organic", "gluten free"],
-        "province": "Buenos Aires",
-        "city": "Mar del Plata",
-        "address": "456 Tea Lane",
-        "site": "https://teatimelounge.com",
-        "instagram": "teatimelounge",
-        "email": "info@teatimelounge.com",
-        "description": "<p>Come relax and enjoy our wide selection of teas.</p>",
-        "offers": 3,
-        "offersData": [
-            {
-                "offerImage": "https://dummyimage.com/300x300",
-                "offerImageAltText": "Organic Green Tea",
-                "offerTitle": "Organic Green Tea",
-                "offerDescription": "Refreshing and healthy organic green tea.",
-                "offerPrice": 3.50
-            },
-            {
-                "offerImage": "https://dummyimage.com/300x300",
-                "offerImageAltText": "Gluten Free Scone",
-                "offerTitle": "Gluten Free Scone",
-                "offerDescription": "Delicious gluten free scones.",
-                "offerPrice": 2.50
-            },
-            {
-                "offerImage": "https://dummyimage.com/300x300",
-                "offerImageAltText": "Herbal Tea Blend",
-                "offerTitle": "Herbal Tea Blend",
-                "offerDescription": "A soothing blend of herbal teas.",
-                "offerPrice": 3.00
-            }
-        ]
-    },
-    {
-        "id": 8,
-        "name": "Bistro Delight",
-        "slug": "bistro-delight",
-        "profileImage": "https://dummyimage.com/300x300",
-        "headerImage": "https://dummyimage.com/1920x600",
-        "headerImageAltText": "Charming bistro",
-        "category": "Bistro",
-        "accessibility": ["Wheelchair accessible", "braille menus"],
-        "menu": ["vegetarian", "gluten free"],
-        "province": "Cordoba",
-        "city": "Cordoba",
-        "address": "789 Bistro Blvd",
-        "site": "https://bistrodelight.com",
-        "instagram": "bistrodelight",
-        "email": "hello@bistrodelight.com",
-        "description": "<p>Delight your taste buds with our exquisite dishes.</p>",
-        "offers": 2,
-        "offersData": [
-            {
-                "offerImage": "https://dummyimage.com/300x300",
-                "offerImageAltText": "Vegetarian Quiche",
-                "offerTitle": "Vegetarian Quiche",
-                "offerDescription": "A delicious vegetarian quiche.",
-                "offerPrice": 5.00
-            },
-            {
-                "offerImage": "https://dummyimage.com/300x300",
-                "offerImageAltText": "Gluten Free Brownie",
-                "offerTitle": "Gluten Free Brownie",
-                "offerDescription": "Rich and fudgy gluten free brownies.",
-                "offerPrice": 3.00
-            }
-        ]
-    },
-    {
-        "id": 9,
-        "name": "Veggie Paradise",
-        "slug": "veggie-paradise",
-        "profileImage": "https://dummyimage.com/300x300",
-        "headerImage": "https://dummyimage.com/1920x600",
-        "headerImageAltText": "Vibrant vegetarian restaurant",
-        "category": "Vegetarian Restaurant",
-        "accessibility": ["Pet friendly", "wheelchair accessible"],
-        "menu": ["vegan", "organic"],
-        "province": "Santa Fe",
-        "city": "Rosario",
-        "address": "101 Veggie St",
-        "site": "https://veggieparadise.com",
-        "instagram": "veggieparadise",
-        "email": "contact@veggieparadise.com",
-        "description": "<p>Experience the best of vegetarian cuisine.</p>",
-        "offers": 2,
-        "offersData": [
-            {
-                "offerImage": "https://dummyimage.com/300x300",
-                "offerImageAltText": "Vegan Burger",
-                "offerTitle": "Vegan Burger",
-                "offerDescription": "Tasty and healthy vegan burger.",
-                "offerPrice": 7.50
-            },
-            {
-                "offerImage": "https://dummyimage.com/300x300",
-                "offerImageAltText": "Organic Salad",
-                "offerTitle": "Organic Salad",
-                "offerDescription": "Fresh organic salad.",
-                "offerPrice": 5.00
-            }
-        ]
-    },
-    {
-        "id": 10,
-        "name": "Bakery Bliss",
-        "slug": "bakery-bliss",
-        "profileImage": "https://dummyimage.com/300x300",
-        "headerImage": "https://dummyimage.com/1920x600",
-        "headerImageAltText": "Charming bakery",
-        "category": "Bakery",
-        "accessibility": ["Wheelchair accessible", "family friendly"],
-        "menu": ["gluten free", "diabetic"],
-        "province": "Buenos Aires",
-        "city": "Buenos Aires",
-        "address": "202 Sweet St",
-        "site": "https://bakerybliss.com",
-        "instagram": "bakerybliss",
-        "email": "info@bakerybliss.com",
-        "description": "<p>Indulge in our delightful baked goods.</p>",
-        "offers": 2,
-        "offersData": [
-            {
-                "offerImage": "https://dummyimage.com/300x300",
-                "offerImageAltText": "Gluten Free Bread",
-                "offerTitle": "Gluten Free Bread",
-                "offerDescription": "Soft and tasty gluten free bread.",
-                "offerPrice": 4.00
-            },
-            {
-                "offerImage": "https://dummyimage.com/300x300",
-                "offerImageAltText": "Diabetic Muffin",
-                "offerTitle": "Diabetic Muffin",
-                "offerDescription": "A delicious and healthy muffin.",
-                "offerPrice": 2.50
-            }
-        ]
-    },
-    {
-        "id": 11,
-        "name": "Pasta Perfection",
-        "slug": "pasta-perfection",
-        "profileImage": "https://dummyimage.com/300x300",
-        "headerImage": "https://dummyimage.com/1920x600",
-        "headerImageAltText": "Italian pasta restaurant",
-        "category": "Italian Restaurant",
-        "accessibility": ["Wheelchair accessible", "family friendly"],
-        "menu": ["vegetarian", "gluten free"],
-        "province": "Mendoza",
-        "city": "Mendoza",
-        "address": "303 Pasta Ave",
-        "site": "https://pastaperfection.com",
-        "instagram": "pastaperfection",
-        "email": "hello@pastaperfection.com",
-        "description": "<p>Perfect pasta dishes made fresh daily.</p>",
-        "offers": 3,
-        "offersData": [
-            {
-                "offerImage": "https://dummyimage.com/300x300",
-                "offerImageAltText": "Gluten Free Pasta",
-                "offerTitle": "Gluten Free Pasta",
-                "offerDescription": "Delicious gluten free pasta.",
-                "offerPrice": 8.00
-            },
-            {
-                "offerImage": "https://dummyimage.com/300x300",
-                "offerImageAltText": "Vegetarian Lasagna",
-                "offerTitle": "Vegetarian Lasagna",
-                "offerDescription": "Hearty and tasty vegetarian lasagna.",
-                "offerPrice": 7.50
-            },
-            {
-                "offerImage": "https://dummyimage.com/300x300",
-                "offerImageAltText": "Classic Spaghetti",
-                "offerTitle": "Classic Spaghetti",
-                "offerDescription": "Traditional spaghetti with marinara sauce.",
-                "offerPrice": 6.00
-            }
-        ]
-    },
-    {
-        "id": 12,
         "name": "Sushi Sensation",
         "slug": "sushi-sensation",
         "profileImage": "https://dummyimage.com/300x300",
         "headerImage": "https://dummyimage.com/1920x600",
-        "headerImageAltText": "Modern sushi restaurant",
-        "category": "Sushi Restaurant",
-        "accessibility": ["Wheelchair accessible", "braille menus"],
-        "menu": ["gluten free", "vegan"],
-        "province": "Tucuman",
-        "city": "San Miguel de Tucuman",
-        "address": "404 Sushi St",
+        "headerImageAltText": "Restaurante de sushi",
+        "category": "Restaurante",
+        "accessibility": ["Braille", "dog friendly", "wheelchair accessible"],
+        "menu": ["gluten free", "vegan", "diabetic"],
+        "province": "Buenos Aires",
+        "city": "Buenos Aires",
+        "address": "4040 Calle Bamboo",
         "site": "https://sushisensation.com",
         "instagram": "sushisensation",
-        "email": "contact@sushisensation.com",
-        "description": "<p>Experience the sensation of our fresh sushi.</p>",
-        "offers": 2,
+        "email": "contacto@sushisensation.com",
+        "description": "<p>Sushi Sensation ofrece sushi fresco y delicioso en un ambiente elegante.</p>",
+        "offers": 3,
         "offersData": [
-            {
-                "offerImage": "https://dummyimage.com/300x300",
-                "offerImageAltText": "Vegan Sushi Roll",
-                "offerTitle": "Vegan Sushi Roll",
-                "offerDescription": "Tasty and healthy vegan sushi rolls.",
-                "offerPrice": 9.00
-            },
-            {
-                "offerImage": "https://dummyimage.com/300x300",
-                "offerImageAltText": "Gluten Free Tempura",
-                "offerTitle": "Gluten Free Tempura",
-                "offerDescription": "Crispy and delicious gluten free tempura.",
-                "offerPrice": 8.50
-            }
+          {
+            "offerImage": "https://dummyimage.com/300x300",
+            "offerImageAltText": "Combo de sushi",
+            "offerTitle": "Combo de sushi",
+            "offerDescription": "Combo de sushi con una selección variada de rolls.",
+            "offerPrice": 12.99
+          },
+          {
+            "offerImage": "https://dummyimage.com/300x300",
+            "offerImageAltText": "Sashimi de salmón",
+            "offerTitle": "Sashimi de salmón",
+            "offerDescription": "Fresco sashimi de salmón.",
+            "offerPrice": 14.99
+          },
+          {
+            "offerImage": "https://dummyimage.com/300x300",
+            "offerImageAltText": "Roll vegano",
+            "offerTitle": "Roll vegano",
+            "offerDescription": "Roll vegano con aguacate, pepino y zanahoria.",
+            "offerPrice": 10.99
+          }
         ]
-    },
-    {
-        "id": 13,
-        "name": "Burger Bonanza",
-        "slug": "burger-bonanza",
+      },
+      {
+        "id": 8,
+        "name": "Pasta Palace",
+        "slug": "pasta-palace",
         "profileImage": "https://dummyimage.com/300x300",
         "headerImage": "https://dummyimage.com/1920x600",
-        "headerImageAltText": "Classic burger joint",
-        "category": "Burger Restaurant",
-        "accessibility": ["Pet friendly", "wheelchair accessible"],
-        "menu": ["vegetarian", "gluten free"],
-        "province": "Neuquen",
-        "city": "Neuquen",
-        "address": "505 Burger Blvd",
-        "site": "https://burgerbonanza.com",
-        "instagram": "burgerbonanza",
-        "email": "info@burgerbonanza.com",
-        "description": "<p>The best burgers in town, made just for you.</p>",
+        "headerImageAltText": "Restaurante de pasta",
+        "category": "Restaurante",
+        "accessibility": ["Braille", "dog friendly", "wheelchair accessible"],
+        "menu": ["gluten free", "vegan", "diabetic"],
+        "province": "Buenos Aires",
+        "city": "Buenos Aires",
+        "address": "5050 Calle Olive",
+        "site": "https://pastapalace.com",
+        "instagram": "pastapalace",
+        "email": "contacto@pastapalace.com",
+        "description": "<p>Pasta Palace te trae las mejores pastas italianas hechas a mano.</p>",
         "offers": 2,
         "offersData": [
-            {
-                "offerImage": "https://dummyimage.com/300x300",
-                "offerImageAltText": "Vegetarian Burger",
-                "offerTitle": "Vegetarian Burger",
-                "offerDescription": "Delicious and healthy vegetarian burger.",
-                "offerPrice": 7.00
-            },
-            {
-                "offerImage": "https://dummyimage.com/300x300",
-                "offerImageAltText": "Gluten Free Fries",
-                "offerTitle": "Gluten Free Fries",
-                "offerDescription": "Crispy and tasty gluten free fries.",
-                "offerPrice": 3.50
-            }
+          {
+            "offerImage": "https://dummyimage.com/300x300",
+            "offerImageAltText": "Espaguetis a la boloñesa",
+            "offerTitle": "Espaguetis a la boloñesa",
+            "offerDescription": "Clásicos espaguetis a la boloñesa con salsa casera.",
+            "offerPrice": 11.99
+          },
+          {
+            "offerImage": "https://dummyimage.com/300x300",
+            "offerImageAltText": "Lasaña vegetariana",
+            "offerTitle": "Lasaña vegetariana",
+            "offerDescription": "Lasaña llena de vegetales frescos y queso ricotta.",
+            "offerPrice": 12.49
+          }
         ]
-    },
-    {
-        "id": 14,
+      },
+      {
+        "id": 9,
+        "name": "Taco Town",
+        "slug": "taco-town",
+        "profileImage": "https://dummyimage.com/300x300",
+        "headerImage": "https://dummyimage.com/1920x600",
+        "headerImageAltText": "Taquería",
+        "category": "Restaurante",
+        "accessibility": ["Braille", "dog friendly", "wheelchair accessible"],
+        "menu": ["gluten free", "vegan", "diabetic"],
+        "province": "Buenos Aires",
+        "city": "Buenos Aires",
+        "address": "6060 Calle Pineapple",
+        "site": "https://tacotown.com",
+        "instagram": "tacotown",
+        "email": "contacto@tacotown.com",
+        "description": "<p>Taco Town ofrece los mejores tacos y sabores auténticos de México.</p>",
+        "offers": 3,
+        "offersData": [
+          {
+            "offerImage": "https://dummyimage.com/300x300",
+            "offerImageAltText": "Tacos al pastor",
+            "offerTitle": "Tacos al pastor",
+            "offerDescription": "Deliciosos tacos al pastor con piña y cilantro.",
+            "offerPrice": 9.99
+          },
+          {
+            "offerImage": "https://dummyimage.com/300x300",
+            "offerImageAltText": "Tacos veganos",
+            "offerTitle": "Tacos veganos",
+            "offerDescription": "Tacos veganos con tofu y vegetales frescos.",
+            "offerPrice": 8.99
+          },
+          {
+            "offerImage": "https://dummyimage.com/300x300",
+            "offerImageAltText": "Nachos con guacamole",
+            "offerTitle": "Nachos con guacamole",
+            "offerDescription": "Nachos crujientes con guacamole casero.",
+            "offerPrice": 6.99
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "name": "Bagel Bliss",
+        "slug": "bagel-bliss",
+        "profileImage": "https://dummyimage.com/300x300",
+        "headerImage": "https://dummyimage.com/1920x600",
+        "headerImageAltText": "Tienda de bagels",
+        "category": "Cafetería",
+        "accessibility": ["Braille", "dog friendly", "wheelchair accessible"],
+        "menu": ["gluten free", "vegan", "diabetic"],
+        "province": "Buenos Aires",
+        "city": "La Plata",
+        "address": "7070 Calle Bagel",
+        "site": "https://bagelbliss.com",
+        "instagram": "bagelbliss",
+        "email": "contacto@bagelbliss.com",
+        "description": "<p>Bagel Bliss ofrece los mejores bagels recién horneados y un excelente café.</p>",
+        "offers": 2,
+        "offersData": [
+          {
+            "offerImage": "https://dummyimage.com/300x300",
+            "offerImageAltText": "Bagel clásico",
+            "offerTitle": "Bagel clásico",
+            "offerDescription": "Bagel clásico con queso crema.",
+            "offerPrice": 3.99
+          },
+          {
+            "offerImage": "https://dummyimage.com/300x300",
+            "offerImageAltText": "Bagel vegano",
+            "offerTitle": "Bagel vegano",
+            "offerDescription": "Bagel vegano con hummus y vegetales frescos.",
+            "offerPrice": 4.49
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "name": "Salad Station",
+        "slug": "salad-station",
+        "profileImage": "https://dummyimage.com/300x300",
+        "headerImage": "https://dummyimage.com/1920x600",
+        "headerImageAltText": "Restaurante de ensaladas",
+        "category": "Restaurante",
+        "accessibility": ["Braille", "dog friendly", "wheelchair accessible"],
+        "menu": ["gluten free", "vegan", "diabetic"],
+        "province": "Buenos Aires",
+        "city": "Buenos Aires",
+        "address": "8080 Calle Garden",
+        "site": "https://saladstation.com",
+        "instagram": "saladstation",
+        "email": "contacto@saladstation.com",
+        "description": "<p>Salad Station ofrece ensaladas frescas y nutritivas para una alimentación saludable.</p>",
+        "offers": 3,
+        "offersData": [
+          {
+            "offerImage": "https://dummyimage.com/300x300",
+            "offerImageAltText": "Ensalada César",
+            "offerTitle": "Ensalada César",
+            "offerDescription": "Clásica ensalada César con crutones y aderezo casero.",
+            "offerPrice": 7.99
+          },
+          {
+            "offerImage": "https://dummyimage.com/300x300",
+            "offerImageAltText": "Ensalada vegana",
+            "offerTitle": "Ensalada vegana",
+            "offerDescription": "Ensalada vegana con quinoa, garbanzos y vegetales frescos.",
+            "offerPrice": 8.49
+          },
+          {
+            "offerImage": "https://dummyimage.com/300x300",
+            "offerImageAltText": "Wrap de ensalada",
+            "offerTitle": "Wrap de ensalada",
+            "offerDescription": "Wrap de ensalada con pollo a la parrilla.",
+            "offerPrice": 6.99
+          }
+        ]
+      },
+      {
+        "id": 12,
         "name": "Pizza Paradise",
         "slug": "pizza-paradise",
         "profileImage": "https://dummyimage.com/300x300",
         "headerImage": "https://dummyimage.com/1920x600",
-        "headerImageAltText": "Classic pizzeria",
-        "category": "Pizzeria",
-        "accessibility": ["Family friendly", "wheelchair accessible"],
-        "menu": ["gluten free", "vegetarian"],
+        "headerImageAltText": "Pizzería",
+        "category": "Restaurante",
+        "accessibility": ["Braille", "dog friendly", "wheelchair accessible"],
+        "menu": ["gluten free", "vegan", "diabetic"],
         "province": "Buenos Aires",
-        "city": "Tigre",
-        "address": "606 Pizza St",
+        "city": "Buenos Aires",
+        "address": "9090 Calle Cheese",
         "site": "https://pizzaparadise.com",
         "instagram": "pizzaparadise",
-        "email": "hello@pizzaparadise.com",
-        "description": "<p>Discover your slice of heaven at Pizza Paradise.</p>",
+        "email": "contacto@pizzaparadise.com",
+        "description": "<p>Pizza Paradise ofrece las pizzas más deliciosas y variadas de la ciudad.</p>",
+        "offers": 3,
+        "offersData": [
+          {
+            "offerImage": "https://dummyimage.com/300x300",
+            "offerImageAltText": "Pizza margarita",
+            "offerTitle": "Pizza margarita",
+            "offerDescription": "Clásica pizza margarita con albahaca fresca.",
+            "offerPrice": 9.99
+          },
+          {
+            "offerImage": "https://dummyimage.com/300x300",
+            "offerImageAltText": "Pizza vegana",
+            "offerTitle": "Pizza vegana",
+            "offerDescription": "Pizza vegana con queso de almendras y vegetales frescos.",
+            "offerPrice": 10.49
+          },
+          {
+            "offerImage": "https://dummyimage.com/300x300",
+            "offerImageAltText": "Calzone",
+            "offerTitle": "Calzone",
+            "offerDescription": "Delicioso calzone relleno de queso y jamón.",
+            "offerPrice": 8.99
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "name": "Coffee Corner",
+        "slug": "coffee-corner",
+        "profileImage": "https://dummyimage.com/300x300",
+        "headerImage": "https://dummyimage.com/1920x600",
+        "headerImageAltText": "Cafetería",
+        "category": "Cafetería",
+        "accessibility": ["Braille", "dog friendly", "wheelchair accessible"],
+        "menu": ["gluten free", "vegan", "diabetic"],
+        "province": "Buenos Aires",
+        "city": "Buenos Aires",
+        "address": "1010 Calle Java",
+        "site": "https://coffeecorner.com",
+        "instagram": "coffeecorner",
+        "email": "contacto@coffeecorner.com",
+        "description": "<p>Coffee Corner ofrece un ambiente acogedor y el mejor café de la ciudad.</p>",
         "offers": 2,
         "offersData": [
-            {
-                "offerImage": "https://dummyimage.com/300x300",
-                "offerImageAltText": "Gluten Free Pizza",
-                "offerTitle": "Gluten Free Pizza",
-                "offerDescription": "Delicious gluten free pizza.",
-                "offerPrice": 10.00
-            },
-            {
-                "offerImage": "https://dummyimage.com/300x300",
-                "offerImageAltText": "Vegetarian Pizza",
-                "offerTitle": "Vegetarian Pizza",
-                "offerDescription": "Healthy and tasty vegetarian pizza.",
-                "offerPrice": 9.00
-            }
+          {
+            "offerImage": "https://dummyimage.com/300x300",
+            "offerImageAltText": "Café latte",
+            "offerTitle": "Café latte",
+            "offerDescription": "Café latte cremoso y aromático.",
+            "offerPrice": 3.49
+          },
+          {
+            "offerImage": "https://dummyimage.com/300x300",
+            "offerImageAltText": "Café vegano",
+            "offerTitle": "Café vegano",
+            "offerDescription": "Café vegano con leche de almendras.",
+            "offerPrice": 3.99
+          }
         ]
-    },
-    {
+      },
+      {
+        "id": 14,
+        "name": "Bistro Bella",
+        "slug": "bistro-bella",
+        "profileImage": "https://dummyimage.com/300x300",
+        "headerImage": "https://dummyimage.com/1920x600",
+        "headerImageAltText": "Bistró",
+        "category": "Restaurante",
+        "accessibility": ["Braille", "dog friendly", "wheelchair accessible"],
+        "menu": ["gluten free", "vegan", "diabetic"],
+        "province": "Buenos Aires",
+        "city": "Buenos Aires",
+        "address": "1111 Calle Gourmet",
+        "site": "https://bistrobella.com",
+        "instagram": "bistrobella",
+        "email": "contacto@bistrobella.com",
+        "description": "<p>Bistro Bella combina la elegancia y la comida deliciosa en un solo lugar.</p>",
+        "offers": 3,
+        "offersData": [
+          {
+            "offerImage": "https://dummyimage.com/300x300",
+            "offerImageAltText": "Risotto de hongos",
+            "offerTitle": "Risotto de hongos",
+            "offerDescription": "Risotto cremoso con una mezcla de hongos silvestres.",
+            "offerPrice": 13.99
+          },
+          {
+            "offerImage": "https://dummyimage.com/300x300",
+            "offerImageAltText": "Plato vegano",
+            "offerTitle": "Plato vegano",
+            "offerDescription": "Plato vegano con tofu marinado y vegetales al wok.",
+            "offerPrice": 12.49
+          },
+          {
+            "offerImage": "https://dummyimage.com/300x300",
+            "offerImageAltText": "Postre de frutas",
+            "offerTitle": "Postre de frutas",
+            "offerDescription": "Delicioso postre de frutas de temporada.",
+            "offerPrice": 6.99
+          }
+        ]
+      },
+      {
         "id": 15,
+        "name": "Grill Master",
+        "slug": "grill-master",
+        "profileImage": "https://dummyimage.com/300x300",
+        "headerImage": "https://dummyimage.com/1920x600",
+        "headerImageAltText": "Parrilla",
+        "category": "Restaurante",
+        "accessibility": ["Braille", "dog friendly", "wheelchair accessible"],
+        "menu": ["gluten free", "vegan", "diabetic"],
+        "province": "Buenos Aires",
+        "city": "Buenos Aires",
+        "address": "1212 Calle BBQ",
+        "site": "https://grillmaster.com",
+        "instagram": "grillmaster",
+        "email": "contacto@grillmaster.com",
+        "description": "<p>Grill Master es el lugar para disfrutar de las mejores carnes a la parrilla.</p>",
+        "offers": 2,
+        "offersData": [
+          {
+            "offerImage": "https://dummyimage.com/300x300",
+            "offerImageAltText": "Costillas de cerdo",
+            "offerTitle": "Costillas de cerdo",
+            "offerDescription": "Costillas de cerdo a la parrilla con salsa BBQ.",
+            "offerPrice": 14.99
+          },
+          {
+            "offerImage": "https://dummyimage.com/300x300",
+            "offerImageAltText": "Chorizo a la parrilla",
+            "offerTitle": "Chorizo a la parrilla",
+            "offerDescription": "Chorizo a la parrilla con chimichurri.",
+            "offerPrice": 7.99
+          }
+        ]
+      },
+      {
+        "id": 16,
         "name": "Smoothie Spot",
         "slug": "smoothie-spot",
         "profileImage": "https://dummyimage.com/300x300",
         "headerImage": "https://dummyimage.com/1920x600",
-        "headerImageAltText": "Colorful smoothie shop",
-        "category": "Smoothie Shop",
-        "accessibility": ["Pet friendly", "wheelchair accessible"],
-        "menu": ["vegan", "gluten free"],
-        "province": "Misiones",
-        "city": "Posadas",
-        "address": "707 Smoothie Blvd",
+        "headerImageAltText": "Tienda de batidos",
+        "category": "Cafetería",
+        "accessibility": ["Braille", "dog friendly", "wheelchair accessible"],
+        "menu": ["gluten free", "vegan", "diabetic"],
+        "province": "Buenos Aires",
+        "city": "Buenos Aires",
+        "address": "1313 Calle Berry",
         "site": "https://smoothiespot.com",
         "instagram": "smoothiespot",
-        "email": "info@smoothiespot.com",
-        "description": "<p>Refresh yourself with our delicious smoothies.</p>",
+        "email": "contacto@smoothiespot.com",
+        "description": "<p>Smoothie Spot ofrece batidos frescos y saludables hechos al momento.</p>",
         "offers": 3,
         "offersData": [
-            {
-                "offerImage": "https://dummyimage.com/300x300",
-                "offerImageAltText": "Berry Blast Smoothie",
-                "offerTitle": "Berry Blast Smoothie",
-                "offerDescription": "A refreshing berry smoothie.",
-                "offerPrice": 5.00
-            },
-            {
-                "offerImage": "https://dummyimage.com/300x300",
-                "offerImageAltText": "Green Detox Smoothie",
-                "offerTitle": "Green Detox Smoothie",
-                "offerDescription": "A healthy green smoothie.",
-                "offerPrice": 5.50
-            },
-            {
-                "offerImage": "https://dummyimage.com/300x300",
-                "offerImageAltText": "Tropical Smoothie",
-                "offerTitle": "Tropical Smoothie",
-                "offerDescription": "A taste of the tropics in a smoothie.",
-                "offerPrice": 6.00
-            }
+          {
+            "offerImage": "https://dummyimage.com/300x300",
+            "offerImageAltText": "Batido de fresa",
+            "offerTitle": "Batido de fresa",
+            "offerDescription": "Batido de fresa con leche de almendras.",
+            "offerPrice": 5.99
+          },
+          {
+            "offerImage": "https://dummyimage.com/300x300",
+            "offerImageAltText": "Batido vegano",
+            "offerTitle": "Batido vegano",
+            "offerDescription": "Batido vegano con espinacas, plátano y aguacate.",
+            "offerPrice": 6.49
+          },
+          {
+            "offerImage": "https://dummyimage.com/300x300",
+            "offerImageAltText": "Batido tropical",
+            "offerTitle": "Batido tropical",
+            "offerDescription": "Batido tropical con mango, piña y coco.",
+            "offerPrice": 6.99
+          }
         ]
-    },
-    {
-        "id": 16,
-        "name": "Steak House",
-        "slug": "steak-house",
-        "profileImage": "https://dummyimage.com/300x300",
-        "headerImage": "https://dummyimage.com/1920x600",
-        "headerImageAltText": "Cozy steak house",
-        "category": "Steakhouse",
-        "accessibility": ["Wheelchair accessible", "family friendly"],
-        "menu": ["gluten free", "diabetic"],
-        "province": "Salta",
-        "city": "Salta",
-        "address": "808 Steak St",
-        "site": "https://steakhouse.com",
-        "instagram": "steakhouse",
-        "email": "hello@steakhouse.com",
-        "description": "<p>Enjoy our prime cuts of steak cooked to perfection.</p>",
-        "offers": 2,
-        "offersData": [
-            {
-                "offerImage": "https://dummyimage.com/300x300",
-                "offerImageAltText": "Grilled Steak",
-                "offerTitle": "Grilled Steak",
-                "offerDescription": "Perfectly grilled steak.",
-                "offerPrice": 15.00
-            },
-            {
-                "offerImage": "https://dummyimage.com/300x300",
-                "offerImageAltText": "Gluten Free Salad",
-                "offerTitle": "Gluten Free Salad",
-                "offerDescription": "Fresh and tasty gluten free salad.",
-                "offerPrice": 6.00
-            }
-        ]
-    },
-    {
-        "id": 17,
-        "name": "Taco Fiesta",
-        "slug": "taco-fiesta",
-        "profileImage": "https://dummyimage.com/300x300",
-        "headerImage": "https://dummyimage.com/1920x600",
-        "headerImageAltText": "Lively taco restaurant",
-        "category": "Mexican Restaurant",
-        "accessibility": ["Family friendly", "wheelchair accessible"],
-        "menu": ["gluten free", "vegan"],
-        "province": "Buenos Aires",
-        "city": "Quilmes",
-        "address": "909 Taco St",
-        "site": "https://tacofiesta.com",
-        "instagram": "tacofiesta",
-        "email": "info@tacofiesta.com",
-        "description": "<p>Join the fiesta with our amazing tacos.</p>",
-        "offers": 3,
-        "offersData": [
-            {
-                "offerImage": "https://dummyimage.com/300x300",
-                "offerImageAltText": "Vegan Tacos",
-                "offerTitle": "Vegan Tacos",
-                "offerDescription": "Delicious and healthy vegan tacos.",
-                "offerPrice": 7.00
-            },
-            {
-                "offerImage": "https://dummyimage.com/300x300",
-                "offerImageAltText": "Gluten Free Tacos",
-                "offerTitle": "Gluten Free Tacos",
-                "offerDescription": "Tasty and safe gluten free tacos.",
-                "offerPrice": 7.50
-            },
-            {
-                "offerImage": "https://dummyimage.com/300x300",
-                "offerImageAltText": "Spicy Salsa",
-                "offerTitle": "Spicy Salsa",
-                "offerDescription": "Add some heat with our spicy salsa.",
-                "offerPrice": 2.00
-            }
-        ]
-    }
+      }
   ]
-  
