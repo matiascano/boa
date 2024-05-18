@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boa - Buscador de ofertas accesible</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
@@ -20,24 +20,24 @@
                 <option value="Mar del Plata" >San Bernardo</option>
             </select>
         </div>
-        <button id="btnOpen" class="menuPrincipal__controlOpen u-hiddeDesktop" aria-expanded="false" aria-labelledby="nav-label"><i class="fa fa-bars" aria-hidden="true"></i></button>
+        <button id="btnOpen" class="menuPrincipal__controlOpen u-hiddeDesktop" aria-expanded="false" aria-labelledby="nav-label"><span class="mdi mdi-menu"></span></button>
         <div class="menuPrincipal__wrappItems" data-state="close" role="dialog">
-            <button id="btnClose" class="menuPrincipal__controlClose u-hiddeDesktop"  aria-label="Close"><i class="fa fa-close" aria-hidden="true"></i></button>
+            <button id="btnClose" class="menuPrincipal__controlClose u-hiddeDesktop"  aria-label="Close"><span class="mdi mdi-close"></span></button>
             <ul class="menuPrincipal__items">
                 <li class="menuPrincipal__item">
-                    <a href="./index.html" class="menuPrincipal__link"><i class="menuPrincipal__icon fa fa-home" aria-hidden="true"></i> Inicio</a>
+                    <a href="./index.html" class="menuPrincipal__link"><span class="mdi mdi-home"></span> Inicio</a>
                 </li>
                 <li class="menuPrincipal__item">
-                    <a href="./mapa.html" class="menuPrincipal__link"><i class="menuPrincipal__icon fa fa-map-marker" aria-hidden="true"></i> Mapa de ofertas</a>
+                    <a href="./mapa.html" class="menuPrincipal__link"><span class="mdi mdi-map"></span> Mapa de ofertas</a>
                 </li>
                 <li class="menuPrincipal__item">
-                    <a href="./faqs.html" class="menuPrincipal__link"><i class="menuPrincipal__icon fa fa-question" aria-hidden="true"></i> Preguntas frecuentes</a>
+                    <a href="./index.html#faqs" class="menuPrincipal__link"><span class="mdi mdi-frequently-asked-questions"></span> Preguntas Frecuentes</a>
                 </li>
                 <li class="menuPrincipal__item">
-                    <a href="./registro.html" class="menuPrincipal__link"><i class="menuPrincipal__icon fa fa-user-plus" aria-hidden="true"></i> Registrarse</a>
+                    <a href="./registro.html" class="menuPrincipal__link"><span class="mdi mdi-account-plus"></span> Registrarse</a>
                 </li>
                 <li class="menuPrincipal__item">
-                    <a href="./login.html" class="menuPrincipal__link"><i class="menuPrincipal__icon fa fa-sign-in" aria-hidden="true"></i> Ingresar</a>
+                    <a href="./login.html" class="menuPrincipal__link"><span class="mdi mdi-login"></span>Ingresar</a>
                 </li>
             </ul>
         </div>
@@ -63,95 +63,15 @@
         </section>
         <section class="lastPublications">
             <h2 class="lastPublications__title">Últimas publicaciones</h2>
-            <div class="cards cards--ani">
-                    <a href="#" class="card" role="article">
-                    <header class="card__header">
-                        <img src="./assets/img/fotoOhMora.webp" alt="Perona con que sostiene en una mano un pote de helado de un kilo con el logo de Oh Mora y en la otra una cuchara de servir helados con una bocha de helado de dulce de leche." class="card__image">
-                        <p class="card__category">Heladría</p>
-                    </header>
-                    <div class="card__body">
-                        <h3 class="card__title">Oh Mora!</h3>
-                        <p class="card__description">¡Preparate para un viaje de sabor con nuestros helados artesanales! Con ingredientes cuidadosamente seleccionados. ¡Descubrí tu sabor favorito!</p>
-                    </div>
-                    <footer class="card__footer">
-                        <ul class="card__services">
-                            <li class="card__service"><i class="fa fa-american-sign-language-interpreting" aria-hidden="true"></i></li>
-                            <li class="card__service"><i class="fa fa-braille" aria-hidden="true"></i></li>
-                            <li class="card__service"><i class="fa fa-blind" aria-hidden="true"></i></li>
-                        </ul>
-                    </footer>
-                </a>
-                <a href="#" class="card" role="article">
-                    <header class="card__header">
-                        <img src="./assets/img/fotoLoveMyGift.webp" alt="Una pareja de un hombre regalandole una caja con forma de corazón a una mucjer que lo está besando y en su mano tiene 3 globos rojos en forma de corazón, y la imagen tiene un texto que dice: más que un regalo." class="card__image">
-                        <p class="card__category">Regalería</p>
-                    </header>
-                    <div class="card__body">
-                        <h3 class="card__title">Love My Gift</h3>
-                        <p class="card__description">Descubrí sorpresas súper originales. 🎁 Más que un regalo.</p>
-                    </div>
-                    <footer class="card__footer">
-                        <ul class="card__services">
-                            <li class="card__service"><i class="fa fa-american-sign-language-interpreting" aria-hidden="true"></i></li>
-                            <li class="card__service"><i class="fa fa-braille" aria-hidden="true"></i></li>
-                            <li class="card__service"><i class="fa fa-blind" aria-hidden="true"></i></li>
-                        </ul>
-                    </footer>
-                </a>
-                <a href="#" class="card" role="article">
-                    <header class="card__header">
-                        <img src="./assets/img/fotoTorombolo.webp" alt="Una mano sosteniendo la tapa de un sandwich de hamburguesa completa, con queso derretido, tomate, lechuga y papas fritas." class="card__image">
-                        <p class="card__category">Hamburguesería</p>
-                    </header>
-                    <div class="card__body">
-                        <h3 class="card__title">Torombolo</h3>
-                        <p class="card__description">Somos un Sandwich Bar que abrió sus puertas por los años ochenta, luego cerró y ahora abrió nuevamente.</p>
-                    </div>
-                    <footer class="card__footer">
-                        <ul class="card__services">
-                            <li class="card__service"><i class="fa fa-american-sign-language-interpreting" aria-hidden="true"></i></li>
-                            <li class="card__service"><i class="fa fa-braille" aria-hidden="true"></i></li>
-                            <li class="card__service"><i class="fa fa-blind" aria-hidden="true"></i></li>
-                        </ul>
-                    </footer>
-                </a>
-                <a href="#" class="card" role="article">
-                    <header class="card__header">
-                        <img src="./assets/img/fotoChiquiEmpanadas.webp" alt="Foto de empanadas horneadas con leves quemaduras y de fondo se ve de forma borrosa leños encendidos" class="card__image">
-                        <p class="card__category">Empanadas</p>
-                    </header>
-                    <div class="card__body">
-                        <h3 class="card__title">Chiqui empanadas</h3>
-                        <p class="card__description">Somos Chiqui Empanadas y desde 2020 el fuego, la leña y los mejores productos son nuestros protagonistas a la hora de hacer pizzas y empanadas únicas.</p>
-                    </div>
-                    <footer class="card__footer">
-                        <ul class="card__services">
-                            <li class="card__service"><i class="fa fa-american-sign-language-interpreting" aria-hidden="true"></i></li>
-                            <li class="card__service"><i class="fa fa-braille" aria-hidden="true"></i></li>
-                            <li class="card__service"><i class="fa fa-blind" aria-hidden="true"></i></li>
-                        </ul>
-                    </footer>
-                </a>
-                <a href="#" class="card" role="article">
-                    <header class="card__header">
-                        <img src="./assets/img/fotoTratoriaVespoli.webp" alt="Foto primer plano de bandeja con porción de sorrentinos con salsa de tomate, salsa blanca y hojas de albahaca" class="card__image">
-                        <p class="card__category">Pastas</p>
-                    </header>
-                    <div class="card__body">
-                        <h3 class="card__title">Tratoria Napolitana Vespoli</h3>
-                        <p class="card__description">La Trattoria Napolitana Vespoli es un restaurante de comida italiana situado en la calle 3 de Febrero 3154 60 Casi Independencia, en Mar del Plata, Argentina. Este restaurante es conocido por ofrecer una deliciosa variedad de platos italianos, europeos y argentinos. Famosos pro crear los sorrentinos.</p>
-                    </div>
-                    <footer class="card__footer">
-                        <ul class="card__services">
-                            <li class="card__service"><i class="fa fa-american-sign-language-interpreting" aria-hidden="true"></i></li>
-                            <li class="card__service"><i class="fa fa-braille" aria-hidden="true"></i></li>
-                            <li class="card__service"><i class="fa fa-blind" aria-hidden="true"></i></li>
-                        </ul>
-                    </footer>
-                </a>
+            <div id="comercios-container" class="cards cards--ani">
+                <script src="./assets/js/comercios.js"></script>
+                <script>
+                    // Llamar a la función para generar las cards
+                    generateCommerceCards();
+                    </script>
             </div>
         </section>
-        <section class="faqs">
+        <section id="faqs" class="faqs">
             <h2 class="faqs__title">Preguntas Frecuentes</h2>
             <h3>Personas usuarias</h3>
             <div class="accordion">

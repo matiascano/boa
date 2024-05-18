@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boa - Buscador de ofertas accesible</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
@@ -20,24 +20,24 @@
                 <option value="Mar del Plata" >San Bernardo</option>
             </select>
         </div>
-        <button id="btnOpen" class="menuPrincipal__controlOpen u-hiddeDesktop" aria-expanded="false" aria-labelledby="nav-label"><i class="fa fa-bars" aria-hidden="true"></i></button>
+        <button id="btnOpen" class="menuPrincipal__controlOpen u-hiddeDesktop" aria-expanded="false" aria-labelledby="nav-label"><span class="mdi mdi-menu"></span></button>
         <div class="menuPrincipal__wrappItems" data-state="close" role="dialog">
-            <button id="btnClose" class="menuPrincipal__controlClose u-hiddeDesktop"  aria-label="Close"><i class="fa fa-close" aria-hidden="true"></i></button>
+            <button id="btnClose" class="menuPrincipal__controlClose u-hiddeDesktop"  aria-label="Close"><span class="mdi mdi-close"></span></button>
             <ul class="menuPrincipal__items">
                 <li class="menuPrincipal__item">
-                    <a href="./index.html" class="menuPrincipal__link"><i class="menuPrincipal__icon fa fa-home" aria-hidden="true"></i> Inicio</a>
+                    <a href="./index.html" class="menuPrincipal__link"><span class="mdi mdi-home"></span> Inicio</a>
                 </li>
                 <li class="menuPrincipal__item">
-                    <a href="./mapa.html" class="menuPrincipal__link"><i class="menuPrincipal__icon fa fa-map-marker" aria-hidden="true"></i> Mapa de ofertas</a>
+                    <a href="./mapa.html" class="menuPrincipal__link"><span class="mdi mdi-map"></span> Mapa de ofertas</a>
                 </li>
                 <li class="menuPrincipal__item">
-                    <a href="./faqs.html" class="menuPrincipal__link"><i class="menuPrincipal__icon fa fa-question" aria-hidden="true"></i> Preguntas frecuentes</a>
+                    <a href="./index.html#faqs" class="menuPrincipal__link"><span class="mdi mdi-frequently-asked-questions"></span> Preguntas Frecuentes</a>
                 </li>
                 <li class="menuPrincipal__item">
-                    <a href="./registro.html" class="menuPrincipal__link"><i class="menuPrincipal__icon fa fa-user-plus" aria-hidden="true"></i> Registrarse</a>
+                    <a href="./registro.html" class="menuPrincipal__link"><span class="mdi mdi-account-plus"></span> Registrarse</a>
                 </li>
                 <li class="menuPrincipal__item">
-                    <a href="./login.html" class="menuPrincipal__link"><i class="menuPrincipal__icon fa fa-sign-in" aria-hidden="true"></i> Ingresar</a>
+                    <a href="./login.html" class="menuPrincipal__link"><span class="mdi mdi-login"></span>Ingresar</a>
                 </li>
             </ul>
         </div>
