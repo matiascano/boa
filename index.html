@@ -6,7 +6,6 @@
     <title>Boa - Buscador de ofertas accesible</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/script.js"></script>
 </head>
 <body>
     <nav class="menuPrincipal">
@@ -62,10 +61,11 @@
         <section class="lastPublications">
             <h2 class="lastPublications__title">Últimas publicaciones</h2>
             <div id="comercios-container" class="cards cards--ani">
+                <script src="./assets/js/comercios.js"></script>
                 <script>
                     // Llamar a la función para generar las cards
                     generateCommerceCards();
-                </script>
+                    </script>
             </div>
         </section>
         <section id="faqs" class="faqs">
@@ -117,5 +117,6 @@
     <footer class="footerPrincipal">
         <p class="footerPrincipal__text">Hecho por el <strong>equipo 14</strong> para Codo a Codo.</p>
     </footer>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
