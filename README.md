@@ -11,14 +11,13 @@ Proyecto para el curso de **Fullstack Node JS** en **Codo a codo**. Comisión 24
 
 **Tutora:** Fabiana Ramirez Cuenca
 
-**Docente:** Talia Rodrigues
+**Docente:** Thalia Rodrigues
 
 ### Integrantes
 
-- Catriel Cabrera
-- Eleonora Martina Omentari Ongaro
-- Franco D'Angelo 
-- Matías Cano
+- Catriel Cabrera - [Repositorio individual](https://github.com/catriel458/BOA.git){:target="_blank"}
+- Franco D'Angelo - [Repositorio individual](https://github.com/Est133/BOA){:target="_blank"}
+- Matías Cano - [Repositorio individual](https://github.com/matiascano/boa){:target="_blank"}
 
 
 ## Idea
@@ -30,8 +29,8 @@ Registro de comerciantes que podrán publicar sus comercios, publicación de log
 
 ## Bibliotecas
 
-### ForkAwesome
-Fork de la famosa fuente de iconos y conjunto de herramientas CSS llamado Font Awesome. Se utliza en el proyecto para utilizar los íconos.
+### Material Design Icons
+Se utilizan los iconos de material design icons.
 
 
 
