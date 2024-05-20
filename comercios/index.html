@@ -83,9 +83,9 @@ const slug = urlParams.get('slug');
 function generateCommerceContent(commerce) {
     return `
         <header class="comercio__header">
-            <img src="${commerce.headerImage}" alt="${commerce.headerImageAltText}" class="comercio__photo">
+            <img src="../assets/img/${commerce.headerImage}" alt="${commerce.headerImageAltText}" class="comercio__photo">
             <div class="comercio__profile u-shadow">
-                <img src="${commerce.profileImage}" alt="${commerce.name}">
+                <img src="../assets/img/${commerce.profileImage}" alt="${commerce.name}">
             </div>
             <h2 class="comercio__title">${commerce.name} <span class="badge">${commerce.category}</span></h2>
             <ul class="comercio__services">
@@ -97,7 +97,7 @@ function generateCommerceContent(commerce) {
             <div class="carrousel carrousel--noTablet">
                 ${commerce.offersData.map(offer => `
                     <a class="card-small carrousel__item" href="#" role="article">
-                        <img src="${offer.offerImage}" alt="${offer.offerImageAltText}" class="card-small__image">
+                        <img src="../assets/img/${offer.offerImage}" alt="${offer.offerImageAltText}" class="card-small__image">
                         <h3 class="card-small__title">${offer.offerTitle}</h3>
                         <p class="card-small__text">${offer.offerDescription}</p>
                         <p class="card-small__footer">$${offer.offerPrice.toFixed(2)}</p>
