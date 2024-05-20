@@ -35,7 +35,7 @@ function generateCommerceCard(commerce) {
             </header>
             <div class="card__body">
                 <h3 class="card__title">${commerce.name}</h3>
-                <p class="card__description">${commerce.description}</p>
+                <div class="card__description">${commerce.description}</div>
             </div>
             <footer class="card__footer">
                 <ul class="card__services">

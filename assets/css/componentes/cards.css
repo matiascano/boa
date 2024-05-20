@@ -68,6 +68,10 @@
 
     .card__description{
         opacity: .6;
+        display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
     }
 
     .card__services{
