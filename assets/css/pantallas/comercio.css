@@ -72,6 +72,10 @@
     color: var(--secondary-900)
 }
 
+.comercio__description{
+    padding-inline: 2rem;
+}
+
 .comercio__services{
     list-style: none;
     display: flex;
