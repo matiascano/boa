@@ -414,8 +414,8 @@
       },
       {
         "id": 12,
-        "name": "Pizza Paradise",
-        "slug": "pizza-paradise",
+        "name": "Pizza Jack",
+        "slug": "pizza-jack",
         "profileImage": "https://dummyimage.com/300x300",
         "headerImage": "https://dummyimage.com/1920x600",
         "headerImageAltText": "Pizzería",
@@ -425,10 +425,10 @@
         "province": "Buenos Aires",
         "city": "Buenos Aires",
         "address": "9090 Calle Cheese",
-        "site": "https://pizzaparadise.com",
+        "site": "https://pizzajack.com",
         "instagram": "pizzaparadise",
-        "email": "contacto@pizzaparadise.com",
-        "description": "<p>Pizza Paradise ofrece las pizzas más deliciosas y variadas de la ciudad.</p>",
+        "email": "contacto@pizzajack.com",
+        "description": "<p>Pizza Jack ofrece las pizzas más deliciosas y variadas de la ciudad.</p>",
         "offers": 3,
         "offersData": [
           {
