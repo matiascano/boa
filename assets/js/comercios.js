@@ -58,3 +58,30 @@ async function generateCommerceCards() {
     }
 }
 
+// Función para generar la estructura HTML para cada card de los resultados
+function generateResultsCard(commerce) {
+    return `
+    <a class="card-small" href="./comercios/index.html?slug=${commerce.slug}" role="article">
+    <img src="./assets/img/${commerce.profileImage}" alt="${commerce.profileImageAltText}" class="card-small__image">
+        <h3 class="card-small__title">${commerce.name}</h3>
+        <p class="card-small__text">${commerce.category}</p>
+            <footer class="card-small__footer">
+                <ul class="lists">
+                    ${commerce.accessibility.map(service => `<li class="card__service"><span class="mdi ${getAccessibilityIcon(service)}"></span></li>`).join('')}
+                    ${commerce.menu.map(service => `<li class="card__service"><span class="mdi ${getAccessibilityIcon(service)}"></span></li>`).join('')}
+                </ul>
+            </footer>
+    </a>`;
+}
+
+//Funcion principal para generar y agregar cards de resultados
+async function generateResultsCards() {
+    const comerciosContainer = document.getElementById('comercios-container');
+    const data = await fetchData();
+    if (data) {
+        data.forEach(commerce => {
+            comerciosContainer.innerHTML += generateResultsCard(commerce);
+        });
+    }
+}
+
