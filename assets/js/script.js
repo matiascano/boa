@@ -11,8 +11,7 @@ function openMenu () {
     
     function closeMenu () {
         btnOpen.setAttribute('aria-expanded', 'false')
-        menu.setAttribute('data-state', 'close'),
-        btnOpen.focus()
+        menu.setAttribute('data-state', 'close')
 }
 
 btnOpen.addEventListener('click', openMenu)
