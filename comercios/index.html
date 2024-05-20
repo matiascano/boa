@@ -80,7 +80,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const slug = urlParams.get('slug');
 
 // Función para generar el contenido del comercio
-function generateCommerceContent(commerce) {
+function generateCommerceContent(commerce, randomCommerce, randomCommerce2, randomCommerce3) {
     return `
         <header class="comercio__header">
             <img src="../assets/img/${commerce.headerImage}" alt="${commerce.headerImageAltText}" class="comercio__photo">
@@ -89,7 +89,8 @@ function generateCommerceContent(commerce) {
             </div>
             <h2 class="comercio__title">${commerce.name} <span class="badge">${commerce.category}</span></h2>
             <ul class="comercio__services">
-                ${commerce.accessibility.map(service => `<li class="card-small__service"><i class="mdi ${getAccessibilityIcon(service)}"></i></li>`).join('')}
+                ${commerce.accessibility.map(service => `<li class="card-small__service"><span class="mdi ${getAccessibilityIcon(service)}"></span></li>`).join('')}
+                ${commerce.menu.map(service => `<li class="card-small__service"><span class="mdi ${getAccessibilityIcon(service)}"></span></li>`).join('')}
             </ul>
         </header>
         <section class="comercios__ofertas">
@@ -107,7 +108,7 @@ function generateCommerceContent(commerce) {
         </section>
         <div class="comercio__body">
             <h3 class="comercio__subtitle">Sobre ${commerce.name}</h3>
-            <p>${commerce.description}</p>
+            <section class="comercio__description">${commerce.description}</section>
         </div>
         <footer class="comercio__footer">
             <div class="comercio__details">
@@ -122,44 +123,40 @@ function generateCommerceContent(commerce) {
                     <li class="comercio__linksItem"><a href="mailto:${commerce.email}" title="Enviar un email" class="comercio__link"><i class="mdi mdi-email"></i> E-mail</a></li>
                 </ul>
             </div>
-            <div class="comercio__near">
-                        <h3 class="comercio__h3">Comercios cercanos</h3>
-                        <div class="comercio__cards cards--ani">
-                            <a class="card-small" href="#" role="article">
-                            <img src="../assets/img/logoOhMora.webp" alt="Logo de Oh Mora healderia" class="card-small__image">
-                            <h3 class="card-small__title">Oh Mora!</h3>
-                            <p class="card-small__text">Heladería</p>
-                            <footer class="card-small__footer">
-                                <ul class="lists">
-                                    <li class="item"><span class="mdi mdi-dog"></span></li>
-                                    <li class="item"><span class="mdi "mdi-sign-language"></span></li>
-                                    <li class="item"><span class="mdi mdi-barley-off"></span></li>
-                                </ul>
-                            </footer>
-                        </a>
-                        <a class="card-small" href="#" role="article">
-                            <img src="../assets/img/logoStarbucks.webp" alt="Logo de Love My Gift" class="card-small__image">
-                            <h3 class="card-small__title">Starbucks</h3>
-                            <p class="card-small__text">Cafetería</p>
+            <div class="comercio__near cards cards--ani">
+                        <h3 class="comercio__h3">Otros comercios</h3>
+                        <a class="card-small" href="./index.html?slug=${randomCommerce.slug}" role="article">
+                            <img src="../assets/img/${randomCommerce.profileImage}" alt="${randomCommerce.name}" class="card-small__image">
+                            <h3 class="card-small__title">${randomCommerce.name}</h3>
+                            <p class="card-small__text">${randomCommerce.category}</p>
                                 <footer class="card-small__footer">
                                     <ul class="lists">
-                                    <li class="item"><span class="mdi mdi-dog"></span></li>
-                                    <li class="item"><span class="mdi "mdi-sign-language"></span></li>
-                                    <li class="item"><span class="mdi mdi-barley-off"></span></li>
+                                        ${randomCommerce.accessibility.map(service => `<li class="card-small__service"><span class="mdi ${getAccessibilityIcon(service)}"></span></li>`).join('')}
+                                        ${randomCommerce.menu.map(service => `<li class="card-small__service"><span class="mdi ${getAccessibilityIcon(service)}"></span></li>`).join('')}
                                     </ul>
                                 </footer>
                         </a>
-                        <a class="card-small" href="#" role="article">
-                            <img src="../assets/img/logoChiquiEmpanadas.webp" alt="Logo de Chiqui Empanadas" class="card-small__image">
-                                    <p class="card-small__text">Empanadas</p>
-                                    <h3 class="card-small__title">Chiqui</h3>                                
-                                    <footer class="card-small__footer">
-                                        <ul class="lists">
-                                    <li class="item"><span class="mdi mdi-dog"></span></li>
-                                    <li class="item"><span class="mdi "mdi-sign-language"></span></li>
-                                    <li class="item"><span class="mdi mdi-barley-off"></span></li>
-                                        </ul>
-                                    </footer>
+                        <a class="card-small" href="./index.html?slug=${randomCommerce2.slug}" role="article">
+                            <img src="../assets/img/${randomCommerce2.profileImage}" alt="${randomCommerce2.name}" class="card-small__image">
+                            <h3 class="card-small__title">${randomCommerce2.name}</h3>
+                            <p class="card-small__text">${randomCommerce2.category}</p>
+                                <footer class="card-small__footer">
+                                    <ul class="lists">
+                                        ${randomCommerce2.accessibility.map(service => `<li class="card-small__service"><span class="mdi ${getAccessibilityIcon(service)}"></span></li>`).join('')}
+                                        ${randomCommerce2.menu.map(service => `<li class="card-small__service"><span class="mdi ${getAccessibilityIcon(service)}"></span></li>`).join('')}
+                                    </ul>
+                                </footer>
+                        </a>
+                        <a class="card-small" href="./index.html?slug=${randomCommerce3.slug}" role="article">
+                            <img src="../assets/img/${randomCommerce3.profileImage}" alt="${randomCommerce3.name}" class="card-small__image">
+                            <h3 class="card-small__title">${randomCommerce3.name}</h3>
+                            <p class="card-small__text">${randomCommerce3.category}</p>
+                                <footer class="card-small__footer">
+                                    <ul class="lists">
+                                        ${randomCommerce3.accessibility.map(service => `<li class="card-small__service"><span class="mdi ${getAccessibilityIcon(service)}"></span></li>`).join('')}
+                                        ${randomCommerce3.menu.map(service => `<li class="card-small__service"><span class="mdi ${getAccessibilityIcon(service)}"></span></li>`).join('')}
+                                    </ul>
+                                </footer>
                         </a>
                     </div>
                 </div>
@@ -167,15 +164,37 @@ function generateCommerceContent(commerce) {
     `;
 }
 
-// Función principal para cargar el contenido del comercio
+// Función principal para cargar el contenido del comercio y 3 comercios random distintos al comercio seleccionado
 async function loadCommerceContent() {
     const data = await fetchData();
-    const commerce = data.find(item => item.slug === slug);
-    if (commerce) {
-        const commerceDetails = document.getElementById('commerce-details');
-        commerceDetails.innerHTML = generateCommerceContent(commerce);
+    if (data) {
+        const commerce = data.find(item => item.slug === slug);
+        if (commerce) {
+            let randomCommerce = getRandomCommerce(data, commerce);
+            let randomCommerce2 = getRandomCommerce(data, commerce);
+            let randomCommerce3 = getRandomCommerce(data, commerce);
+            if (randomCommerce === randomCommerce2) {
+                randomCommerce2 = getRandomCommerce(data, commerce);
+            }else if (randomCommerce3 === randomCommerce2 || randomCommerce3 === randomCommerce) {
+                randomCommerce3 = getRandomCommerce(data, commerce); 
+            }
+            console.log(randomCommerce, randomCommerce2, randomCommerce3);
+            document.getElementById('commerce-details').innerHTML = generateCommerceContent(commerce, randomCommerce, randomCommerce2, randomCommerce3);
+        } else {
+            console.error('Comercio no encontrado:', slug);
+        }
     } else {
-        console.error('Comercio no encontrado');
+        console.error('Error al leer el archivo JSON');
+    }
+}
+
+function getRandomCommerce(data, commerce) {
+    const randomIndex = Math.floor(Math.random() * data.length);
+    const randomShop = data[randomIndex];
+    if (randomShop.slug !== commerce.slug) {
+        return randomShop;
+    } else {
+        return getRandomCommerce(data, commerce);
     }
 }
 
