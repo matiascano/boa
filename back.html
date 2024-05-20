@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boa - Buscador de ofertas accesible</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
+    <!-- Include stylesheet -->
+<link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
@@ -135,9 +137,9 @@
                     <input type="email" name="mail" id="mail" class="form__input" required>
                     <div class="form__textHelp">Este es un texto de ayuda</div>
                 </div>
-                <div class="form__block">
+                <div class="u-paddingBottom">
                     <label class="form__label" for="description">Descripción</label>
-                    <textarea name="description" id="description" rows="5" class="form__textarea"></textarea>
+                    <div name="description" id="description"  class="form_wysiwyg"></div>
                     <div class="form__textHelp">Este es un texto de ayuda</div>
                 </div>
                 <button class="form__button form__button--primary" type="submit">Publicar comercio</button>
@@ -146,6 +148,15 @@
             </form>
         </div>
     </main>
+    <!-- Include the Quill library -->
+<script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
+
+<!-- Initialize Quill editor -->
+<script>
+  const quill = new Quill('#description', {
+    theme: 'snow'
+  });
+</script>
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
