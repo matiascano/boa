@@ -59,56 +59,13 @@
     </header>
     <main>
         <section class="lastPublications">
-            <h2 class="lastPublications__title">Encontramos estos comercios en tu zona</h2>
-            <div class="cards cards--ani">
-                <a class="card-small" href="#" role="article">
-                        <img src="./assets/img/logoLoveMyGift.webp" alt="Logo de Love My Gift" class="card-small__image">
-                            <p class="card-small__text">Regalería</p>
-                            <h3 class="card-small__title">Love My Gift</h3>
-                        <footer class="card-small__footer">
-                            <ul class="lists">
-                                <li class="item"><i class="fa fa-american-sign-language-interpreting" aria-hidden="true"></i></li>
-                                <li class="item"><i class="fa fa-braille" aria-hidden="true"></i></li>
-                                <li class="item"><i class="fa fa-blind" aria-hidden="true"></i></li>
-                            </ul>
-                        </footer>
-                </a>
-                <a class="card-small" href="#" role="article">
-                        <img src="./assets/img/logoChiquiEmpanadas.webp" alt="Logo de Chiqu" class="card-small__image">
-                            <p class="card-small__text">Empanadas</p>
-                            <h3 class="card-small__title">Chiqui</h3>
-                        <footer class="card-small__footer">
-                            <ul class="lists">
-                                <li class="item"><i class="fa fa-american-sign-language-interpreting" aria-hidden="true"></i></li>
-                                <li class="item"><i class="fa fa-braille" aria-hidden="true"></i></li>
-                                <li class="item"><i class="fa fa-blind" aria-hidden="true"></i></li>
-                            </ul>
-                        </footer>
-                </a>
-                <a class="card-small" href="#" role="article">
-                        <img src="./assets/img/logoOhMora.webp" alt="Logo de Oh Mora" class="card-small__image">
-                            <p class="card-small__text">Heladería</p>
-                            <h3 class="card-small__title">Oh Mora</h3>
-                        <footer class="card-small__footer">
-                            <ul class="lists">
-                                <li class="item"><i class="fa fa-american-sign-language-interpreting" aria-hidden="true"></i></li>
-                                <li class="item"><i class="fa fa-braille" aria-hidden="true"></i></li>
-                                <li class="item"><i class="fa fa-blind" aria-hidden="true"></i></li>
-                            </ul>
-                        </footer>
-                </a>
-                <a class="card-small" href="#" role="article">
-                        <img src="./assets/img/logoStarbucks.webp" alt="Logo de logoStarbucks" class="card-small__image">
-                            <p class="card-small__text">Cafetería</p>
-                            <h3 class="card-small__title">logoStarbucks</h3>
-                        <footer class="card-small__footer">
-                            <ul class="lists">
-                                <li class="item"><i class="fa fa-american-sign-language-interpreting" aria-hidden="true"></i></li>
-                                <li class="item"><i class="fa fa-braille" aria-hidden="true"></i></li>
-                                <li class="item"><i class="fa fa-blind" aria-hidden="true"></i></li>
-                            </ul>
-                        </footer>
-                </a>
+            <h2 class="lastPublications__title">Encontramos estos comercios</h2>
+            <div id="comercios-container" class="cards cards--ani">
+                <script src="./assets/js/comercios.js"></script>
+                <script>
+                    // Llamar a la función para generar las cards
+                    generateResultsCards();
+                    </script>
             </div>
         </section>
     </main>
