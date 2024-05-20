@@ -1,5 +1,6 @@
 const btnOpen = document.querySelector('#btnOpen')
 const btnClose = document.querySelector('#btnClose')
+const link = document.querySelectorAll('.menuPrincipal__link')
 const menu = document.querySelector('.menuPrincipal__wrappItems')
 
 function openMenu () {
@@ -10,9 +11,9 @@ function openMenu () {
     
     function closeMenu () {
         btnOpen.setAttribute('aria-expanded', 'false')
-        menu.setAttribute('data-state', 'close'),
-        btnOpen.focus()
+        menu.setAttribute('data-state', 'close')
 }
 
 btnOpen.addEventListener('click', openMenu)
 btnClose.addEventListener('click', closeMenu)
+link.addEventListener('click', closeMenu)

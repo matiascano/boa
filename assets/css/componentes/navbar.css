@@ -33,13 +33,13 @@
 
 .menuPrincipal__wrappItems{
     background-color: var(--primary-200);
-    position: absolute;
+    position: fixed;
     right:0;
     top: -200vh;
     padding:4rem 1rem 2rem;
     height: 100dvh;
     opacity: 0;
-    z-index: 2;
+    z-index: 200;
     transition: opacity 500ms ease-in-out;
 }
 
@@ -115,6 +115,7 @@
         height: auto;
         opacity: 1;
         transition: none;
+        position:absolute
     }
 
     .menuPrincipal__items{
