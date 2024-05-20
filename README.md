@@ -31,7 +31,11 @@ Registro de comerciantes que podrán publicar sus comercios, publicación de log
 
 ### Material Design Icons
 Se utilizan los iconos de material design icons.
+[Sitio web de Material Design Icons](https://pictogrammers.com){:target="_blank"}
 
+### Quilljs
+Se utilizá la biblioteca Quilljs para poner texto enriquecido en los formularios mediante un WYSISWYG
+[Sitio Web de Quilljs](https://quilljs.com){:target="_blank"}
 
 
 

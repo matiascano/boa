@@ -97,6 +97,7 @@
   overflow: hidden;
   background-color: var(--secondary-50);
   box-shadow: 1px 3px 3px rgba(0, 10, 20, 0.06);
+  transition: all 500ms ease-in-out ;
 }
 
 .card-small__image{
