@@ -22,6 +22,10 @@
     transition: all 500ms ease-in-out ;
   }
 
+  .card  p{
+    margin-bottom: 0;
+  }
+
   .cards--ani:hover > *,
   .cards--ani:focus-within > * {
     filter: grayscale(1);
@@ -44,7 +48,8 @@
     .card__category{
         font-size: .8rem;
         text-align: right;
-        padding:.5rem 1rem;
+        padding-inline:1rem;
+        margin-top: .5rem;
     }
 
     .card__body,
@@ -78,7 +83,7 @@
         list-style: none;
         display: flex;
         flex-direction: row;
-        gap: 1rem
+        gap: 1rem;
     }
 
 
@@ -87,7 +92,7 @@
 .card-small{
   display:grid;
   grid-template-columns: 80px 1fr 1fr;
-  grid-template-rows:1fr auto 1fr;
+  grid-template-rows:1fr auto auto;
   grid-column-gap: 1rem;
   color:inherit;
   min-width: 300px;
@@ -104,9 +109,13 @@
   transition: all 500ms ease-in-out ;
 }
 
+.card-small p{
+  margin-bottom: 0;
+}
+
 .card-small__image{
   grid-area: image;
-  height: 100%;
+  height: auto;
   aspect-ratio: 1;
   object-fit: cover;
 }
