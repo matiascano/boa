@@ -22,6 +22,10 @@
     transition: all 500ms ease-in-out ;
   }
 
+  .card  p{
+    margin-bottom: 0;
+  }
+
   .cards--ani:hover > *,
   .cards--ani:focus-within > * {
     filter: grayscale(1);
@@ -44,7 +48,8 @@
     .card__category{
         font-size: .8rem;
         text-align: right;
-        padding:.5rem 1rem;
+        padding-inline:1rem;
+        margin-top: .5rem;
     }
 
     .card__body,
@@ -78,7 +83,7 @@
         list-style: none;
         display: flex;
         flex-direction: row;
-        gap: 1rem
+        gap: 1rem;
     }
 
 
