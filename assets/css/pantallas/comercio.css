@@ -98,6 +98,35 @@
     padding: 1rem;
 }
 
+.mapComercio > :first-child {
+    width: 100%;
+  }
+  .mapComercio > img {  
+    height: auto;
+  } 
+  @supports (--custom:property) {
+    .mapComercio {
+      position: relative;
+    }
+    .mapComercio::before {
+      content: "";
+      display: block;
+      padding-bottom: calc(100% / (16/9));
+    }  
+    .mapComercio > :first-child {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+    }  
+
+    .mapComercio--full::before{
+      content: "";
+      display: block;
+      padding-bottom: 100%;
+    }
+  }
+
 @media screen and (min-width: 768px) {
 
     .comercio__footer{
@@ -117,7 +146,7 @@
         margin-bottom: .6rem;
     }
 
-    .mapHome{
+    .mapComercio{
         aspect-ratio: 6/4;
         margin-bottom: 2rem;
     }
