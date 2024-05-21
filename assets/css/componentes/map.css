@@ -45,7 +45,7 @@
 
     .mapHome--full{
       aspect-ratio: auto;
-      height: 100vh;
+      height: 100%;
       width: 100vw;
     }
     
@@ -70,7 +70,7 @@
 @media screen and (min-width: 768px) {
 
   .mapHome{
-    aspect-ratio: 16/3;
+    aspect-ratio: 16/6;
 }
 
   .mapHome--full{
