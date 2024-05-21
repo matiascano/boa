@@ -87,7 +87,7 @@
 }
 
 .comercio__body{
-    max-width:1000px;
+    width:80vw;
     margin: 2rem auto;
 }
 
@@ -144,6 +144,11 @@
 
     .comercio__subtitle{
         margin-bottom: .6rem;
+    }
+
+    .comercios__ofertas, .comercio__footer{
+        width: 80vw;
+        margin-inline: auto;
     }
 
     .mapComercio{
