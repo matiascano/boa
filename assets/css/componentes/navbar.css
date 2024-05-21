@@ -93,7 +93,8 @@
 @media screen and (min-width: 600px) {
     
     .menuPrincipal{
-        padding: 1rem 2rem
+        padding: 1rem 2rem;
+        position: relative;
     }
     
 }
@@ -111,11 +112,12 @@
         position: relative;
         right: 0;
         top: 0;
-        padding:0;
-        height: auto;
+        padding:0 1rem;
+        height: 100%;
         opacity: 1;
         transition: none;
-        position:absolute
+        position:absolute;
+        align-items: center;
     }
 
     .menuPrincipal__items{

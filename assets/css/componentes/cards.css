@@ -125,6 +125,7 @@
   font-weight: 700;
   font-size: 1rem;
   padding: 0 .5rem;
+  align-self: center;
 }
 
 .card-small__text{
@@ -168,4 +169,5 @@
   font-size: 1rem;
   width: 100%;
   padding-inline: .5rem;
+  align-self: center;
 }
