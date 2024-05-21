@@ -37,5 +37,8 @@ Se utilizan los iconos de material design icons.
 Se utilizá la biblioteca Quilljs para poner texto enriquecido en los formularios mediante un WYSISWYG
 [Sitio Web de Quilljs](https://quilljs.com){:target="_blank"}
 
+### Google Fonts
+Se utiliza la familia tipográfica ["Cantarell"](https://fonts.google.com/specimen/Cantarell){:target="_blank} para los párrafos y la tipografía ["Fjalla One"](https://fonts.google.com/specimen/Fjalla+One){:target="_blank} para los títulos.
+
 
 
