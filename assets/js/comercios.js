@@ -22,10 +22,12 @@ function getAccessibilityIcon(service) {
         "vegan": "mdi-sprout", 
         "diabetic" : "mdi-diabetes" 
     };
-    return icons[service] || false;
+    if (icons[service]){
+        return `<li class="card__service"><span class="mdi ${icons[service]}"></span></li>` || false;
+    }
 }
 
-// Función para generar la estructura HTML para cada car del comercio
+// Función para generar la estructura HTML para cada card del comercio
 function generateCommerceCard(commerce) {
     return `
         <a href="./comercios/index.html?slug=${commerce.slug}" class="card" role="article">
@@ -39,8 +41,8 @@ function generateCommerceCard(commerce) {
             </div>
             <footer class="card__footer">
                 <ul class="card__services">
-                    ${commerce.accessibility.map(service => `<li class="card__service"><span class="mdi ${getAccessibilityIcon(service)}"></span></li>`).join('')}
-                    ${commerce.menu.map(service => `<li class="card__service"><span class="mdi ${getAccessibilityIcon(service)}"></span></li>`).join('')}
+                    ${commerce.accessibility.map(service => getAccessibilityIcon(service)).join('')}
+                    ${commerce.menu.map(service => getAccessibilityIcon(service)).join('')}
                 </ul>
             </footer>
         </a>
@@ -67,8 +69,8 @@ function generateResultsCard(commerce) {
         <p class="card-small__text">${commerce.category}</p>
             <footer class="card-small__footer">
                 <ul class="lists">
-                    ${commerce.accessibility.map(service => `<li class="card__service"><span class="mdi ${getAccessibilityIcon(service)}"></span></li>`).join('')}
-                    ${commerce.menu.map(service => `<li class="card__service"><span class="mdi ${getAccessibilityIcon(service)}"></span></li>`).join('')}
+                ${commerce.accessibility.map(service => getAccessibilityIcon(service)).join('')}
+                ${commerce.menu.map(service => getAccessibilityIcon(service)).join('')}
                 </ul>
             </footer>
     </a>`;

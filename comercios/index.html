@@ -72,8 +72,10 @@ function getAccessibilityIcon(service) {
         "gluten free": "mdi-barley-off" , 
         "vegan": "mdi-sprout", 
         "diabetic" : "mdi-diabetes" 
-    };
-    return icons[service] || false;
+    };    
+    if (icons[service]){
+        return `<li class="card__service"><span class="mdi ${icons[service]}"></span></li>` || false;
+    }
 }
 
 // Obtener el slug de la URL
@@ -90,8 +92,8 @@ function generateCommerceContent(commerce, randomCommerce, randomCommerce2, rand
             </div>
             <h2 class="comercio__title">${commerce.name} <span class="badge">${commerce.category}</span></h2>
             <ul class="comercio__services">
-                ${commerce.accessibility.map(service => `<li class="card-small__service"><span class="mdi ${getAccessibilityIcon(service)}"></span></li>`).join('')}
-                ${commerce.menu.map(service => `<li class="card-small__service"><span class="mdi ${getAccessibilityIcon(service)}"></span></li>`).join('')}
+                ${commerce.accessibility.map(service => getAccessibilityIcon(service)).join('')}
+                ${commerce.menu.map(service => getAccessibilityIcon(service)).join('')}
             </ul>
         </header>
         <section class="comercios__ofertas">
@@ -132,8 +134,8 @@ function generateCommerceContent(commerce, randomCommerce, randomCommerce2, rand
                             <p class="card-small__text">${randomCommerce.category}</p>
                                 <footer class="card-small__footer">
                                     <ul class="lists">
-                                        ${randomCommerce.accessibility.map(service => `<li class="card-small__service"><span class="mdi ${getAccessibilityIcon(service)}"></span></li>`).join('')}
-                                        ${randomCommerce.menu.map(service => `<li class="card-small__service"><span class="mdi ${getAccessibilityIcon(service)}"></span></li>`).join('')}
+                                        ${randomCommerce.accessibility.map(service => getAccessibilityIcon(service)).join('')}
+                                        ${randomCommerce.menu.map(service => getAccessibilityIcon(service)).join('')}
                                     </ul>
                                 </footer>
                         </a>
@@ -143,8 +145,8 @@ function generateCommerceContent(commerce, randomCommerce, randomCommerce2, rand
                             <p class="card-small__text">${randomCommerce2.category}</p>
                                 <footer class="card-small__footer">
                                     <ul class="lists">
-                                        ${randomCommerce2.accessibility.map(service => `<li class="card-small__service"><span class="mdi ${getAccessibilityIcon(service)}"></span></li>`).join('')}
-                                        ${randomCommerce2.menu.map(service => `<li class="card-small__service"><span class="mdi ${getAccessibilityIcon(service)}"></span></li>`).join('')}
+                                        ${randomCommerce2.accessibility.map(service => getAccessibilityIcon(service)).join('')}
+                                        ${randomCommerce2.menu.map(service => getAccessibilityIcon(service)).join('')}
                                     </ul>
                                 </footer>
                         </a>
@@ -154,8 +156,8 @@ function generateCommerceContent(commerce, randomCommerce, randomCommerce2, rand
                             <p class="card-small__text">${randomCommerce3.category}</p>
                                 <footer class="card-small__footer">
                                     <ul class="lists">
-                                        ${randomCommerce3.accessibility.map(service => `<li class="card-small__service"><span class="mdi ${getAccessibilityIcon(service)}"></span></li>`).join('')}
-                                        ${randomCommerce3.menu.map(service => `<li class="card-small__service"><span class="mdi ${getAccessibilityIcon(service)}"></span></li>`).join('')}
+                                        ${randomCommerce3.accessibility.map(service => getAccessibilityIcon(service)).join('')}
+                                        ${randomCommerce3.menu.map(service => getAccessibilityIcon(service)).join('')}
                                     </ul>
                                 </footer>
                         </a>
