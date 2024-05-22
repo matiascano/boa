@@ -110,21 +110,20 @@ function generateCommerceContent(commerce, randomCommerce, randomCommerce2, rand
             </div>
         </section>
         <div class="comercio__body">
-            <h3 class="comercio__subtitle">Sobre ${commerce.name}</h3>
             <section class="comercio__description">${commerce.description}</section>
         </div>
         <footer class="comercio__footer">
             <div class="comercio__details">
-                <h3 class="comercio__subtitle">Zona</h3>
-                <section class="mapComercio">
-                    <iframe src="https://www.google.com/maps/embed?pb=${commerce.embedMap}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                </section>
                 <h3 class="comercio__h3">Contacto</h3>
                 <ul class="comercio__links">
                     <li class="comercio__linksItem"><a href="${commerce.site}" title="Visitar sitio web" class="comercio__link"><i class="mdi mdi-laptop"></i> Sitio web</a></li>
                     <li class="comercio__linksItem"><a href="tel:${commerce.phone}" title="Llamar por teléfono" class="comercio__link"><i class="mdi mdi-phone"></i> Teléfono</a></li>
                     <li class="comercio__linksItem"><a href="mailto:${commerce.email}" title="Enviar un email" class="comercio__link"><i class="mdi mdi-email"></i> E-mail</a></li>
                 </ul>
+                <section class="mapComercio">
+                    <iframe src="https://www.google.com/maps/embed?pb=${commerce.embedMap}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </section>
+                
             </div>
             <div class="comercio__near cards cards--ani">
                         <h3 class="comercio__h3">Otros comercios</h3>
