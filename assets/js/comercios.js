@@ -33,7 +33,7 @@ function generateCommerceCard(commerce) {
         <a href="./comercios/index.html?slug=${commerce.slug}" class="card" role="article">
             <header class="card__header">
                 <img src="./assets/img/${commerce.headerImage}" alt="${commerce.headerImageAltText}" class="card__image">
-                <p class="card__category">${commerce.category}</p>
+                <p class="card__category"><span class="badge">${commerce.category}</span></p>
             </header>
             <div class="card__body">
                 <h3 class="card__title">${commerce.name}</h3>
