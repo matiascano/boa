@@ -11,7 +11,7 @@ Proyecto para el curso de **Fullstack Node JS** en **Codo a codo**. Comisión 24
 
 **Tutora:** Fabiana Ramirez Cuenca
 
-**Docente:** Thalia Rodrigues
+**Docente:** Talia Rodrigues
 
 ### Integrantes
 
