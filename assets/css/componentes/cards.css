@@ -114,7 +114,7 @@
 
 .card-small__image{
   grid-area: image;
-  height: auto;
+  min-height: 100%;
   aspect-ratio: 1;
   object-fit: cover;
 }
