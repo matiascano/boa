@@ -1,6 +1,7 @@
 .badge{
     padding: .2rem .5rem;
     font-size: .8rem;
+    font-family: var(--fuente-texto);
     font-weight: 400;
     margin-left: .5rem;
     border-radius: var(--radius);
