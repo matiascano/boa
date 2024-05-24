@@ -38,7 +38,7 @@ Se utilizá la biblioteca Quilljs para poner texto enriquecido en los formulario
 [Sitio Web de Quilljs](https://quilljs.com)
 
 ### Google Fonts
-Se utiliza la familia tipográfica ["Cantarell"](https://fonts.google.com/specimen/Cantarell) para los párrafos y la tipografía ["Fjalla One"](https://fonts.google.com/specimen/Fjalla+One) para los títulos.
+Se utiliza la familia tipográfica ["Open Sans"](https://fonts.google.com/specimen/Open+Sans) para los párrafos y la tipografía ["Fjalla One"](https://fonts.google.com/specimen/Fjalla+One) para los títulos.
 
 
 
