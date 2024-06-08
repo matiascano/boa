@@ -14,9 +14,37 @@ app.listen(PORT, () => {
 })
 
 //Midleware
-app.use(express.static('public'))
+app.use(express.static('public'));
 
 //Rutas
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + './index.html')
+    res.sendFile(__dirname + '/public/index.html');
+})
+
+app.get('/mapa', (req, res) => {
+    res.sendFile(__dirname + '/public/html/mapa.html');
+})
+
+app.get('/ofertas', (req, res) => {
+    res.sendFile(__dirname + '/public/html/ofertas.html');
+})
+
+app.get('/comercio', (req, res) => {
+    res.sendFile(__dirname + '/public/html/comercio.html');
+}) 
+
+app.get('/registro', (req, res) => {
+    res.sendFile(__dirname + '/public/html/registro.html');
+})
+
+app.getMaxListeners('/back', (req, res) => {
+    res.sendFile(__dirname + '/public/html/back.html');
+})
+
+app.get('/resultados', (req, res) => {
+    res.sendFile(__dirname + '/public/html/resultados.html');
+}) 
+
+app.get('/login', (req, res) => {
+    res.sendFile(__dirname + '/public/html/login.html');
 })
