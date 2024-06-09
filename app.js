@@ -37,7 +37,7 @@ app.get('/registro', (req, res) => {
     res.sendFile(__dirname + '/public/html/registro.html');
 })
 
-app.getMaxListeners('/back', (req, res) => {
+app.get('/back', (req, res) => {
     res.sendFile(__dirname + '/public/html/back.html');
 })
 
@@ -50,6 +50,6 @@ app.get('/login', (req, res) => {
 })
 
 //Error 404
-app.get('*', (req, res) => {
+/*app.get('*', (req, res) => {
     res.sendFile(__dirname + '/public/html/404.html');
-})
+})*/
