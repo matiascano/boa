@@ -1,7 +1,7 @@
 // Función para leer el archivo JSON
 async function fetchData() {
     try {
-        const response = await fetch('./assets/data/comercios.json');
+        const response = await fetch('./data/comercios.json');
         const data = await response.json();
         return data;
     } catch (error) {
@@ -32,7 +32,7 @@ function generateCommerceCard(commerce) {
     return `
         <a href="./comercios/index.html?slug=${commerce.slug}" class="card" role="article">
             <header class="card__header">
-                <img src="./assets/img/${commerce.headerImage}" alt="${commerce.headerImageAltText}" class="card__image">
+                <img src="./img/${commerce.headerImage}" alt="${commerce.headerImageAltText}" class="card__image">
                 <p class="card__category"><span class="badge">${commerce.category}</span></p>
             </header>
             <div class="card__body">
@@ -64,7 +64,7 @@ async function generateCommerceCards() {
 function generateResultsCard(commerce) {
     return `
     <a class="card-small" href="./comercios/index.html?slug=${commerce.slug}" role="article">
-    <img src="./assets/img/${commerce.profileImage}" alt="${commerce.profileImageAltText}" class="card-small__image">
+    <img src="./img/${commerce.profileImage}" alt="${commerce.profileImageAltText}" class="card-small__image">
         <h3 class="card-small__title">${commerce.name}</h3>
         <p class="card-small__text">${commerce.category}</p>
             <footer class="card-small__footer">
