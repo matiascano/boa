@@ -48,3 +48,8 @@ app.get('/resultados', (req, res) => {
 app.get('/login', (req, res) => {
     res.sendFile(__dirname + '/public/html/login.html');
 })
+
+//Error 404
+app.get('*', (req, res) => {
+    res.sendFile(__dirname + '/public/html/404.html');
+})
