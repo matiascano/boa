@@ -3,6 +3,15 @@
 
 Proyecto para el curso de **Fullstack Node JS** en **Codo a codo**. Comisión 24140 - Grupo 14.
 
+## Instalación
+
+Una vez clonado el proyecto
+
+- npm install
+- npm i nodemon -D
+- npm run dev (en caso de desarrollo)
+- npm run start (caso deploy)
+
 ## Codo a codo
 
 **Comisión:** 24140
