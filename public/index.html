@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boa - Buscador de ofertas accesible</title>
+    <link rel="shortcut icon" href="./img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/style.css">
+    <script type="module" src="/js/components/navbarPrimary.js"></script>
+</head>
+<body>
+    <navbar-primary></navbar-primary>
+    <header class="headerPrincipal">
+        <h2 class="headerPrincipal__title">¿Qué estás buscando?</h2>
+        <form action="/resultados" class="searchFrom">
+            <label for="busqueda" class="searchFrom__label u-onlyOCR">Campo de búsqueda</label>
+            <input id="busqueda" name="busqueda" class="searchFrom__input" placeholder="Ej.: Tienda Los gallegos" type="text">
+        </form>
+        <section class="filters">
+            <button class="filters__item" data-state="active">Filtro 1</button>
+            <button class="filters__item" data-state="">Filtro 2</button>
+            <button class="filters__item" data-state="">Filtro 3</button>
+            <button class="filters__item" data-state="active">Filtro 4</button>
+            <button class="filters__item" data-state="">Filtro 5</button>
+            <button class="filters__item" data-state="">Filtro 6</button>
+        </section>
+    </header>
+    <main>
+        <section class="mapHome">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7340.572030008748!2d-57.55728491365686!3d-38.00039396292633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9584dc023c3ed125%3A0x91c12ebdbae37e3a!2sLove%20My%20Gift!5e0!3m2!1sen!2sar!4v1712060874445!5m2!1sen!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+        <section class="lastPublications">
+            <h2 class="lastPublications__title">Últimas publicaciones</h2>
+            <div id="comercios-container" class="cards cards--ani">
+                <script src="./js/comercios.js"></script>
+                <script>
+                    // Llamar a la función para generar las cards
+                    generateCommerceCards();
+                    </script>
+            </div>
+        </section>
+        <section id="faqs" class="faqs">
+            <h2 class="faqs__title">Preguntas Frecuentes</h2>
+            <h3>Personas usuarias</h3>
+            <div class="accordion">
+                <details class="accordion__item">
+                    <summary class="accordion__title">¿Cómo puedo buscar comercios locales en la plataforma?</summary>
+                    <div class="accordion__description"><p>Puedes buscar comercios locales utilizando el cuadro de búsqueda en la página principal. También puedes filtrar los resultados por categorías como tipo de comercio, ubicación, y servicios ofrecidos.</p></div>
+                </details>
+                <details class="accordion__item">
+                    <summary class="accordion__title">¿Qué tipo de información puedo encontrar sobre un comercio local en la plataforma?</summary>
+                    <p class="accordion__description">En la página de cada comercio, encontrarás información detallada sobre sus servicios, ofertas, horarios de atención, datos de contacto y detalles de accesibilidad, como la presencia de rampas, baños para personas con discapacidad, menús en braille, entre otros.</p>
+                </details>
+                <details class="accordion__item">
+                    <summary class="accordion__title">¿Puedo filtrar los resultados de búsqueda por aspectos específicos, como la accesibilidad?</summary>
+                    <p class="accordion__description">Sí, puedes utilizar los filtros de búsqueda para encontrar comercios que cumplan con tus necesidades específicas de accesibilidad, como la presencia de rampas, baños adaptados, y otros servicios para personas con discapacidad.</p>
+                </details>
+                <details class="accordion__item">
+                    <summary class="accordion__title">¿Cómo puedo contactar a un comercio local que encuentre en la plataforma?</summary>
+                    <p class="accordion__description">En la página de cada comercio, encontrarás los datos de contacto, como números de teléfono y direcciones de correo electrónico, que puedes utilizar para comunicarte directamente con el comercio.</p>
+                </details>
+            </div>
+            <h3>Comerciantes</h3>
+            <div class="accordion">
+                <details class="accordion__item">
+                    <summary class="accordion__title">¿Cómo puedo registrar mi comercio en la plataforma?</summary>
+                    <div class="accordion__description"><p>Puedes registrar tu comercio en la plataforma completando el formulario de registro en la sección destinada a comerciantes. Deberás proporcionar información sobre tu comercio, incluyendo datos de contacto, horarios de atención, servicios ofrecidos y detalles de accesibilidad.</p></div>
+                </details>
+                <details class="accordion__item">
+                    <summary class="accordion__title">¿Qué beneficios obtengo al registrar mi comercio en la plataforma?</summary>
+                    <div class="accordion__description"><p>Al registrar tu comercio en la plataforma, podrás promocionar tus servicios y ofertas a una audiencia más amplia, incluyendo personas que buscan comercios locales con servicios específicos de accesibilidad.</p></div>
+                </details>
+                <details class="accordion__item">
+                    <summary class="accordion__title">¿Cómo puedo destacar la accesibilidad de mi comercio en la plataforma?</summary>
+                    <div class="accordion__description"><p>En el formulario de registro, podrás indicar si tu comercio está preparado para recibir a personas con discapacidad, incluyendo detalles como la presencia de rampas, baños adaptados, menús en braille, entre otros.</p></div>
+                </details>
+                <details class="accordion__item">
+                    <summary class="accordion__title">¿Puedo publicar ofertas y promociones de mi comercio en la plataforma?</summary>
+                    <div class="accordion__description"><p>Sí, puedes publicar ofertas y promociones de tu comercio en la plataforma para atraer a nuevos clientes y dar a conocer tus servicios a la comunidad local.</p></div>
+                </details>
+                <details class="accordion__item">
+                    <summary class="accordion__title">¿Cómo puedo actualizar la información de mi comercio en la plataforma?</summary>
+                    <div class="accordion__description"><p>Puedes actualizar la información de tu comercio en la plataforma iniciando sesión en tu cuenta de comerciante y editando los detalles que desees cambiar.</p></div>
+                </details>
+            </div>
+        </section>
+    </main>
+    <footer class="footerPrincipal">
+        <p class="footerPrincipal__text">Hecho por el <strong>equipo 14</strong> para Codo a Codo.</p>
+    </footer>
+    <script src="./js/script.js"></script>
+</body>
+</html>

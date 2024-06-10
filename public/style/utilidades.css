@@ -1,0 +1,55 @@
+/*Utilidades*/
+
+.u-hidde{
+    visibility: hidden;
+}
+
+.u-hiddeMobile{
+    display:none;
+}
+
+.u-viewMobile{
+    display: block;
+}
+
+.u-onlyOCR{
+    width:1px;
+    height: 1px;
+    position: absolute;
+    margin-left:-1000000px;
+}
+
+.u-shadow{
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+}
+
+.u-paddingBottom{
+    padding-bottom: 2rem;
+}
+
+
+@media screen and (min-width: 600px) {
+    
+    .u-hiddeTablet{
+        display:none;
+    }
+
+    .u-viewTablet{
+        display: block;
+    }
+    
+    
+}
+
+
+@media screen and (min-width: 768px) {
+
+    .u-hiddeDesktop{
+        display:none;
+    }
+
+    .u-viewDesktop{
+        display: block;
+    }
+    
+}

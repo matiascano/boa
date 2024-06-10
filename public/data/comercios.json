@@ -1,0 +1,659 @@
+[
+    {
+      "id": 1,
+      "userId": 1,
+      "name": "Coffee Haven",
+      "slug": "coffee-haven",
+      "profileImage": "logo-coffee-haven.png",
+      "headerImage": "photo-coffee-haven.avif",
+      "headerImageAltText": "Cafetería acogedora",
+      "category": "Cafetería",
+      "accessibility": ["braille", "dog friendly", "wheelchair accessible"],
+      "menu": ["gluten free", "vegan", "diabetic"],
+      "province": "Buenos Aires",
+      "city": "Mar del Plata",
+      "address": "Rivadavia 2714",
+      "embedMap": "!1m18!1m12!1m3!1d3144.031482021888!2d-57.551420923181844!3d-37.999726144690506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9584dda46a40ed51%3A0x11838c331c7ed04c!2sRivadavia%202714!5e0!3m2!1sen!2sar!4v1716229164776!5m2!1sen!2sar",
+      "phone": "+54 9 11 2345-6789",
+      "site": "https://coffeehaven.com",
+      "instagram": "coffeehaven",
+      "email": "contacto@coffeehaven.com",
+      "description": "<p>En <strong>Coffee Haven</strong>, creemos que cada taza de café cuenta una historia. Nuestra misión es ofrecer una experiencia única a cada cliente, brindándoles una atmósfera cálida y acogedora donde pueden disfrutar de los mejores granos de café seleccionados de todo el mundo. Ubicados en el corazón de la ciudad, somos el lugar ideal para comenzar tu día, tener una reunión de negocios o simplemente relajarte con amigos.</p><p>Nuestro menú presenta una amplia variedad de opciones, desde los clásicos como el espresso y el cappuccino, hasta nuestras especialidades únicas que no encontrarás en ningún otro lugar. Además, contamos con una selección de tés, pasteles y bocadillos que complementan perfectamente nuestras bebidas. Cada uno de nuestros productos es elaborado con ingredientes frescos y de alta calidad, asegurando una experiencia deliciosa en cada bocado.</p><p>En Coffee Haven, nos enorgullece trabajar directamente con pequeños productores de café, asegurándonos de que cada grano que utilizamos sea cultivado de manera sostenible y justa. Este compromiso no solo garantiza la mejor calidad en nuestras bebidas, sino que también apoya a las comunidades agrícolas y protege el medio ambiente. Estamos dedicados a mantener prácticas comerciales responsables que beneficien tanto a nuestros clientes como al planeta.</p><p>Nuestro equipo de baristas expertos está apasionado por el arte del café. Con años de experiencia y una formación rigurosa, están listos para preparar la taza perfecta según tus preferencias. Ya sea que prefieras un café fuerte y robusto o algo más suave y cremoso, puedes confiar en que recibirás una bebida hecha con dedicación y precisión. Además, siempre estamos encantados de compartir nuestro conocimiento y amor por el café con nuestros clientes.</p><p>Te invitamos a visitarnos y descubrir por qué Coffee Haven es el refugio favorito de los amantes del café. Disfruta de nuestro ambiente acogedor, con una decoración que mezcla lo moderno y lo rústico, creando el lugar perfecto para desconectar del ajetreo diario. Nos encantaría ser parte de tu rutina diaria y compartir contigo nuestra pasión por el café. ¡Esperamos verte pronto!</p>",
+      "offers": 2,
+      "offersData": [
+        {
+          "offerImage": "offer-1-coffee-haven.avif",
+          "offerImageAltText": "Café de especialidad",
+          "offerTitle": "Café de especialidad",
+          "offerDescription": "Disfruta de nuestra mejor selección de cafés de especialidad.",
+          "offerPrice": 4.99
+        },
+        {
+          "offerImage": "offer-2-coffee-haven.avif",
+          "offerImageAltText": "Pastelería vegana",
+          "offerTitle": "Pastelería vegana",
+          "offerDescription": "Deliciosos y saludables pasteles veganos.",
+          "offerPrice": 2.99
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "name": "Tea & Treats",
+      "slug": "tea-treats",
+      "profileImage": "logo-tea-and-treats.png",
+      "headerImage": "photo-tea-and-treats.avif",
+      "headerImageAltText": "Tienda de té acogedora",
+      "category": "Tienda de Té",
+      "accessibility": ["Braille", "dog friendly", "wheelchair accessible"],
+      "menu": ["gluten free", "vegan", "diabetic"],
+      "province": "Córdoba",
+      "city": "Córdoba",
+      "address": "Rivadavia 2714",
+      "embedMap": "!1m18!1m12!1m3!1d3144.031482021888!2d-57.551420923181844!3d-37.999726144690506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9584dda46a40ed51%3A0x11838c331c7ed04c!2sRivadavia%202714!5e0!3m2!1sen!2sar!4v1716229164776!5m2!1sen!2sar",
+      "phone": "+54 9 11 2345-6789",
+      "site": "https://teaandtreats.com",
+      "instagram": "teaandtreats",
+      "email": "contacto@teaandtreats.com",
+      "description": "<p>En <strong>Tea & Treats</strong>, creemos que cada taza de té es una celebración de los sentidos. Nuestra misión es ofrecer una experiencia inolvidable a cada visitante, brindándoles un ambiente tranquilo y elegante donde pueden disfrutar de los mejores tés de todo el mundo. Situados en un rincón encantador de la ciudad, somos el lugar perfecto para relajarse, leer un libro o ponerse al día con amigos.</p><p>Nuestro menú ofrece una amplia variedad de tés, desde los clásicos como el Earl Grey y el Darjeeling, hasta nuestras mezclas exclusivas que no encontrarás en ningún otro lugar. Además, contamos con una selección de pasteles, sándwiches y bocadillos ligeros que complementan perfectamente nuestras bebidas. Cada uno de nuestros productos es elaborado con ingredientes frescos y de alta calidad, asegurando una experiencia deliciosa en cada bocado.</p><p>En Tea & Treats, nos enorgullece trabajar directamente con pequeños productores de té, asegurándonos de que cada hoja que utilizamos sea cultivada de manera sostenible y justa. Este compromiso no solo garantiza la mejor calidad en nuestras bebidas, sino que también apoya a las comunidades agrícolas y protege el medio ambiente. Estamos dedicados a mantener prácticas comerciales responsables que beneficien tanto a nuestros clientes como al planeta.</p><p>Nuestro equipo de expertos en té está apasionado por el arte de preparar la taza perfecta. Con años de experiencia y una formación rigurosa, están listos para recomendarte la variedad ideal según tus gustos y preferencias. Ya sea que prefieras un té fuerte y aromático o algo más suave y delicado, puedes confiar en que recibirás una bebida hecha con dedicación y precisión.</p><p>Te invitamos a visitarnos y descubrir por qué Tea & Treats es el refugio favorito de los amantes del té. Disfruta de nuestro ambiente acogedor, con una decoración que mezcla lo clásico y lo contemporáneo, creando el lugar perfecto para desconectar del ajetreo diario. Nos encantaría ser parte de tu rutina diaria y compartir contigo nuestra pasión por el té. ¡Esperamos verte pronto!</p>",
+      "offers": 3,
+      "offersData": [
+        {
+          "offerImage": "offer-1-tea-and-treats.avif",
+          "offerImageAltText": "Té verde",
+          "offerTitle": "Té verde",
+          "offerDescription": "Refrescante y saludable té verde.",
+          "offerPrice": 3.99
+        },
+        {
+          "offerImage": "offer-2-tea-and-treats.avif",
+          "offerImageAltText": "Brownie vegano",
+          "offerTitle": "Brownie vegano",
+          "offerDescription": "Delicioso brownie vegano hecho con ingredientes orgánicos.",
+          "offerPrice": 2.49
+        },
+        {
+          "offerImage": "offer-3-tea-and-treats.avif",
+          "offerImageAltText": "Tarta de frutas",
+          "offerTitle": "Tarta de frutas",
+          "offerDescription": "Deliciosa tarta llena de frutas frescas.",
+          "offerPrice": 4.49
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "name": "Bakery Bliss",
+      "slug": "bakery-bliss",
+      "profileImage": "logo-bakery-bliss.png",
+      "headerImage": "photo-bakery-bliss.avif",
+      "headerImageAltText": "Panadería artesanal",
+      "category": "Panadería",
+      "accessibility": ["Braille", "dog friendly", "wheelchair accessible"],
+      "menu": ["gluten free", "vegan", "diabetic"],
+      "province": "Santa Fe",
+      "city": "Rosario",
+      "address": "Rivadavia 2714",
+      "embedMap": "!1m18!1m12!1m3!1d3144.031482021888!2d-57.551420923181844!3d-37.999726144690506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9584dda46a40ed51%3A0x11838c331c7ed04c!2sRivadavia%202714!5e0!3m2!1sen!2sar!4v1716229164776!5m2!1sen!2sar",
+      "phone": "+54 9 11 2345-6789",
+      "site": "https://bakerybliss.com",
+      "instagram": "bakerybliss",
+      "email": "contacto@bakerybliss.com",
+      "description": "<p>Bienvenidos a <strong>Bakery Bliss</strong>, donde cada bocado es una delicia. Nuestra misión es ofrecer productos de panadería frescos y de alta calidad que satisfagan todos los gustos. Ubicados en el corazón de la ciudad, somos el destino ideal para los amantes del pan y los pasteles. Desde el primer momento en que entras, serás recibido por el aroma tentador de nuestros productos recién horneados.</p><p>En Bakery Bliss, nuestro menú incluye una amplia variedad de panes artesanales, pasteles, galletas y otros productos de repostería. Utilizamos solo los mejores ingredientes, combinando técnicas tradicionales con toques modernos para crear sabores únicos. Ya sea que busques un croissant perfectamente crujiente, un pastel esponjoso o una galleta decadente, aquí encontrarás algo que te encantará.</p><p>Nos enorgullece trabajar con ingredientes locales y sostenibles, apoyando a los agricultores y proveedores de nuestra comunidad. Cada producto que sale de nuestro horno es una obra de amor y dedicación, hecha para brindar alegría y satisfacción a nuestros clientes. Creemos en la importancia de la calidad y la frescura, y nos esforzamos por entregar lo mejor en cada creación.</p><p>Nuestro equipo de panaderos y pasteleros apasionados trabaja diligentemente para asegurarse de que cada producto cumpla con nuestros altos estándares. Con años de experiencia y un verdadero amor por la panadería, están siempre innovando y perfeccionando sus recetas. Estamos comprometidos a ofrecerte una experiencia de panadería que no solo cumpla sino que supere tus expectativas.</p><p>Te invitamos a visitar Bakery Bliss y descubrir por qué somos la panadería preferida de muchos. Disfruta de nuestro ambiente acogedor y cálido, ideal para tomar un café con un delicioso pastel o para llevar a casa tus panes favoritos. Nos encantaría ser parte de tu día a día, endulzando tus momentos especiales con nuestras creaciones. ¡Esperamos verte pronto!</p>",
+      "offers": 1,
+      "offersData": [
+        {
+          "offerImage": "offer-1-bakery-bliss.avif",
+          "offerImageAltText": "Pan de masa madre",
+          "offerTitle": "Pan de masa madre",
+          "offerDescription": "Pan de masa madre recién horneado.",
+          "offerPrice": 5.99
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "name": "Gourmet Delights",
+      "slug": "gourmet-delights",
+      "profileImage": "logo-gourmet-delights.png",
+      "headerImage": "photo-gourmet-delights.avif",
+      "headerImageAltText": "Restaurante de alta cocina",
+      "category": "Restaurante",
+      "accessibility": ["Braille", "dog friendly", "wheelchair accessible"],
+      "menu": ["gluten free", "vegan", "diabetic"],
+      "province": "Mendoza",
+      "city": "Mendoza",
+      "address": "Rivadavia 2714",
+      "embedMap": "!1m18!1m12!1m3!1d3144.031482021888!2d-57.551420923181844!3d-37.999726144690506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9584dda46a40ed51%3A0x11838c331c7ed04c!2sRivadavia%202714!5e0!3m2!1sen!2sar!4v1716229164776!5m2!1sen!2sar",
+      "phone": "+54 9 11 2345-6789",
+      "site": "https://gourmetdelights.com",
+      "instagram": "gourmetdelights",
+      "email": "contacto@gourmetdelights.com",
+      "description": "<p>Bienvenidos a <strong>Gourmet Delights</strong>, donde la alta cocina se encuentra con la creatividad culinaria. Nuestra misión es ofrecer una experiencia gastronómica inolvidable, combinando ingredientes frescos y de alta calidad con técnicas culinarias innovadoras. Situados en una elegante esquina de la ciudad, nuestro restaurante es el destino perfecto para aquellos que buscan una experiencia culinaria excepcional.</p><p>En Gourmet Delights, nuestro menú presenta una selección cuidadosamente elaborada de platos que destacan lo mejor de la cocina gourmet. Desde aperitivos exquisitos hasta postres decadentes, cada plato está diseñado para deleitar tus sentidos. Utilizamos ingredientes locales y de temporada, asegurando que cada bocado sea fresco y lleno de sabor.</p><p>Nos enorgullece trabajar con productores locales y sostenibles, apoyando a la comunidad y promoviendo prácticas agrícolas responsables. Nuestro compromiso con la sostenibilidad se refleja en cada aspecto de nuestra operación, desde la selección de ingredientes hasta la presentación de los platos. Creemos que la buena comida puede y debe tener un impacto positivo en el mundo.</p><p>Nuestro equipo de chefs talentosos y apasionados está dedicado a la excelencia culinaria. Con años de experiencia en algunos de los mejores restaurantes del mundo, traen a Gourmet Delights una riqueza de conocimientos y habilidades que se traducen en platos únicos y memorables. Cada creación es una obra de arte, meticulosamente preparada para ofrecer una experiencia gastronómica sin igual.</p><p>Te invitamos a descubrir por qué Gourmet Delights es el restaurante gourmet preferido de los amantes de la buena comida. Disfruta de nuestro ambiente sofisticado y acogedor, perfecto para una cena romántica, una celebración especial o una noche de indulgencia culinaria. Estamos emocionados de compartir nuestra pasión por la alta cocina contigo y esperamos que cada visita sea una experiencia extraordinaria. ¡Esperamos verte pronto!</p>",
+      "offers": 2,
+      "offersData": [
+        {
+          "offerImage": "offer-1-gourmet-delights.avif",
+          "offerImageAltText": "Cena gourmet",
+          "offerTitle": "Cena gourmet",
+          "offerDescription": "Disfruta de una cena gourmet preparada por nuestros mejores chefs.",
+          "offerPrice": 49.99
+        },
+        {
+          "offerImage": "offer-2-gourmet-delights.avif",
+          "offerImageAltText": "Degustación de vinos",
+          "offerTitle": "Degustación de vinos",
+          "offerDescription": "Prueba los mejores vinos de nuestra bodega.",
+          "offerPrice": 29.99
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "userId": 1,
+      "name": "Pizza Paradise",
+      "slug": "pizza-paradise",
+      "profileImage": "logo-pizza-paradise.png",
+      "headerImage": "photo-pizza-paradise.avif",
+      "headerImageAltText": "Pizzería acogedora",
+      "category": "Pizzería",
+      "accessibility": ["Braille", "dog friendly", "wheelchair accessible"],
+      "menu": ["gluten free", "vegan", "diabetic"],
+      "province": "Buenos Aires",
+      "city": "Mar del Plata",
+      "address": "Rivadavia 2714",
+      "embedMap": "!1m18!1m12!1m3!1d3144.031482021888!2d-57.551420923181844!3d-37.999726144690506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9584dda46a40ed51%3A0x11838c331c7ed04c!2sRivadavia%202714!5e0!3m2!1sen!2sar!4v1716229164776!5m2!1sen!2sar",
+      "phone": "+54 9 11 2345-6789",
+      "site": "https://pizzaparadise.com",
+      "instagram": "pizzaparadise",
+      "email": "contacto@pizzaparadise.com",
+      "description": "<p>Bienvenidos a <strong>Pizza Paradise</strong>, donde cada pizza es una obra maestra culinaria. Nuestra misión es ofrecer las mejores pizzas, elaboradas con ingredientes frescos y de la más alta calidad, en un ambiente cálido y acogedor. Ubicados en el centro de la ciudad, somos el lugar ideal para disfrutar de una comida deliciosa con familiares y amigos.</p><p>En Pizza Paradise, nuestro menú incluye una amplia variedad de pizzas que satisfacen todos los gustos. Desde las clásicas como la Margherita y la Pepperoni, hasta nuestras especialidades únicas con ingredientes gourmet, hay algo para todos. También ofrecemos opciones vegetarianas y veganas, asegurándonos de que todos puedan disfrutar de nuestras deliciosas pizzas.</p><p>Nos enorgullece trabajar con proveedores locales, seleccionando los mejores ingredientes para nuestras pizzas. Utilizamos masa artesanal, salsa de tomate casera y una variedad de quesos frescos para crear sabores irresistibles. Cada pizza se hornea a la perfección en nuestro horno de leña, logrando una textura crujiente y un sabor auténtico.</p><p>Nuestro equipo de pizzaiolos expertos está apasionado por el arte de hacer pizza. Con años de experiencia y un amor profundo por la cocina, se aseguran de que cada pizza salga perfecta. Ya sea que prefieras una pizza clásica o quieras probar algo nuevo y emocionante, puedes confiar en que recibirás una pizza hecha con dedicación y precisión.</p><p>Te invitamos a visitar Pizza Paradise y descubrir por qué somos la pizzería preferida de la comunidad. Disfruta de nuestro ambiente familiar y amigable, ideal para cualquier ocasión. Nos encantaría ser parte de tus celebraciones y momentos especiales, compartiendo contigo nuestra pasión por la pizza. ¡Esperamos verte pronto!</p>",
+      "offers": 3,
+      "offersData": [
+        {
+          "offerImage": "offer-1-pizza-paradise.avif",
+          "offerImageAltText": "Pizza Margherita",
+          "offerTitle": "Pizza Margherita",
+          "offerDescription": "Clásica pizza Margherita con ingredientes frescos.",
+          "offerPrice": 8.99
+        },
+        {
+          "offerImage": "offer-2-pizza-paradise.avif",
+          "offerImageAltText": "Pizza de pepperoni",
+          "offerTitle": "Pizza de pepperoni",
+          "offerDescription": "Pizza de pepperoni picante para los amantes de la carne.",
+          "offerPrice": 9.99
+        },
+        {
+          "offerImage": "offer-3-pizza-paradise.avif",
+          "offerImageAltText": "Pizza vegana",
+          "offerTitle": "Pizza vegana",
+          "offerDescription": "Deliciosa pizza con queso vegano y toppings.",
+          "offerPrice": 10.99
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "userId": 1,
+      "name": "Burger Bistro",
+      "slug": "burger-bistro",
+      "profileImage": "logo-burger-bistro.png",
+      "headerImage": "photo-burger-bistro.avif",
+      "headerImageAltText": "Moderna hamburguesería",
+      "category": "Comida rápida",
+      "accessibility": ["Braille", "dog friendly", "wheelchair accessible"],
+      "menu": ["gluten free", "vegan", "diabetic"],
+      "province": "Buenos Aires",
+      "city": "Mar del Plata",
+      "address": "Rivadavia 2714",
+      "embedMap": "!1m18!1m12!1m3!1d3144.031482021888!2d-57.551420923181844!3d-37.999726144690506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9584dda46a40ed51%3A0x11838c331c7ed04c!2sRivadavia%202714!5e0!3m2!1sen!2sar!4v1716229164776!5m2!1sen!2sar",
+      "phone": "+54 9 11 2345-6789",
+      "site": "https://burgerbistro.com",
+      "instagram": "burgerbistro",
+      "email": "contacto@burgerbistro.com",
+      "description": "<p>Bienvenidos a <strong>Burger Bistro</strong>, donde cada hamburguesa es una celebración del sabor. Nuestra misión es ofrecer hamburguesas gourmet elaboradas con ingredientes frescos y de alta calidad en un ambiente moderno y acogedor. Ubicados en el corazón de la ciudad, somos el lugar perfecto para disfrutar de una comida deliciosa y relajada con familiares y amigos.</p><p>En Burger Bistro, nuestro menú incluye una amplia variedad de hamburguesas que satisfacen todos los gustos. Desde las clásicas con queso y tocino hasta nuestras especialidades únicas con ingredientes gourmet, hay algo para todos. También ofrecemos opciones vegetarianas y veganas, asegurándonos de que todos puedan disfrutar de nuestras deliciosas creaciones.</p><p>Nos enorgullece trabajar con proveedores locales para seleccionar los mejores ingredientes para nuestras hamburguesas. Utilizamos carne de res de primera calidad, panes artesanales y una variedad de quesos y vegetales frescos para crear sabores irresistibles. Cada hamburguesa se cocina a la perfección, logrando una textura jugosa y un sabor inolvidable.</p><p>Nuestro equipo de chefs apasionados está dedicado al arte de hacer hamburguesas. Con años de experiencia y un verdadero amor por la cocina, se aseguran de que cada hamburguesa cumpla con nuestros altos estándares. Ya sea que prefieras una hamburguesa clásica o quieras probar algo nuevo y emocionante, puedes confiar en que recibirás una comida hecha con dedicación y precisión.</p><p>Te invitamos a visitar Burger Bistro y descubrir por qué somos la hamburguesería preferida de la comunidad. Disfruta de nuestro ambiente relajado y amigable, ideal para cualquier ocasión. Nos encantaría ser parte de tus celebraciones y momentos especiales, compartiendo contigo nuestra pasión por las hamburguesas. ¡Esperamos verte pronto!</p>",
+      "offers": 2,
+      "offersData": [
+        {
+          "offerImage": "offer-1-burger-bistro.avif",
+          "offerImageAltText": "Hamburguesa clásica",
+          "offerTitle": "Hamburguesa clásica",
+          "offerDescription": "Jugosa hamburguesa clásica con queso, lechuga y tomate.",
+          "offerPrice": 7.99
+        },
+        {
+          "offerImage": "offer-2-burger-bistro.avif",
+          "offerImageAltText": "Hamburguesa vegana",
+          "offerTitle": "Hamburguesa vegana",
+          "offerDescription": "Deliciosa hamburguesa vegana hecha con ingredientes frescos.",
+          "offerPrice": 8.49
+        }
+      ]
+    },
+    {
+        "id": 7,
+        "userId": 1,
+        "name": "Sushi Sensation",
+        "slug": "sushi-sensation",
+        "profileImage": "logo-sushi-sensation.png",
+        "headerImage": "photo-sushi-sensation.avif",
+        "headerImageAltText": "Restaurante de sushi",
+        "category": "Restaurante",
+        "accessibility": ["Braille", "dog friendly", "wheelchair accessible"],
+        "menu": ["gluten free", "vegan", "diabetic"],
+        "province": "Buenos Aires",
+        "city": "Mar del Plata",
+        "address": "Rivadavia 2714",
+      "embedMap": "!1m18!1m12!1m3!1d3144.031482021888!2d-57.551420923181844!3d-37.999726144690506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9584dda46a40ed51%3A0x11838c331c7ed04c!2sRivadavia%202714!5e0!3m2!1sen!2sar!4v1716229164776!5m2!1sen!2sar",
+      "phone": "+54 9 11 2345-6789",
+        "site": "https://sushisensation.com",
+        "instagram": "sushisensation",
+        "email": "contacto@sushisensation.com",
+        "description": "<p>Bienvenidos a <strong>Sushi Sensation</strong>, donde la tradición japonesa se encuentra con la creatividad culinaria. Nuestra misión es ofrecer una experiencia gastronómica única a cada cliente, brindándoles los sabores más frescos y auténticos del sushi. Ubicados en un elegante rincón de la ciudad, somos el lugar ideal para disfrutar de una comida excepcional en un ambiente moderno y acogedor.</p><p>En Sushi Sensation, nuestro menú presenta una amplia variedad de opciones, desde los clásicos nigiris y sashimis hasta nuestras especialidades únicas que combinan ingredientes tradicionales con toques contemporáneos. También ofrecemos una selección de rolls vegetarianos y veganos, asegurándonos de que todos puedan disfrutar de nuestras delicias culinarias.</p><p>Nos enorgullece trabajar con los proveedores más selectos para asegurarnos de que cada pieza de sushi esté hecha con ingredientes frescos y de la más alta calidad. Utilizamos pescados y mariscos sostenibles, arroz perfectamente cocido y una variedad de vegetales frescos para crear sabores irresistibles que deleitan los sentidos.</p><p>Nuestro equipo de chefs expertos está apasionado por el arte del sushi. Con años de experiencia y una dedicación a la perfección, se aseguran de que cada plato sea una obra de arte culinaria. Ya sea que prefieras algo tradicional o quieras experimentar con nuevos sabores, puedes confiar en que recibirás una comida preparada con precisión y cuidado.</p><p>Te invitamos a visitar Sushi Sensation y descubrir por qué somos el restaurante de sushi preferido de los amantes de la buena comida. Disfruta de nuestro ambiente sofisticado y tranquilo, perfecto para una cena romántica, una reunión de negocios o una salida con amigos. Nos encantaría ser parte de tus momentos especiales, compartiendo contigo nuestra pasión por el sushi. ¡Esperamos verte pronto!</p>",
+        "offers": 3,
+        "offersData": [
+          {
+            "offerImage": "offer-1-sushi-sensation.avif",
+            "offerImageAltText": "Combo de sushi",
+            "offerTitle": "Combo de sushi",
+            "offerDescription": "Combo de sushi con una selección variada de rolls.",
+            "offerPrice": 12.99
+          },
+          {
+            "offerImage": "offer-2-sushi-sensation.avif",
+            "offerImageAltText": "Sashimi de salmón",
+            "offerTitle": "Sashimi de salmón",
+            "offerDescription": "Fresco sashimi de salmón.",
+            "offerPrice": 14.99
+          },
+          {
+            "offerImage": "offer-3-sushi-sensation.avif",
+            "offerImageAltText": "Roll vegano",
+            "offerTitle": "Roll vegano",
+            "offerDescription": "Roll vegano con aguacate, pepino y zanahoria.",
+            "offerPrice": 10.99
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "userId": 1,
+        "name": "Pasta Palace",
+        "slug": "pasta-palace",
+        "profileImage": "logo-pasta-palace.png",
+        "headerImage": "photo-pasta-palace.avif",
+        "headerImageAltText": "Restaurante de pasta",
+        "category": "Restaurante",
+        "accessibility": ["Braille", "dog friendly", "wheelchair accessible"],
+        "menu": ["gluten free", "vegan", "diabetic"],
+        "province": "Buenos Aires",
+        "city": "Mar del Plata",
+        "address": "Rivadavia 2714",
+      "embedMap": "!1m18!1m12!1m3!1d3144.031482021888!2d-57.551420923181844!3d-37.999726144690506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9584dda46a40ed51%3A0x11838c331c7ed04c!2sRivadavia%202714!5e0!3m2!1sen!2sar!4v1716229164776!5m2!1sen!2sar",
+      "phone": "+54 9 11 2345-6789",
+        "site": "https://pastapalace.com",
+        "instagram": "pastapalace",
+        "email": "contacto@pastapalace.com",
+        "description": "<p>Bienvenidos a <strong>Pasta Palace</strong>, donde la auténtica cocina italiana cobra vida. Nuestra misión es ofrecer una experiencia culinaria inolvidable a cada cliente, brindándoles los sabores más auténticos de Italia en un ambiente cálido y acogedor. Ubicados en el corazón de la ciudad, somos el lugar perfecto para disfrutar de una comida deliciosa con familiares y amigos.</p><p>En Pasta Palace, nuestro menú incluye una amplia variedad de pastas artesanales, desde los clásicos como spaghetti alla carbonara y lasagna, hasta nuestras especialidades únicas con salsas y ingredientes frescos. También ofrecemos opciones vegetarianas y sin gluten, asegurándonos de que todos puedan disfrutar de nuestras delicias culinarias.</p><p>Nos enorgullece trabajar con proveedores locales y seleccionar los mejores ingredientes para nuestras recetas. Utilizamos pastas frescas, tomates maduros, hierbas aromáticas y quesos italianos auténticos para crear sabores que transportan a nuestros clientes directamente a Italia. Cada plato es preparado con amor y dedicación, asegurando una experiencia gastronómica auténtica y satisfactoria.</p><p>Nuestro equipo de chefs expertos está apasionado por la cocina italiana. Con años de experiencia y una verdadera devoción por la gastronomía, se aseguran de que cada plato cumpla con nuestros altos estándares de calidad. Ya sea que prefieras una pasta sencilla o quieras probar algo más elaborado, puedes confiar en que recibirás una comida hecha con cuidado y precisión.</p><p>Te invitamos a visitar Pasta Palace y descubrir por qué somos la casa de comida italiana preferida de la comunidad. Disfruta de nuestro ambiente acogedor y familiar, ideal para cualquier ocasión. Nos encantaría ser parte de tus celebraciones y momentos especiales, compartiendo contigo nuestra pasión por la auténtica comida italiana. ¡Esperamos verte pronto!</p>",
+        "offers": 2,
+        "offersData": [
+          {
+            "offerImage": "offer-1-pasta-palace.avif",
+            "offerImageAltText": "Espaguetis a la boloñesa",
+            "offerTitle": "Espaguetis a la boloñesa",
+            "offerDescription": "Clásicos espaguetis a la boloñesa con salsa casera.",
+            "offerPrice": 11.99
+          },
+          {
+            "offerImage": "offer-2-pasta-palace.avif",
+            "offerImageAltText": "Lasaña vegetariana",
+            "offerTitle": "Lasaña vegetariana",
+            "offerDescription": "Lasaña llena de vegetales frescos y queso ricotta.",
+            "offerPrice": 12.49
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "userId": 1,
+        "name": "Taco Town",
+        "slug": "taco-town",
+        "profileImage": "logo-taco-town.png",
+        "headerImage": "photo-taco-town.avif",
+        "headerImageAltText": "Taquería",
+        "category": "Restaurante",
+        "accessibility": ["Braille", "dog friendly", "wheelchair accessible"],
+        "menu": ["gluten free", "vegan", "diabetic"],
+        "province": "Buenos Aires",
+        "city": "Mar del Plata",
+        "address": "Rivadavia 2714",
+      "embedMap": "!1m18!1m12!1m3!1d3144.031482021888!2d-57.551420923181844!3d-37.999726144690506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9584dda46a40ed51%3A0x11838c331c7ed04c!2sRivadavia%202714!5e0!3m2!1sen!2sar!4v1716229164776!5m2!1sen!2sar",
+      "phone": "+54 9 11 2345-6789",
+        "site": "https://tacotown.com",
+        "instagram": "tacotown",
+        "email": "contacto@tacotown.com",
+        "description": "<p>Bienvenidos a <strong>Taco Town</strong>, donde cada taco es un viaje a México en cada bocado. Nuestra misión es ofrecer auténticos sabores mexicanos en un ambiente acogedor y vibrante. Ubicados en el corazón de la ciudad, somos el destino perfecto para aquellos que buscan disfrutar de la comida callejera mexicana de alta calidad.</p><p>En Taco Town, nuestro menú presenta una variedad de tacos que satisfacen todos los gustos. Desde los clásicos como el taco al pastor y el taco de carnitas, hasta nuestras creaciones únicas con ingredientes tradicionales y modernos. También ofrecemos opciones vegetarianas y veganas, asegurándonos de que todos puedan disfrutar de nuestros tacos.</p><p>Nos enorgullece trabajar con ingredientes frescos y de la más alta calidad para ofrecer auténticos sabores mexicanos. Utilizamos tortillas de maíz recién hechas, carnes marinadas con especias tradicionales y una variedad de salsas y condimentos para crear tacos que son un verdadero festín para los sentidos.</p><p>Nuestro equipo de cocineros está inspirado por la tradición y la pasión por la comida mexicana. Con años de experiencia y un amor por los sabores auténticos, se aseguran de que cada taco sea una experiencia deliciosa y memorable. Ya sea que prefieras un taco clásico o quieras probar algo nuevo y emocionante, en Taco Town encontrarás el taco perfecto para ti.</p><p>Te invitamos a visitar Taco Town y descubrir por qué somos la taquería preferida de los amantes de la comida mexicana. Disfruta de nuestro ambiente animado y colorido, ideal para una comida rápida o una reunión con amigos. Estamos emocionados de compartir contigo la pasión y la alegría de la comida callejera mexicana. ¡Esperamos verte pronto!</p>",
+        "offers": 3,
+        "offersData": [
+          {
+            "offerImage": "offer-1-taco-town.avif",
+            "offerImageAltText": "Tacos al pastor",
+            "offerTitle": "Tacos al pastor",
+            "offerDescription": "Deliciosos tacos al pastor con piña y cilantro.",
+            "offerPrice": 9.99
+          },
+          {
+            "offerImage": "offer-2-taco-town.avif",
+            "offerImageAltText": "Tacos veganos",
+            "offerTitle": "Tacos veganos",
+            "offerDescription": "Tacos veganos con tofu y vegetales frescos.",
+            "offerPrice": 8.99
+          },
+          {
+            "offerImage": "offer-3-taco-town.avif",
+            "offerImageAltText": "Nachos con guacamole",
+            "offerTitle": "Nachos con guacamole",
+            "offerDescription": "Nachos crujientes con guacamole casero.",
+            "offerPrice": 6.99
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "userId": 1,
+        "name": "Bagel Bliss",
+        "slug": "bagel-bliss",
+        "profileImage": "logo-bagel-bliss.png",
+        "headerImage": "photo-bagel-bliss.avif",
+        "headerImageAltText": "Tienda de bagels",
+        "category": "Cafetería",
+        "accessibility": ["Braille", "dog friendly", "wheelchair accessible"],
+        "menu": ["gluten free", "vegan", "diabetic"],
+        "province": "Buenos Aires",
+        "city": "La Plata",
+        "address": "Rivadavia 2714",
+      "embedMap": "!1m18!1m12!1m3!1d3144.031482021888!2d-57.551420923181844!3d-37.999726144690506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9584dda46a40ed51%3A0x11838c331c7ed04c!2sRivadavia%202714!5e0!3m2!1sen!2sar!4v1716229164776!5m2!1sen!2sar",
+      "phone": "+54 9 11 2345-6789",
+        "site": "https://bagelbliss.com",
+        "instagram": "bagelbliss",
+        "email": "contacto@bagelbliss.com",
+        "description": "<p>Bienvenidos a <strong>Bagel Bliss</strong>, donde cada bagel es una delicia recién horneada. Nuestra misión es ofrecer una experiencia única a cada cliente, brindándoles los bagels más frescos y sabrosos en un ambiente acogedor. Ubicados en el corazón de la ciudad, somos el lugar perfecto para disfrutar de un desayuno o almuerzo delicioso y reconfortante.</p><p>En Bagel Bliss, nuestro menú incluye una amplia variedad de bagels, desde los clásicos como el de queso crema y el de salmón ahumado, hasta nuestras creaciones especiales con ingredientes frescos y sabrosos. También ofrecemos una selección de spreads y toppings para complementar tu bagel y satisfacer tus antojos.</p><p>Nos enorgullece trabajar con ingredientes de la más alta calidad para ofrecer bagels que son una verdadera delicia. Utilizamos métodos de horneado tradicionales para lograr una textura crujiente por fuera y suave por dentro en cada bagel. Cada uno es hecho a mano con amor y cuidado, asegurando una experiencia deliciosa en cada bocado.</p><p>Nuestro equipo de bageleros está comprometido con la excelencia en la preparación de bagels. Con años de experiencia y un amor por la cocina, se aseguran de que cada bagel cumpla con nuestros estándares de calidad. Ya sea que prefieras un bagel clásico o quieras probar algo nuevo y emocionante, en Bagel Bliss encontrarás el bagel perfecto para ti.</p><p>Te invitamos a visitar Bagel Bliss y descubrir por qué somos la casa de bagels preferida de la comunidad. Disfruta de nuestro ambiente acogedor y relajado, ideal para disfrutar de un delicioso desayuno o almuerzo. Nos encantaría ser parte de tu día y compartir contigo la alegría de un buen bagel. ¡Esperamos verte pronto!</p>",
+        "offers": 2,
+        "offersData": [
+          {
+            "offerImage": "offer-1-bagel-bliss.avif",
+            "offerImageAltText": "Bagel clásico",
+            "offerTitle": "Bagel clásico",
+            "offerDescription": "Bagel clásico con queso crema.",
+            "offerPrice": 3.99
+          },
+          {
+            "offerImage": "offer-2-bagel-bliss.avif",
+            "offerImageAltText": "Bagel vegano",
+            "offerTitle": "Bagel vegano",
+            "offerDescription": "Bagel vegano con hummus y vegetales frescos.",
+            "offerPrice": 4.49
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "userId": 1,
+        "name": "Salad Station",
+        "slug": "salad-station",
+        "profileImage": "logo-salad-station.png",
+        "headerImage": "photo-salad-station.avif",
+        "headerImageAltText": "Restaurante de ensaladas",
+        "category": "Restaurante",
+        "accessibility": ["Braille", "dog friendly", "wheelchair accessible"],
+        "menu": ["gluten free", "vegan", "diabetic"],
+        "province": "Buenos Aires",
+        "city": "Mar del Plata",
+        "address": "Rivadavia 2714",
+      "embedMap": "!1m18!1m12!1m3!1d3144.031482021888!2d-57.551420923181844!3d-37.999726144690506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9584dda46a40ed51%3A0x11838c331c7ed04c!2sRivadavia%202714!5e0!3m2!1sen!2sar!4v1716229164776!5m2!1sen!2sar",
+      "phone": "+54 9 11 2345-6789",
+        "site": "https://saladstation.com",
+        "instagram": "saladstation",
+        "email": "contacto@saladstation.com",
+        "description": "<p>Bienvenidos a <strong>Salad Station</strong>, donde cada ensalada es una explosión de frescura y sabor. Nuestra misión es ofrecer una experiencia culinaria saludable y deliciosa a cada cliente, brindándoles las ensaladas más frescas y creativas en un ambiente acogedor. Ubicados en el centro de la ciudad, somos el destino ideal para aquellos que buscan una comida ligera y nutritiva.</p><p>En Salad Station, nuestro menú presenta una amplia variedad de ensaladas que satisfacen todos los gustos y necesidades dietéticas. Desde las clásicas como la César y la Griega, hasta nuestras creaciones especiales con ingredientes frescos y sabrosos. También ofrecemos opciones vegetarianas, veganas y sin gluten, asegurándonos de que todos puedan disfrutar de nuestras deliciosas ensaladas.</p><p>Nos enorgullece trabajar con productores locales y seleccionar los mejores ingredientes para nuestras ensaladas. Utilizamos vegetales frescos y crujientes, proteínas magras y aderezos caseros para crear sabores y texturas que deleitan los sentidos. Cada ensalada es una combinación equilibrada de nutrientes y sabores, diseñada para satisfacer y nutrir.</p><p>Nuestro equipo de chefs está comprometido con la excelencia en la preparación de ensaladas. Con años de experiencia y un amor por la cocina saludable, se aseguran de que cada ensalada sea fresca, deliciosa y satisfactoria. Ya sea que prefieras una ensalada clásica o quieras probar algo nuevo y emocionante, en Salad Station encontrarás la ensalada perfecta para ti.</p><p>Te invitamos a visitar Salad Station y descubrir por qué somos la casa de ensaladas preferida de la comunidad. Disfruta de nuestro ambiente limpio y acogedor, ideal para una comida rápida y saludable. Estamos emocionados de ser parte de tu estilo de vida saludable y compartir contigo la frescura y la vitalidad de nuestras ensaladas. ¡Esperamos verte pronto!</p>",
+        "offers": 3,
+        "offersData": [
+          {
+            "offerImage": "offer-1-salad-station.avif",
+            "offerImageAltText": "Ensalada César",
+            "offerTitle": "Ensalada César",
+            "offerDescription": "Clásica ensalada César con crutones y aderezo casero.",
+            "offerPrice": 7.99
+          },
+          {
+            "offerImage": "offer-2-salad-station.avif",
+            "offerImageAltText": "Ensalada vegana",
+            "offerTitle": "Ensalada vegana",
+            "offerDescription": "Ensalada vegana con quinoa, garbanzos y vegetales frescos.",
+            "offerPrice": 8.49
+          },
+          {
+            "offerImage": "offer-3-salad-station.avif",
+            "offerImageAltText": "Wrap de ensalada",
+            "offerTitle": "Wrap de ensalada",
+            "offerDescription": "Wrap de ensalada con pollo a la parrilla.",
+            "offerPrice": 6.99
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "userId": 1,
+        "name": "Pizza Jack",
+        "slug": "pizza-jack",
+        "profileImage": "logo-pizza-jack.png",
+        "headerImage": "photo-pizza-jack.avif",
+        "headerImageAltText": "Pizzería",
+        "category": "Restaurante",
+        "accessibility": ["Braille", "dog friendly", "wheelchair accessible"],
+        "menu": ["gluten free", "vegan", "diabetic"],
+        "province": "Buenos Aires",
+        "city": "Mar del Plata",
+        "address": "Rivadavia 2714",
+      "embedMap": "!1m18!1m12!1m3!1d3144.031482021888!2d-57.551420923181844!3d-37.999726144690506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9584dda46a40ed51%3A0x11838c331c7ed04c!2sRivadavia%202714!5e0!3m2!1sen!2sar!4v1716229164776!5m2!1sen!2sar",
+      "phone": "+54 9 11 2345-6789",
+        "site": "https://pizzajack.com",
+        "instagram": "pizzaparadise",
+        "email": "contacto@pizzajack.com",
+        "description": "<p>Bienvenidos a <strong>Pizza Jack</strong>, donde cada pizza es una obra maestra de sabor y calidad. Nuestra misión es ofrecer auténticas pizzas italianas en un ambiente acogedor y familiar. Ubicados en el corazón de la ciudad, somos el lugar ideal para disfrutar de una deliciosa comida con amigos y familiares.</p><p>En Pizza Jack, nuestra pasión es la pizza. Nuestro menú ofrece una amplia variedad de pizzas, desde las clásicas como la Margherita y la Pepperoni, hasta nuestras creaciones especiales con ingredientes frescos y sabrosos. También ofrecemos opciones vegetarianas y veganas, asegurándonos de que todos puedan disfrutar de nuestras pizzas.</p><p>Nos enorgullece trabajar con los mejores ingredientes para ofrecer pizzas que son una verdadera delicia. Utilizamos masa fresca, salsa de tomate casera y una variedad de quesos y toppings de alta calidad para crear sabores auténticos y deliciosos. Cada pizza se hornea a la perfección en nuestro horno de leña, garantizando una experiencia culinaria excepcional.</p><p>Nuestro equipo de pizzaiolos está dedicado a la excelencia en la preparación de pizzas. Con años de experiencia y un amor por la cocina italiana, se aseguran de que cada pizza sea una experiencia única y deliciosa. Ya sea que prefieras una pizza clásica o quieras probar algo nuevo y emocionante, en Pizza Jack encontrarás la pizza perfecta para ti.</p><p>Te invitamos a visitar Pizza Jack y descubrir por qué somos la pizzería preferida de la comunidad. Disfruta de nuestro ambiente acogedor y amigable, perfecto para cualquier ocasión. Estamos emocionados de compartir nuestra pasión por la pizza contigo y esperamos que cada visita sea una experiencia memorable. ¡Esperamos verte pronto!</p>",
+        "offers": 3,
+        "offersData": [
+          {
+            "offerImage": "offer-1-pizza-jack.avif",
+            "offerImageAltText": "Pizza margarita",
+            "offerTitle": "Pizza margarita",
+            "offerDescription": "Clásica pizza margarita con albahaca fresca.",
+            "offerPrice": 9.99
+          },
+          {
+            "offerImage": "offer-2-pizza-jack.avif",
+            "offerImageAltText": "Pizza vegana",
+            "offerTitle": "Pizza vegana",
+            "offerDescription": "Pizza vegana con queso de almendras y vegetales frescos.",
+            "offerPrice": 10.49
+          },
+          {
+            "offerImage": "offer-3-pizza-jack.avif",
+            "offerImageAltText": "Calzone",
+            "offerTitle": "Calzone",
+            "offerDescription": "Delicioso calzone relleno de queso y jamón.",
+            "offerPrice": 8.99
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "userId": 1,
+        "name": "Coffee Corner",
+        "slug": "coffee-corner",
+        "profileImage": "logo-coffee-corner.png",
+        "headerImage": "photo-coffee-corner.avif",
+        "headerImageAltText": "Cafetería",
+        "category": "Cafetería",
+        "accessibility": ["Braille", "dog friendly", "wheelchair accessible"],
+        "menu": ["gluten free", "vegan", "diabetic"],
+        "province": "Buenos Aires",
+        "city": "Mar del Plata",
+        "address": "Rivadavia 2714",
+      "embedMap": "!1m18!1m12!1m3!1d3144.031482021888!2d-57.551420923181844!3d-37.999726144690506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9584dda46a40ed51%3A0x11838c331c7ed04c!2sRivadavia%202714!5e0!3m2!1sen!2sar!4v1716229164776!5m2!1sen!2sar",
+      "phone": "+54 9 11 2345-6789",
+        "site": "https://coffeecorner.com",
+        "instagram": "coffeecorner",
+        "email": "contacto@coffeecorner.com",
+        "description": "<p>Bienvenidos a <strong>Coffee Corner</strong>, donde cada taza de café es un momento de placer y calidez. Nuestra misión es ofrecer la mejor experiencia de café a cada cliente, brindándoles café de calidad y un ambiente acogedor. Ubicados en una esquina tranquila de la ciudad, somos el lugar ideal para disfrutar de una pausa tranquila o una reunión informal con amigos.</p><p>En Coffee Corner, nuestra pasión es el café. Nuestro menú ofrece una variedad de opciones, desde los clásicos como el espresso y el cappuccino, hasta nuestras creaciones especiales con sabores únicos. También ofrecemos una selección de tés, chocolates calientes y bebidas frías, asegurándonos de que todos encuentren algo que les guste.</p><p>Nos enorgullece trabajar con granos de café de alta calidad para ofrecer bebidas que son una verdadera delicia. Nuestros baristas expertos se dedican a preparar cada taza con cuidado y precisión, garantizando un sabor excepcional en cada sorbo. Además, ofrecemos una variedad de opciones de leche y siropes para personalizar tu café según tus gustos.</p><p>Nuestro ambiente acogedor y relajado te invita a disfrutar de tu café en paz. Ya sea que estés buscando un lugar tranquilo para leer un libro o un espacio para reunirte con amigos, en Coffee Corner encontrarás el ambiente perfecto. Además, ofrecemos una selección de pasteles y bocadillos para acompañar tu bebida y completar tu experiencia.</p><p>Te invitamos a visitar Coffee Corner y descubrir por qué somos la cafetería preferida de la comunidad. Disfruta de nuestro ambiente acogedor y nuestro café excepcional, hecho con amor y cuidado. Estamos emocionados de compartir nuestra pasión por el café contigo y esperamos que cada visita sea una experiencia memorable. ¡Esperamos verte pronto!</p>",
+        "offers": 2,
+        "offersData": [
+          {
+            "offerImage": "offer-1-coffee-corner.avif",
+            "offerImageAltText": "Café latte",
+            "offerTitle": "Café latte",
+            "offerDescription": "Café latte cremoso y aromático.",
+            "offerPrice": 3.49
+          },
+          {
+            "offerImage": "offer-2-coffee-corner.avif",
+            "offerImageAltText": "Café vegano",
+            "offerTitle": "Café vegano",
+            "offerDescription": "Café vegano con leche de almendras.",
+            "offerPrice": 3.99
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "userId": 1,
+        "name": "Bistro Bella",
+        "slug": "bistro-bella",
+        "profileImage": "logo-bistro-bella.png",
+        "headerImage": "photo-bistro-bella.avif",
+        "headerImageAltText": "Bistró",
+        "category": "Restaurante",
+        "accessibility": ["Braille", "dog friendly", "wheelchair accessible"],
+        "menu": ["gluten free", "vegan", "diabetic"],
+        "province": "Buenos Aires",
+        "city": "Mar del Plata",
+        "address": "Rivadavia 2714",
+      "embedMap": "!1m18!1m12!1m3!1d3144.031482021888!2d-57.551420923181844!3d-37.999726144690506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9584dda46a40ed51%3A0x11838c331c7ed04c!2sRivadavia%202714!5e0!3m2!1sen!2sar!4v1716229164776!5m2!1sen!2sar",
+       "phone": "+54 9 11 2345-6789",
+        "site": "https://bistrobella.com",
+        "instagram": "bistrobella",
+        "email": "contacto@bistrobella.com",
+        "description": "<p>Bienvenidos a <strong>Bistro Bella</strong>, donde cada plato es una obra de arte culinaria. Nuestra misión es ofrecer una experiencia gastronómica excepcional a cada cliente, combinando sabores frescos y creativos con un ambiente acogedor y elegante. Ubicados en el corazón de la ciudad, somos el destino perfecto para disfrutar de una comida gourmet inolvidable.</p><p>En Bistro Bella, nuestra cocina se inspira en la tradición francesa con un toque moderno. Nuestro menú ofrece una variedad de platos, desde los clásicos como el coq au vin y el ratatouille, hasta nuestras creaciones especiales con ingredientes locales y de temporada. También ofrecemos una selección de vinos finos y postres exquisitos para complementar tu experiencia culinaria.</p><p>Nos enorgullece trabajar con ingredientes frescos y de la más alta calidad para ofrecer platos que son una verdadera delicia. Nuestro equipo de chefs expertos está comprometido con la excelencia culinaria, asegurando que cada plato sea una experiencia sensorial única. Cada plato es preparado con amor y dedicación, garantizando una experiencia gastronómica memorable.</p><p>Nuestro ambiente elegante y acogedor te invita a disfrutar de una comida relajada y refinada. Ya sea que estés buscando una cena romántica, una reunión íntima o una comida especial con amigos, en Bistro Bella encontrarás el ambiente perfecto. Además, nuestro personal amable y atento está siempre dispuesto a hacer de tu visita una experiencia inolvidable.</p><p>Te invitamos a visitar Bistro Bella y descubrir por qué somos el bistró preferido de la comunidad. Disfruta de nuestra cocina excepcional, nuestro ambiente elegante y nuestro servicio impecable. Estamos emocionados de compartir nuestra pasión por la buena comida y la hospitalidad contigo y esperamos que cada visita sea una experiencia memorable. ¡Esperamos verte pronto!</p>",
+        "offers": 3,
+        "offersData": [
+          {
+            "offerImage": "offer-1-bistro-bella.avif",
+            "offerImageAltText": "Risotto de hongos",
+            "offerTitle": "Risotto de hongos",
+            "offerDescription": "Risotto cremoso con una mezcla de hongos silvestres.",
+            "offerPrice": 13.99
+          },
+          {
+            "offerImage": "offer-2-bistro-bella.avif",
+            "offerImageAltText": "Plato vegano",
+            "offerTitle": "Plato vegano",
+            "offerDescription": "Plato vegano con tofu marinado y vegetales al wok.",
+            "offerPrice": 12.49
+          },
+          {
+            "offerImage": "offer-3-bistro-bella.avif",
+            "offerImageAltText": "Postre de frutas",
+            "offerTitle": "Postre de frutas",
+            "offerDescription": "Delicioso postre de frutas de temporada.",
+            "offerPrice": 6.99
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "userId": 1,
+        "name": "Grill Master",
+        "slug": "grill-master",
+        "profileImage": "logo-grill-master.png",
+        "headerImage": "photo-grill-master.avif",
+        "headerImageAltText": "Parrilla",
+        "category": "Restaurante",
+        "accessibility": ["Braille", "dog friendly", "wheelchair accessible"],
+        "menu": ["gluten free", "vegan", "diabetic"],
+        "province": "Buenos Aires",
+        "city": "Mar del Plata",
+        "address": "Rivadavia 2714",
+      "embedMap": "!1m18!1m12!1m3!1d3144.031482021888!2d-57.551420923181844!3d-37.999726144690506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9584dda46a40ed51%3A0x11838c331c7ed04c!2sRivadavia%202714!5e0!3m2!1sen!2sar!4v1716229164776!5m2!1sen!2sar",
+      "phone": "+54 9 11 2345-6789",
+        "site": "https://grillmaster.com",
+        "instagram": "grillmaster",
+        "email": "contacto@grillmaster.com",
+        "description": "<p>Bienvenidos a <strong>Grill Master</strong>, donde cada plato es una experiencia culinaria inolvidable. Nuestra misión es ofrecer la mejor comida a la parrilla en un ambiente acogedor y familiar. Ubicados en el corazón de la ciudad, somos el destino ideal para los amantes de la carne a la parrilla y los sabores ahumados.</p><p>En Grill Master, nuestra pasión es la parrilla. Nuestro menú ofrece una amplia variedad de cortes de carne, desde las clásicas como la chuleta de cerdo y el filete, hasta nuestras especialidades con marinados y adobos únicos. También ofrecemos opciones para vegetarianos y acompañamientos deliciosos para complementar tu comida.</p><p>Nos enorgullece trabajar con los mejores cortes de carne y ingredientes frescos para ofrecer platos que son una verdadera delicia. Nuestro equipo de parrilleros expertos se dedica a cocinar cada pieza de carne a la perfección, asegurando un sabor y una textura excepcionales en cada bocado. Además, ofrecemos una variedad de salsas caseras y condimentos para realzar el sabor de cada plato.</p><p>Nuestro ambiente cálido y acogedor te invita a disfrutar de una comida relajada y deliciosa. Ya sea que estés buscando una cena en familia, una comida con amigos o una celebración especial, en Grill Master encontrarás el ambiente perfecto. Además, nuestro personal amable y atento está siempre dispuesto a hacer de tu visita una experiencia inolvidable.</p><p>Te invitamos a visitar Grill Master y descubrir por qué somos el restaurante de parrilla preferido de la comunidad. Disfruta de nuestra comida excepcional, nuestro ambiente acogedor y nuestro servicio impecable. Estamos emocionados de compartir nuestra pasión por la parrilla contigo y esperamos que cada visita sea una experiencia memorable. ¡Esperamos verte pronto!</p>",
+        "offers": 2,
+        "offersData": [
+          {
+            "offerImage": "offer-1-grill-master.avif",
+            "offerImageAltText": "Costillas de cerdo",
+            "offerTitle": "Costillas de cerdo",
+            "offerDescription": "Costillas de cerdo a la parrilla con salsa BBQ.",
+            "offerPrice": 14.99
+          },
+          {
+            "offerImage": "offer-2-grill-master.avif",
+            "offerImageAltText": "Chorizo a la parrilla",
+            "offerTitle": "Chorizo a la parrilla",
+            "offerDescription": "Chorizo a la parrilla con chimichurri.",
+            "offerPrice": 7.99
+          }
+        ]
+      },
+      {
+        "id": 16,
+        "userId": 1,
+        "name": "Smoothie Spot",
+        "slug": "smoothie-spot",
+        "profileImage": "logo-smoothie-spot.png",
+        "headerImage": "photo-smoothie-spot.avif",
+        "headerImageAltText": "Tienda de batidos",
+        "category": "Cafetería",
+        "accessibility": ["Braille", "dog friendly", "wheelchair accessible"],
+        "menu": ["gluten free", "vegan", "diabetic"],
+        "province": "Buenos Aires",
+        "city": "Mar del Plata",
+        "address": "Rivadavia 2714",
+      "embedMap": "!1m18!1m12!1m3!1d3144.031482021888!2d-57.551420923181844!3d-37.999726144690506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9584dda46a40ed51%3A0x11838c331c7ed04c!2sRivadavia%202714!5e0!3m2!1sen!2sar!4v1716229164776!5m2!1sen!2sar",
+      "phone": "+54 9 11 2345-6789",
+        "site": "https://smoothiespot.com",
+        "instagram": "smoothiespot",
+        "email": "contacto@smoothiespot.com",
+        "description": "<p>Bienvenidos a <strong>Smoothie Spot</strong>, donde cada smoothie es una explosión de sabor y frescura. Nuestra misión es ofrecer smoothies deliciosos y nutritivos en un ambiente acogedor y relajado. Ubicados en el centro de la ciudad, somos el destino ideal para aquellos que buscan una opción saludable y deliciosa para refrescarse.</p><p>En Smoothie Spot, nuestra pasión es crear smoothies que no solo sean deliciosos, sino también nutritivos. Nuestro menú ofrece una variedad de opciones, desde los clásicos como el smoothie de frutas tropicales hasta nuestras creaciones especiales con superalimentos y proteínas. También ofrecemos opciones veganas y sin gluten, asegurándonos de que todos puedan disfrutar de nuestros smoothies.</p><p>Nos enorgullece trabajar con ingredientes frescos y de alta calidad para ofrecer smoothies que son una verdadera delicia. Utilizamos frutas frescas, verduras y otros ingredientes naturales para garantizar que cada smoothie esté lleno de sabor y nutrientes. Además, ofrecemos una variedad de complementos y suplementos para personalizar tu smoothie según tus necesidades y gustos.</p><p>Nuestro ambiente acogedor y relajado te invita a disfrutar de tu smoothie en paz. Ya sea que estés buscando una bebida refrescante después del ejercicio o simplemente quieras disfrutar de un smoothie delicioso en un entorno agradable, en Smoothie Spot encontrarás el lugar perfecto. Además, nuestro personal amable y atento está siempre dispuesto a ayudarte a elegir el smoothie perfecto para ti.</p><p>Te invitamos a visitar Smoothie Spot y descubrir por qué somos el lugar favorito de los amantes de los smoothies en la ciudad. Disfruta de nuestra variedad de sabores y opciones saludables, y déjanos refrescarte con nuestros smoothies deliciosos. Estamos emocionados de compartir nuestra pasión por los smoothies contigo y esperamos que cada visita sea una experiencia refrescante. ¡Esperamos verte pronto!</p>",
+        "offers": 3,
+        "offersData": [
+          {
+            "offerImage": "offer-1-smoothie-spot.avif",
+            "offerImageAltText": "Batido de fresa",
+            "offerTitle": "Batido de fresa",
+            "offerDescription": "Batido de fresa con leche de almendras.",
+            "offerPrice": 5.99
+          },
+          {
+            "offerImage": "offer-2-smoothie-spot.avif",
+            "offerImageAltText": "Batido vegano",
+            "offerTitle": "Batido vegano",
+            "offerDescription": "Batido vegano con espinacas, plátano y aguacate.",
+            "offerPrice": 6.49
+          },
+          {
+            "offerImage": "offer-3-smoothie-spot.avif",
+            "offerImageAltText": "Batido tropical",
+            "offerTitle": "Batido tropical",
+            "offerDescription": "Batido tropical con mango, piña y coco.",
+            "offerPrice": 6.99
+          }
+        ]
+      }
+  ]

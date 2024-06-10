@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boa - Buscador de ofertas accesible</title>
+    <link rel="shortcut icon" href="./assets/img/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/style.css">
+    <script type="module" src="/js/components/navbarPrimary.js"></script>
+</head>
+<body>
+    <navbar-primary></navbar-primary>
+    <header class="headerPrincipal">
+        <h2 class="headerPrincipal__title">¿Qué estás buscando?</h2>
+        <form action="/resultados" class="searchFrom">
+            <label for="busqueda" class="searchFrom__label u-onlyOCR">Campo de búsqueda</label>
+            <input id="busqueda" name="busqueda" class="searchFrom__input" placeholder="Ej.: Tienda Los gallegos" type="text">
+        </form>
+        <section class="filters">
+            <button class="filters__item" data-state="active">Filtro 1</button>
+            <button class="filters__item" data-state="">Filtro 2</button>
+            <button class="filters__item" data-state="">Filtro 3</button>
+            <button class="filters__item" data-state="active">Filtro 4</button>
+            <button class="filters__item" data-state="">Filtro 5</button>
+            <button class="filters__item" data-state="">Filtro 6</button>
+        </section>
+    </header>
+    <main>
+        <section class="lastPublications">
+            <h2 class="lastPublications__title">Encontramos estos comercios</h2>
+            <div id="comercios-container" class="cards cards--ani">
+                <script src="../js/comercios.js"></script>
+                <script>
+                    // Llamar a la función para generar las cards
+                    generateResultsCards();
+                    </script>
+            </div>
+        </section>
+    </main>
+    <footer class="footerPrincipal">
+        <p class="footerPrincipal__text">Hecho por el <strong>equipo 14</strong> para Codo a Codo.</p>
+    </footer>
+    <script src="../js/script.js"></script>
+</body>
+</html>

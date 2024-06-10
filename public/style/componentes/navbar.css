@@ -1,0 +1,139 @@
+/*Navbar*/
+
+.menuPrincipal{
+    align-items: center;
+    background-color: var(--primary-500);
+    color:var(--secondary-50);
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+.menuPrincipal__leftWrapper{
+    display: flex;
+    flex-direction: row;
+    gap:1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.menuPrincipal__logo{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.menuPrincipal__logoLink{
+    text-decoration: none;
+    color:var(--secondary-50)
+}
+
+.menuPrincipal__back{
+    color:var(--secondary-50)
+}
+
+.menuPrincipal__wrappItems{
+    background-color: var(--primary-200);
+    position: fixed;
+    right:0;
+    top: -200vh;
+    padding:4rem 1rem 2rem;
+    height: 100dvh;
+    opacity: 0;
+    z-index: 200;
+    transition: opacity 500ms ease-in-out;
+}
+
+
+.menuPrincipal__wrappItems[data-state="open"]{
+    opacity: 1;
+    top:0;
+}
+
+.menuPrincipal__items{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    list-style: none;
+}
+
+.menuPrincipal__link{
+    color: var(--pri)
+}
+
+.menuPrincipal__controlClose,
+.menuPrincipal__controlOpen{
+    padding:.5rem;
+    background-color: transparent;
+    border:none;
+    font-size: 1rem;
+    cursor: pointer;
+    margin:0;
+}
+
+.menuPrincipal__controlOpen{
+    color:var(--secondary-50)
+}
+
+.menuPrincipal__controlClose{
+    top:1rem;
+    right:2rem;
+    position: absolute;
+}
+
+.menuPrincipal__select{
+    padding:.2em .4em;
+    max-width:100%;
+    border-radius: var(--radius);
+    margin:0;
+    font-size: .8rem;
+}
+
+
+
+@media screen and (min-width: 600px) {
+    
+    .menuPrincipal{
+        padding: 1rem 2rem;
+        position: relative;
+    }
+    
+}
+
+
+@media screen and (min-width: 768px) {
+
+
+    .menuPrincipal__wrappItems{
+        display: flex;
+        gap:1rem;
+        font-size: 1rem;
+        flex-direction: row;
+        background-color: transparent;
+        position: relative;
+        right: 0;
+        top: 0;
+        padding:0 1rem;
+        height: 100%;
+        opacity: 1;
+        transition: none;
+        position:absolute;
+        align-items: center;
+    }
+
+    .menuPrincipal__items{
+        flex-direction: row;
+    }
+
+    .menuPrincipal__link{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        font-size: .8rem;
+    }
+
+    .menuPrincipal__link span{
+        font-size: 1.5rem;
+    }
+    
+}

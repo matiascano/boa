@@ -1,0 +1,98 @@
+.mapHome{
+    aspect-ratio: 16/9;
+}
+
+.mapHome--full{
+  aspect-ratio: auto;
+  height: 100%;
+  width: 100vw;
+}
+
+.mapHome > :first-child {
+    width: 100%;
+  }
+  .mapHome > img {  
+    height: auto;
+  } 
+  @supports (--custom:property) {
+    .mapHome {
+      position: relative;
+    }
+    .mapHome::before {
+      content: "";
+      display: block;
+      padding-bottom: calc(100% / (16/9));
+    }  
+    .mapHome > :first-child {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+    }  
+
+    .mapHome--full::before{
+      content: "";
+      display: block;
+      padding-bottom: 100%;
+    }
+  }
+
+  @media screen and (min-width: 600px) {
+    
+    .mapHome{
+        aspect-ratio: 16/6;
+    }
+
+    .mapHome--full{
+      aspect-ratio: auto;
+      height: 100%;
+      width: 100vw;
+    }
+    
+
+      @supports (--custom:property) {
+
+        .mapHome::before {
+          padding-bottom: calc(100% / (16/6));
+        }  
+
+        .mapHome--full::before{
+          content: "";
+          display: block;
+          padding-bottom: 100vh;
+        }
+      }
+    
+    
+}
+
+
+@media screen and (min-width: 768px) {
+
+  .mapHome{
+    aspect-ratio: 16/6;
+}
+
+  .mapHome--full{
+    aspect-ratio: auto;
+    height: 100%;
+    width: 100vw;
+  }
+  
+
+  
+
+      @supports (--custom:property) {
+
+        .mapHome::before {
+          padding-bottom: calc(100% / (16/3));
+        }  
+
+        .mapHome--full::before{
+          content: "";
+          display: block;
+          padding-bottom: 100vh;
+        }
+      }
+    
+}

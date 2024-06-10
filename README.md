@@ -11,13 +11,13 @@ Proyecto para el curso de **Fullstack Node JS** en **Codo a codo**. Comisión 24
 
 **Tutora:** Fabiana Ramirez Cuenca
 
-**Docente:** Thalia Rodrigues
+**Docente:** Talia Rodrigues
 
 ### Integrantes
 
-- Catriel Cabrera - [Repositorio individual](https://github.com/catriel458/BOA.git){:target="_blank"}
-- Franco D'Angelo - [Repositorio individual](https://github.com/Est133/BOA){:target="_blank"}
-- Matías Cano - [Repositorio individual](https://github.com/matiascano/boa){:target="_blank"}
+- Catriel Cabrera - [Repositorio individual](https://github.com/catriel458/BOA.git)
+- Franco D'Angelo - [Repositorio individual](https://github.com/Est133/BOA)
+- Matías Cano - [Repositorio individual](https://github.com/matiascano/boa)
 
 
 ## Idea
@@ -31,7 +31,14 @@ Registro de comerciantes que podrán publicar sus comercios, publicación de log
 
 ### Material Design Icons
 Se utilizan los iconos de material design icons.
+[Sitio web de Material Design Icons](https://pictogrammers.com)
 
+### Quilljs
+Se utilizá la biblioteca Quilljs para poner texto enriquecido en los formularios mediante un WYSISWYG
+[Sitio Web de Quilljs](https://quilljs.com)
+
+### Google Fonts
+Se utiliza la familia tipográfica ["Open Sans"](https://fonts.google.com/specimen/Open+Sans) para los párrafos y la tipografía ["Fjalla One"](https://fonts.google.com/specimen/Fjalla+One) para los títulos.
 
 
 

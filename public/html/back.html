@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boa - Buscador de ofertas accesible</title>
+    <link rel="shortcut icon" href="./assets/img/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <!-- Include stylesheet -->
+<link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../style/style.css">
+    <script type="module" src="/js/components/navbarBack.js"></script>
+</head>
+<body>
+    <navbar-back></navbar-back>    
+    <main class="mainBack">
+
+    <aside class="asideBack">
+        <h2 class="asideBack__title">Comercios</h2>
+                    <a href="#" class="card-extra-small" role="article">
+                    <img src="./assets/img/logoLoveMyGift.webp" alt="Logo de Love My Gift" class="card-extra-small__image">
+                        <h3 class="card-extra-small__title">Love My Gift</h3>
+                    </a>
+    </aside>
+        <div class="commerceBack">
+            <div class="commerceBack__header">
+                <h2 class="commerceBack__title">Cargar comercio</h2>
+                <!-- <a class="commerceBack__preview" title="Previsualizar" href="./comercio.html"><span class="mdi mdi-eye"></span></a>-->
+            </div>
+            <form action="#" class="form commerceProfile">
+                <div class="form__block">
+                    <label class="form__label" for="name">Nombre del comercio</label>
+                    <input type="text" name="name" id="name" class="form__input" required>
+                    <div class="form__textHelp">Este es un texto de ayuda</div>
+                </div>
+                <div class="form__block">
+                    <label class="form__label" for="profileImg">Imagen de perfil</label>
+                    <input type="file" name="profileImg" id="profileImg" class="form__input" required>
+                    <div class="form__textHelp">Este es un texto de ayuda</div>
+                </div>
+                <div class="form__block">
+                    <label class="form__label" for="headerImg">Imagen de encabezado</label>
+                    <input type="file" name="headerImg" id="headerImg" class="form__input">
+                    <div class="form__textHelp">Este es un texto de ayuda</div>
+                </div>
+                <div class="form__block">
+                    <label class="form__label" for="headerAltImage">Texto alternativo de la imagen</label>
+                    <input type="text" name="headerAltImage" id="headerAltImage" class="form__input" required>
+                    <div class="form__textHelp">Este es un texto de ayuda</div>
+                </div>
+                <div class="form__block">
+                    <label class="form__label" for="category">Categoría</label>
+                    <select name="category" id="category" class="form__select">
+                        <option value="Cat1">Categoría 1</option>
+                        <option value="Cat2">Categoría 2</option>
+                        <option value="Cat3">Categoría 3</option>
+                        <option value="Cat4">Categoría 4</option>
+                    </select>
+                    <div class="form__textHelp">Este es un texto de ayuda</div>
+                </div>
+                <div class="form__block">
+                    <label class="form__label" for="accessibility">Accesibilidad</label>
+                    <select name="accessibility" id="accessibility" class="form__select">
+                        <option value="Acc1">Accesibilidad 1</option>
+                        <option value="Acc2">Accesibilidad 2</option>
+                        <option value="Acc3">Accesibilidad 3</option>
+                        <option value="Acc4">Accesibilidad 4</option>
+                    </select>
+                    <div class="form__textHelp">Este es un texto de ayuda</div>
+                </div>
+                <div class="form__block">
+                    <label class="form__label" for="menu">Menues aptos</label>
+                    <select name="menu" id="menu" class="form__select">
+                        <option value="menu1">Menú 1</option>
+                        <option value="menu2">Menú 2</option>
+                        <option value="menu3">Menú 3</option>
+                        <option value="menu4">Menú 4</option>
+                    </select>
+                    <div class="form__textHelp">Multiple selección. Sólo si es gastronmico el local.</div>
+                </div>
+                <div class="form__block">
+                    <label class="form__label" for="province">Provincia</label>
+                    <select name="province" id="province" class="form__select">
+                        <option value="Cat1" selected>Buenos Aires</option>
+                        <option value="Cat2">CABA</option>
+                        <option value="Cat3">La Pampa</option>
+                        <option value="Cat4">La Rioja</option>
+                    </select>
+                    <div class="form__textHelp">Este es un texto de ayuda</div>
+                </div>
+                <div class="form__block">
+                    <label class="form__label" for="city">Ciudad</label>
+                    <select name="city" id="city" class="form__select">
+                        <option value="Cat1" selected>Mar del Plata</option>
+                        <option value="Cat2">Miramar</option>
+                        <option value="Cat3">Pinamar</option>
+                        <option value="Cat4">Bahía Blanca</option>
+                    </select>
+                    <div class="form__textHelp">Este es un texto de ayuda</div>
+                </div>
+                <div class="form__block">
+                    <label class="form__label" for="address">Domicilio</label>
+                    <input type="text" name="address" id="address" class="form__input" required>
+                    <div class="form__textHelp">Este es un texto de ayuda</div>
+                </div>
+                <div class="form__block">
+                    <label class="form__label" for="web">Sitio Web</label>
+                    <input type="text" name="web" id="web" class="form__input" required>
+                    <div class="form__textHelp">Este es un texto de ayuda</div>
+                </div>
+                <div class="form__block">
+                    <label class="form__label" for="instagram">Instagram</label>
+                    <input type="text" name="instagram" id="instagram" class="form__input" required>
+                    <div class="form__textHelp">Este es un texto de ayuda</div>
+                </div>
+                
+                <div class="form__block">
+                    <label class="form__label" for="mail">Email</label>
+                    <input type="email" name="mail" id="mail" class="form__input" required>
+                    <div class="form__textHelp">Este es un texto de ayuda</div>
+                </div>
+                <div class="u-paddingBottom">
+                    <label class="form__label" for="description">Descripción</label>
+                    <div name="description" id="description"  class="form_wysiwyg"></div>
+                    <div class="form__textHelp">Este es un texto de ayuda</div>
+                </div>
+                <button class="form__button form__button--primary" type="submit">Publicar comercio</button>
+                <button class="form__button form__button--secondary" type="button" onclick="window.open('/ofertas', '_self')">Cargar ofertas</button>
+                <button class="form__button form__button--tertiary" type="button">Eliminar</button>
+            </form>
+        </div>
+    </main>
+    <!-- Include the Quill library -->
+<script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
+
+<!-- Initialize Quill editor -->
+<script>
+  const quill = new Quill('#description', {
+    theme: 'snow'
+  });
+</script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+.comercios{
+    margin-bottom: 2rem;
+}
+
+.comercio{
+    margin:0;
+}
+
+.comercio__cards{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.comercio__photo{
+    aspect-ratio: 6/2;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.comercio__profile{
+    width:150px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: -95px auto 2rem;
+}
+
+.comercio__logo{
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    width:100%;
+}
+
+.comercio__title{
+    font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.comercio__subtitle{
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.comercio__h3{
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.comercio__links{
+    display: flex;
+    gap:2rem;
+    list-style: none;
+    justify-content: center;
+    width: 100%;
+    margin-inline: auto;
+    margin-bottom: 1rem;
+}
+
+.comercio__link{
+    text-decoration: none;
+    color: var(--secondary-900)
+}
+
+.comercio__description{
+    padding-inline: 2rem;
+}
+
+.comercio__services{
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    width:90vw;
+    margin-inline: auto;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+.comercio__body{
+    width:80vw;
+    margin: 2rem auto;
+}
+
+.comercio__footer{
+    display: grid;
+    grid-template-columns:1fr;
+    gap:1rem;
+    padding: 1rem;
+}
+
+.mapComercio > :first-child {
+    width: 100%;
+  }
+  .mapComercio > img {  
+    height: auto;
+  } 
+  @supports (--custom:property) {
+    .mapComercio {
+      position: relative;
+    }
+    .mapComercio::before {
+      content: "";
+      display: block;
+      padding-bottom: calc(100% / (16/9));
+    }  
+    .mapComercio > :first-child {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+    }  
+
+    .mapComercio--full::before{
+      content: "";
+      display: block;
+      padding-bottom: 100%;
+    }
+  }
+
+@media screen and (min-width: 768px) {
+
+    .comercio__footer{
+        grid-template-columns: 2fr 1fr;
+    }
+    
+    .comercio__details, .comercio__near{
+        width: 100%;
+        align-self:flex-start;
+    }
+
+    .comercio__h3 {
+        margin-top: 0;
+    }
+
+    .comercio__subtitle{
+        margin-bottom: .6rem;
+    }
+
+    .comercios__ofertas, .comercio__footer{
+        width: 80vw;
+        margin-inline: auto;
+    }
+
+    .mapComercio{
+        aspect-ratio: 6/4;
+        margin-bottom: 2rem;
+    }
+}
