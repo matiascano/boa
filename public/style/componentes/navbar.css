@@ -2,7 +2,7 @@
 
 .menuPrincipal{
     align-items: center;
-    background-color: var(--primary-500);
+    background-color: var(--primary-900);
     color:var(--secondary-50);
     display: flex;
     justify-content: space-between;
