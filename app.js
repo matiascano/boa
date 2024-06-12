@@ -5,51 +5,55 @@ const express = require('express');
 // Creamos la variable app que nos va a permitir hacer llamadas
 const app = express();
 
-//creamos el puerto
+// Creamos el puerto
 const PORT = 3000;
 
-//hacemos el listen
+// Hacemos el listen
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en la url http://localhost:${PORT}/`);
-})
+});
 
-//Midleware
+const comerciosRouter = require('./app/routes/comercios');
+
+app.use('/comercios', comerciosRouter);
+
+// Middleware
 app.use(express.static('public'));
 
-//Rutas
+// Rutas
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/index.html');
-})
+});
 
 app.get('/mapa', (req, res) => {
     res.sendFile(__dirname + '/public/html/mapa.html');
-})
+});
 
 app.get('/ofertas', (req, res) => {
     res.sendFile(__dirname + '/public/html/ofertas.html');
-})
+});
 
 app.get('/comercio', (req, res) => {
     res.sendFile(__dirname + '/public/html/comercio.html');
-}) 
+});
 
 app.get('/registro', (req, res) => {
     res.sendFile(__dirname + '/public/html/registro.html');
-})
+});
 
 app.get('/back', (req, res) => {
     res.sendFile(__dirname + '/public/html/back.html');
-})
+});
 
 app.get('/resultados', (req, res) => {
     res.sendFile(__dirname + '/public/html/resultados.html');
-}) 
+});
 
 app.get('/login', (req, res) => {
     res.sendFile(__dirname + '/public/html/login.html');
-})
+});
 
-//Error 404
-app.get('*', (req, res) => {
+// Error 404
+/*app.get('*', (req, res) => {
     res.sendFile(__dirname + '/public/html/404.html');
-})
+});*/
