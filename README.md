@@ -8,6 +8,8 @@ Proyecto para el curso de **Fullstack Node JS** en **Codo a codo**. Comisión 24
 Una vez clonado el proyecto
 
 - npm install
+- npm i express
+- npm i body-parser
 - npm i nodemon -D
 - npm run dev (en caso de desarrollo)
 - npm run start (caso deploy)

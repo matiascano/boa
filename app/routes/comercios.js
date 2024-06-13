@@ -30,4 +30,13 @@ router.get('/city/:city', controller.getComerciosByCity);
 // Obtener comercios por slug
 router.get('/slug/:slug', controller.getComerciosBySlug);
 
+// Publicar comercio
+router.post('/create/:id', controller.addCommerce);
+
+// Actualizar comercio
+router.put('/update/:id', controller.updateCommerce);
+
+// Eliminar comercio
+router.delete('/delete/:id', controller.deleteCommerce);
+
 module.exports = router;
