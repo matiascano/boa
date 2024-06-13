@@ -1,6 +1,7 @@
-// app.js
 // Hacemos la llamada a express
 const express = require('express');
+// Llamamos a body-parser
+const bodyParser = require('body-parser');
 
 // Creamos la variable app que nos va a permitir hacer llamadas
 const app = express();
@@ -8,19 +9,16 @@ const app = express();
 // Creamos el puerto
 const PORT = 3000;
 
-// Hacemos el listen
-app.listen(PORT, () => {
-    console.log(`Servidor corriendo en la url http://localhost:${PORT}/`);
-});
+// Middleware para parsear JSON antes de definir las rutas
+app.use(bodyParser.json());
 
-const comerciosRouter = require('./app/routes/comercios');
-
-app.use('/comercios', comerciosRouter);
-
-// Middleware
+// Middleware para servir archivos estáticos
 app.use(express.static('public'));
 
 // Rutas
+const comerciosRouter = require('./app/routes/comercios');
+app.use('/comercios', comerciosRouter);
+
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/index.html');
 });
@@ -57,3 +55,8 @@ app.get('/login', (req, res) => {
 /*app.get('*', (req, res) => {
     res.sendFile(__dirname + '/public/html/404.html');
 });*/
+
+// Hacemos el listen
+app.listen(PORT, () => {
+    console.log(`Servidor corriendo en la url http://localhost:${PORT}/`);
+});
