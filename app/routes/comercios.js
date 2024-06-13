@@ -3,6 +3,10 @@ const controller = require('../controllers/comercios');
 
 const router = express.Router();
 
+// Obtenemos datos de los comercios para mostrarlos en el index
+router.get('/data', controller.getComercios);
+
+
 // Obtenemos datos de los comercios
 router.get('/', controller.getData);
 
