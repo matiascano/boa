@@ -1,7 +1,7 @@
 // Función para leer el archivo JSON
 async function fetchData() {
     try {
-        const response = await fetch('./data/comercios.json');
+        const response = await fetch('/comercios/data');
         const data = await response.json();
         return data;
     } catch (error) {
@@ -30,7 +30,7 @@ function getAccessibilityIcon(service) {
 // Función para generar la estructura HTML para cada card del comercio
 function generateCommerceCard(commerce) {
     return `
-        <a href="./comercios/index.html?slug=${commerce.slug}" class="card" role="article">
+        <a href="./comercio/?slug=${commerce.slug}" class="card" role="article">
             <header class="card__header">
                 <img src="./img/${commerce.headerImage}" alt="${commerce.headerImageAltText}" class="card__image">
                 <p class="card__category"><span class="badge">${commerce.category}</span></p>
@@ -63,7 +63,7 @@ async function generateCommerceCards() {
 // Función para generar la estructura HTML para cada card de los resultados
 function generateResultsCard(commerce) {
     return `
-    <a class="card-small" href="./comercios/index.html?slug=${commerce.slug}" role="article">
+    <a class="card-small" href="./comercio/?slug=${commerce.slug}" role="article">
     <img src="./img/${commerce.profileImage}" alt="${commerce.profileImageAltText}" class="card-small__image">
         <h3 class="card-small__title">${commerce.name}</h3>
         <p class="card-small__text">${commerce.category}</p>

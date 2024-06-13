@@ -2,6 +2,11 @@ exports.getData = (req, res) => {
   res.json(comercios);
 };
 
+// Obtenemos datos de los comercios
+exports.getComercios = (req, res) => {
+  res.json(comercios);
+};
+
 exports.getComercioById = (req, res) => {
   const id = parseInt(req.params.id);
   const comercio = comercios.find(com => com.id === id);
