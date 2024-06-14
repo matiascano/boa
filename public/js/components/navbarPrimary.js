@@ -21,7 +21,7 @@ class NavbarPrimary extends HTMLElement {
         this.shadowRoot.innerHTML = `
             <style>${NavbarPrimary.styles}</style>
             <nav class="menuPrincipal">
-        <a href="#" class="menuPrincipal__back u-hidde u-hiddeDesktop"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+        <a href="/" class="menuPrincipal__back u-hidde u-hiddeDesktop"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
         <div class="menuPrincipal__leftWrapper">
             <h1 class="menuPrincipal__logo gelatina"><a class="menuPrincipal__logoLink" href="./">BOA</a></h1>
             <select name="ciudad" id="ciudad" class="menuPrincipal__select">
