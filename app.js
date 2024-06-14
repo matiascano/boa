@@ -2,6 +2,8 @@
 const express = require('express');
 // Llamamos a body-parser
 const bodyParser = require('body-parser');
+// Importamos path para manejar rutas de archivos
+const path = require('path');
 
 // Creamos la variable app que nos va a permitir hacer llamadas
 const app = express();
@@ -13,47 +15,47 @@ const PORT = 3000;
 app.use(bodyParser.json());
 
 // Middleware para servir archivos estáticos
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Rutas
 const comerciosRouter = require('./app/routes/comercios');
 app.use('/comercios', comerciosRouter);
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/public/index.html');
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 app.get('/mapa', (req, res) => {
-    res.sendFile(__dirname + '/public/html/mapa.html');
+    res.sendFile(path.join(__dirname, 'public', 'html', 'mapa.html'));
 });
 
 app.get('/ofertas', (req, res) => {
-    res.sendFile(__dirname + '/public/html/ofertas.html');
+    res.sendFile(path.join(__dirname, 'public', 'html', 'ofertas.html'));
 });
 
 app.get('/comercio', (req, res) => {
-    res.sendFile(__dirname + '/public/html/comercio.html');
+    res.sendFile(path.join(__dirname, 'public', 'html', 'comercio.html'));
 });
 
 app.get('/registro', (req, res) => {
-    res.sendFile(__dirname + '/public/html/registro.html');
+    res.sendFile(path.join(__dirname, 'public', 'html', 'registro.html'));
 });
 
 app.get('/back', (req, res) => {
-    res.sendFile(__dirname + '/public/html/back.html');
+    res.sendFile(path.join(__dirname, 'public', 'html', 'back.html'));
 });
 
 app.get('/resultados', (req, res) => {
-    res.sendFile(__dirname + '/public/html/resultados.html');
+    res.sendFile(path.join(__dirname, 'public', 'html', 'resultados.html'));
 });
 
 app.get('/login', (req, res) => {
-    res.sendFile(__dirname + '/public/html/login.html');
+    res.sendFile(path.join(__dirname, 'public', 'html', 'login.html'));
 });
 
 // Error 404
 /*app.get('*', (req, res) => {
-    res.sendFile(__dirname + '/public/html/404.html');
+    res.sendFile(path.join(__dirname, 'public', 'html', '404.html'));
 });*/
 
 // Hacemos el listen
