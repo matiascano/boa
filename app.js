@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Rutas
-const comerciosRouter = require('./app/routes/comercios');
+const comerciosRouter = require('./app/routes/comerciosRoutes');
 app.use('/comercios', comerciosRouter);
 
 app.get('/', (req, res) => {

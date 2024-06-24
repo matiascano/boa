@@ -181,4 +181,4 @@ exports.deleteCommerce = (req, res) => {
 
 //Obtenemos los datos del comercio y los guardamos en una variable
 let comercios = require('../data/comercios.json');
-const router = require('../routes/comercios');
+const router = require('../routes/comerciosRoutes');
