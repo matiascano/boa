@@ -6,9 +6,9 @@ const router = express.Router();
 // Obtenemos datos de los comercios para mostrarlos en el index
 router.get('/data', controller.getComercios);
 
-
 // Obtenemos datos de los comercios
-router.get('/', controller.getData);
+router.get('/', controller.getComercios);
+
 
 // Obtenemos datos de un comercio
 router.get('/:id', controller.getComercioById);
@@ -35,12 +35,13 @@ router.get('/city/:city', controller.getComerciosByCity);
 router.get('/slug/:slug', controller.getComerciosBySlug);
 
 // Publicar comercio
-router.post('/create/:id', controller.addCommerce);
-
+router.post('/create/', controller.addComercio);
+/*
 // Actualizar comercio
 router.put('/update/:id', controller.updateCommerce);
 
 // Eliminar comercio
 router.delete('/delete/:id', controller.deleteCommerce);
+*/
 
 module.exports = router;
