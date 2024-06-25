@@ -28,50 +28,15 @@ const getComerciosByUserId = (req, res) => {
   })
 }
 
-const getComerciosByAccessibility = (req, res) => {
-  const { accessibility } = req.params
-  const sql = 'SELECT * FROM comercios WHERE accessibility = ?'
-  db.query(sql, [accessibility], (err, result) => {
-    if (err) throw err
-    res.json(result)
-  })
-}
-
-const getComerciosByMenu = (req, res) => {
-  const { menu } = req.params
-  const sql = 'SELECT * FROM comercios WHERE menu = ?'
-  db.query(sql, [menu], (err, result) => {
-    if (err) throw err
-    res.json(result)
-  })
-}
-
 const getComerciosByName = (req, res) => {
   const { name } = req.params
-  const sql = 'SELECT * FROM comercios WHERE name = ?'
+  const sql = 'SELECT * FROM comercios WHERE nombre = ?'
   db.query(sql, [name], (err, result) => {
     if (err) throw err
     res.json(result)
   })
 }
 
-const getComerciosByCategory = (req, res) => {
-  const { category } = req.params
-  const sql = 'SELECT * FROM comercios WHERE category = ?'
-  db.query(sql, [category], (err, result) => {
-    if (err) throw err
-    res.json(result)
-  })
-}
-
-const getComerciosByCity = (req, res) => {
-  const { city } = req.params
-  const sql = 'SELECT * FROM comercios WHERE city = ?'
-  db.query(sql, [city], (err, result) => {
-    if (err) throw err
-    res.json(result)
-  })
-}
 
 const getComerciosBySlug = (req, res) => {
   const { slug } = req.params
@@ -98,19 +63,59 @@ const addComercio = (req, res) => {
 }
 
 
-//PUTS
+//UPDATES
+const updateComercio = (req, res) => {
+  const { id } = req.params;
+  const fieldsToUpdate = req.body;
+
+  let sql = 'UPDATE comercios SET ';
+  let values = [];
+  let updateFields = [];
+
+  // Construir la consulta SQL y los valores a actualizar
+  Object.keys(fieldsToUpdate).forEach(key => {
+      if (key !== 'id') { // No permitir actualizar el ID
+          updateFields.push(`${key} = ?`);
+          values.push(fieldsToUpdate[key]);
+      }
+  });
+
+  // Si no se proporcionan campos para actualizar, devolver un error
+  if (updateFields.length === 0) {
+      return res.status(400).json({ error: 'No se proporcionaron campos para actualizar.' });
+  }
+
+  sql += updateFields.join(', ') + ' WHERE id = ?';
+  values.push(id);
+
+  db.query(sql, values, (err, result) => {
+      if (err) {
+          console.error('Error al actualizar el comercio:', err);
+          return res.status(500).json({ error: 'Error interno del servidor al actualizar el comercio.' });
+      }
+      res.json({ message: 'Comercio actualizado correctamente.' });
+  });
+};
+
+
 
 //DELETES
+const deleteComercio = (req, res) => {
+  const { id } = req.params
+  const sql = 'DELETE FROM comercios WHERE id = ?'
+  db.query(sql, [id], (err, result) => {
+    if (err) throw err
+    res.json(result)
+  })
+}
 
 module.exports = {
   getComercios,
   getComercioById,
   getComerciosByUserId,
-  getComerciosByAccessibility,
-  getComerciosByMenu,
   getComerciosByName,
-  getComerciosByCategory,
-  getComerciosByCity,
   getComerciosBySlug,
-  addComercio
+  addComercio,
+  updateComercio,
+  deleteComercio
 }
