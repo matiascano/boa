@@ -1,184 +1,121 @@
-exports.getData = (req, res) => {
-  res.json(comercios);
-};
+const db = require('../db/db')
 
-// Obtenemos datos de los comercios
-exports.getComercios = (req, res) => {
-  res.json(comercios);
-};
+//GETS
 
-exports.getComercioById = (req, res) => {
-  const id = parseInt(req.params.id);
-  const comercio = comercios.find(com => com.id === id);
-  if (comercio) {
-      res.json(comercio);
-  } else {
-      res.status(404).send('Comercio no encontrado');
-  }
-};
+const getComercios = (req, res) => {
+  const sql = 'SELECT * FROM comercios'
+  db.query(sql, (err, result) => {
+    if (err) throw err
+    res.json(result) // Corrección aquí
+  })
+}
 
-// Obtener comercios por user id
-exports.getComerciosByUserId = (req, res) => {
-  const userId = parseInt(req.params.userId);
-  const comercio = comercios.filter(com => com.userId === userId);
-  if (comercio.length > 0) {
-      res.json(comercio);
-  } else {
-      res.status(404).send('Comercios no encontrados para el usuario');
-  }
-};
+const getComercioById = (req, res) => {
+  const { id } = req.params
+  const sql = 'SELECT * FROM comercios WHERE id = ?'
+  db.query(sql, [id], (err, result) => {
+    if (err) throw err
+    res.json(result)
+  })
+}
 
-// Obtener comercios por accesibilidad
-exports.getComerciosByAccessibility = (req, res) => {
-  const accessibility = req.params.accessibility.toLowerCase();
-  const comercio = comercios.filter(com => com.accessibility.some(accessibilityItem => accessibilityItem.toLowerCase() === accessibility));
-  if (comercio.length > 0) {
-      res.json(comercio);
-  } else {
-      res.status(404).send('Comercios no encontrados para la accesibilidad');
-  }
-};
+const getComerciosByUserId = (req, res) => {
+  const { userId } = req.params
+  const sql = 'SELECT * FROM comercios WHERE userId = ?'
+  db.query(sql, [userId], (err, result) => {
+    if (err) throw err
+    res.json(result)
+  })
+}
 
-// Obtener comercios por menú
-exports.getComerciosByMenu = (req, res) => {
-  const menu = req.params.menu.toLowerCase();
-  const comercio = comercios.filter(com => com.menu.some(menuItem => menuItem.toLowerCase() === menu));
-  if (comercio.length > 0) {
-      res.json(comercio);
-  } else {
-      res.status(404).send('Comercios no encontrados para el menú');
-  }
-};
+const getComerciosByName = (req, res) => {
+  const { name } = req.params
+  const sql = 'SELECT * FROM comercios WHERE nombre = ?'
+  db.query(sql, [name], (err, result) => {
+    if (err) throw err
+    res.json(result)
+  })
+}
 
 
-// Obtener comercios por nombre
-exports.getComerciosByName = (req, res) => {
-  const name = req.params.name.toLowerCase();
-  const comercio = comercios.filter(com => com.name.toLowerCase().includes(name));
-  if (comercio.length > 0) {
-      res.json(comercio);
-  } else {
-      res.status(404).send('Comercios no encontrados para el nombre');
-  }
-};
+const getComerciosBySlug = (req, res) => {
+  const { slug } = req.params
+  const sql = 'SELECT * FROM comercios WHERE slug = ?'
+  db.query(sql, [slug], (err, result) => {
+    if (err) throw err
+    res.json(result)
+  })
+}
 
-// Obtener comercios por categoría
-exports.getComerciosByCategory = (req, res) => {
-  const category = req.params.category.toLowerCase();
-  const comercio = comercios.filter(com => com.category.toLowerCase() === category);
-  if (comercio.length > 0) {
-      res.json(comercio);
-  } else {
-      res.status(404).send('Comercios no encontrados para la ciudad');
-  }
-};
-
-// Obtener comercios por ciudad
-exports.getComerciosByCity = (req, res) => {
-  const city = req.params.city.toLowerCase();
-  const comercio = comercios.filter(com => com.city.toLowerCase() === city);
-  if (comercio.length > 0) {
-      res.json(comercio);
-  } else {
-      res.status(404).send('Comercios no encontrados para la ciudad');
-  }
-};
-
-// Obtener comercios por slug
-exports.getComerciosBySlug = (req, res) => {
-  const slug = req.params.slug.toLowerCase();
-  const comercio = comercios.filter(com => com.slug.toLowerCase() === slug);
-  if (comercio.length > 0) {
-      res.json(comercio);
-  } else {
-      res.status(404).send('Comercios no encontrados para el slug');
-  }
-};
-
-//Post para crear comercio
-exports.addCommerce = (req, res) => {
+//POSTS
+const addComercio = (req, res) => {
   const {
-      id,
-      userId,
-      name,
-      slug,
-      profileImage,
-      headerImage,
-      headerImageAltText,
-      category,
-      accessibility,
-      menu,
-      province,
-      city,
-      address,
-      embedMap,
-      phone,
-      site,
-      instagram,
-      email,
-      description,
-      offers,
-      offersData
-  } = req.body;
+    nombre, slug, descripcion, imgPerfil, altPerfil,
+    imgHeader, altHeader, domicilio, latitud, longitud,
+    web, email, instagram, idUsuario, idCiudad
+  } = req.body
 
-  console.log({
-      id,
-      userId,
-      name,
-      slug,
-      profileImage,
-      headerImage,
-      headerImageAltText,
-      category,
-      accessibility,
-      menu,
-      province,
-      city,
-      address,
-      embedMap,
-      phone,
-      site,
-      instagram,
-      email,
-      description,
-      offers,
-      offersData
+  const sql = 'INSERT INTO comercios (nombre, slug, descripcion, imgPerfil, altPerfil, imgHeader, altHeader, domicilio, latitud, longitud, web, email, instagram, idUsuario, idCiudad) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'
+  db.query(sql, [nombre, slug, descripcion, imgPerfil, altPerfil, imgHeader, altHeader, domicilio, latitud, longitud, web, email, instagram, idUsuario, idCiudad], (err, result) => {
+    if (err) throw err
+    res.json(result)
+  })
+}
+
+
+//UPDATES
+const updateComercio = (req, res) => {
+  const { id } = req.params;
+  const fieldsToUpdate = req.body;
+
+  let sql = 'UPDATE comercios SET ';
+  let values = [];
+  let updateFields = [];
+
+  // Construir la consulta SQL y los valores a actualizar
+  Object.keys(fieldsToUpdate).forEach(key => {
+      if (key !== 'id') { // No permitir actualizar el ID
+          updateFields.push(`${key} = ?`);
+          values.push(fieldsToUpdate[key]);
+      }
   });
 
-
-
-  comercios.push(req.body);
-
-  res.status(201).send('Nuevo comercio agregado exitosamente');
-};
-
-// Actualizar un comercio por ID
-exports.updateCommerce = (req, res) => {
-  const id = parseInt(req.params.id);
-  const updatedData = req.body;
-
-  let comercioIndex = comercios.findIndex(com => com.id === id);
-  if (comercioIndex !== -1) {
-      comercios[comercioIndex] = { ...comercios[comercioIndex], ...updatedData };
-      res.json(comercios[comercioIndex]);
-  } else {
-      res.status(404).send('Comercio no encontrado');
+  // Si no se proporcionan campos para actualizar, devolver un error
+  if (updateFields.length === 0) {
+      return res.status(400).json({ error: 'No se proporcionaron campos para actualizar.' });
   }
+
+  sql += updateFields.join(', ') + ' WHERE id = ?';
+  values.push(id);
+
+  db.query(sql, values, (err, result) => {
+      if (err) {
+          console.error('Error al actualizar el comercio:', err);
+          return res.status(500).json({ error: 'Error interno del servidor al actualizar el comercio.' });
+      }
+      res.json({ message: 'Comercio actualizado correctamente.' });
+  });
 };
 
-// Eliminar un comercio por ID
-exports.deleteCommerce = (req, res) => {
-  const id = parseInt(req.params.id);
 
-  const comercioIndex = comercios.findIndex(com => com.id === id);
-  if (comercioIndex !== -1) {
-      comercios.splice(comercioIndex, 1);
-      res.status(204).send();
-  } else {
-      res.status(404).send('Comercio no encontrado');
-  }
-};
 
-//Obtenemos los datos del comercio y los guardamos en una variable
-let comercios = require('../data/comercios.json');
-const router = require('../routes/comercios');
+//DELETES
+const deleteComercio = (req, res) => {
+  const { id } = req.params
+  const sql = 'DELETE FROM comercios WHERE id = ?'
+  db.query(sql, [id], (err, result) => {
+    if (err) throw err
+    res.json(result)
+  })
+}
+
+module.exports = {
+  getComercios,
+  getComercioById,
+  getComerciosByUserId,
+  getComerciosByName,
+  getComerciosBySlug,
+  addComercio,
+  updateComercio,
+  deleteComercio
+}
