@@ -1,184 +1,116 @@
-exports.getData = (req, res) => {
-  res.json(comercios);
-};
+const db = require('../db/db')
 
-// Obtenemos datos de los comercios
-exports.getComercios = (req, res) => {
-  res.json(comercios);
-};
+//GETS
 
-exports.getComercioById = (req, res) => {
-  const id = parseInt(req.params.id);
-  const comercio = comercios.find(com => com.id === id);
-  if (comercio) {
-      res.json(comercio);
-  } else {
-      res.status(404).send('Comercio no encontrado');
-  }
-};
+const getComercios = (req, res) => {
+  const sql = 'SELECT * FROM comercios'
+  db.query(sql, (err, result) => {
+    if (err) throw err
+    res.json(result) // Corrección aquí
+  })
+}
 
-// Obtener comercios por user id
-exports.getComerciosByUserId = (req, res) => {
-  const userId = parseInt(req.params.userId);
-  const comercio = comercios.filter(com => com.userId === userId);
-  if (comercio.length > 0) {
-      res.json(comercio);
-  } else {
-      res.status(404).send('Comercios no encontrados para el usuario');
-  }
-};
+const getComercioById = (req, res) => {
+  const { id } = req.params
+  const sql = 'SELECT * FROM comercios WHERE id = ?'
+  db.query(sql, [id], (err, result) => {
+    if (err) throw err
+    res.json(result)
+  })
+}
 
-// Obtener comercios por accesibilidad
-exports.getComerciosByAccessibility = (req, res) => {
-  const accessibility = req.params.accessibility.toLowerCase();
-  const comercio = comercios.filter(com => com.accessibility.some(accessibilityItem => accessibilityItem.toLowerCase() === accessibility));
-  if (comercio.length > 0) {
-      res.json(comercio);
-  } else {
-      res.status(404).send('Comercios no encontrados para la accesibilidad');
-  }
-};
+const getComerciosByUserId = (req, res) => {
+  const { userId } = req.params
+  const sql = 'SELECT * FROM comercios WHERE userId = ?'
+  db.query(sql, [userId], (err, result) => {
+    if (err) throw err
+    res.json(result)
+  })
+}
 
-// Obtener comercios por menú
-exports.getComerciosByMenu = (req, res) => {
-  const menu = req.params.menu.toLowerCase();
-  const comercio = comercios.filter(com => com.menu.some(menuItem => menuItem.toLowerCase() === menu));
-  if (comercio.length > 0) {
-      res.json(comercio);
-  } else {
-      res.status(404).send('Comercios no encontrados para el menú');
-  }
-};
+const getComerciosByAccessibility = (req, res) => {
+  const { accessibility } = req.params
+  const sql = 'SELECT * FROM comercios WHERE accessibility = ?'
+  db.query(sql, [accessibility], (err, result) => {
+    if (err) throw err
+    res.json(result)
+  })
+}
 
+const getComerciosByMenu = (req, res) => {
+  const { menu } = req.params
+  const sql = 'SELECT * FROM comercios WHERE menu = ?'
+  db.query(sql, [menu], (err, result) => {
+    if (err) throw err
+    res.json(result)
+  })
+}
 
-// Obtener comercios por nombre
-exports.getComerciosByName = (req, res) => {
-  const name = req.params.name.toLowerCase();
-  const comercio = comercios.filter(com => com.name.toLowerCase().includes(name));
-  if (comercio.length > 0) {
-      res.json(comercio);
-  } else {
-      res.status(404).send('Comercios no encontrados para el nombre');
-  }
-};
+const getComerciosByName = (req, res) => {
+  const { name } = req.params
+  const sql = 'SELECT * FROM comercios WHERE name = ?'
+  db.query(sql, [name], (err, result) => {
+    if (err) throw err
+    res.json(result)
+  })
+}
 
-// Obtener comercios por categoría
-exports.getComerciosByCategory = (req, res) => {
-  const category = req.params.category.toLowerCase();
-  const comercio = comercios.filter(com => com.category.toLowerCase() === category);
-  if (comercio.length > 0) {
-      res.json(comercio);
-  } else {
-      res.status(404).send('Comercios no encontrados para la ciudad');
-  }
-};
+const getComerciosByCategory = (req, res) => {
+  const { category } = req.params
+  const sql = 'SELECT * FROM comercios WHERE category = ?'
+  db.query(sql, [category], (err, result) => {
+    if (err) throw err
+    res.json(result)
+  })
+}
 
-// Obtener comercios por ciudad
-exports.getComerciosByCity = (req, res) => {
-  const city = req.params.city.toLowerCase();
-  const comercio = comercios.filter(com => com.city.toLowerCase() === city);
-  if (comercio.length > 0) {
-      res.json(comercio);
-  } else {
-      res.status(404).send('Comercios no encontrados para la ciudad');
-  }
-};
+const getComerciosByCity = (req, res) => {
+  const { city } = req.params
+  const sql = 'SELECT * FROM comercios WHERE city = ?'
+  db.query(sql, [city], (err, result) => {
+    if (err) throw err
+    res.json(result)
+  })
+}
 
-// Obtener comercios por slug
-exports.getComerciosBySlug = (req, res) => {
-  const slug = req.params.slug.toLowerCase();
-  const comercio = comercios.filter(com => com.slug.toLowerCase() === slug);
-  if (comercio.length > 0) {
-      res.json(comercio);
-  } else {
-      res.status(404).send('Comercios no encontrados para el slug');
-  }
-};
+const getComerciosBySlug = (req, res) => {
+  const { slug } = req.params
+  const sql = 'SELECT * FROM comercios WHERE slug = ?'
+  db.query(sql, [slug], (err, result) => {
+    if (err) throw err
+    res.json(result)
+  })
+}
 
-//Post para crear comercio
-exports.addCommerce = (req, res) => {
+//POSTS
+const addComercio = (req, res) => {
   const {
-      id,
-      userId,
-      name,
-      slug,
-      profileImage,
-      headerImage,
-      headerImageAltText,
-      category,
-      accessibility,
-      menu,
-      province,
-      city,
-      address,
-      embedMap,
-      phone,
-      site,
-      instagram,
-      email,
-      description,
-      offers,
-      offersData
-  } = req.body;
+    nombre, slug, descripcion, imgPerfil, altPerfil,
+    imgHeader, altHeader, domicilio, latitud, longitud,
+    web, email, instagram, idUsuario, idCiudad
+  } = req.body
 
-  console.log({
-      id,
-      userId,
-      name,
-      slug,
-      profileImage,
-      headerImage,
-      headerImageAltText,
-      category,
-      accessibility,
-      menu,
-      province,
-      city,
-      address,
-      embedMap,
-      phone,
-      site,
-      instagram,
-      email,
-      description,
-      offers,
-      offersData
-  });
+  const sql = 'INSERT INTO comercios (nombre, slug, descripcion, imgPerfil, altPerfil, imgHeader, altHeader, domicilio, latitud, longitud, web, email, instagram, idUsuario, idCiudad) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'
+  db.query(sql, [nombre, slug, descripcion, imgPerfil, altPerfil, imgHeader, altHeader, domicilio, latitud, longitud, web, email, instagram, idUsuario, idCiudad], (err, result) => {
+    if (err) throw err
+    res.json(result)
+  })
+}
 
 
+//PUTS
 
-  comercios.push(req.body);
+//DELETES
 
-  res.status(201).send('Nuevo comercio agregado exitosamente');
-};
-
-// Actualizar un comercio por ID
-exports.updateCommerce = (req, res) => {
-  const id = parseInt(req.params.id);
-  const updatedData = req.body;
-
-  let comercioIndex = comercios.findIndex(com => com.id === id);
-  if (comercioIndex !== -1) {
-      comercios[comercioIndex] = { ...comercios[comercioIndex], ...updatedData };
-      res.json(comercios[comercioIndex]);
-  } else {
-      res.status(404).send('Comercio no encontrado');
-  }
-};
-
-// Eliminar un comercio por ID
-exports.deleteCommerce = (req, res) => {
-  const id = parseInt(req.params.id);
-
-  const comercioIndex = comercios.findIndex(com => com.id === id);
-  if (comercioIndex !== -1) {
-      comercios.splice(comercioIndex, 1);
-      res.status(204).send();
-  } else {
-      res.status(404).send('Comercio no encontrado');
-  }
-};
-
-//Obtenemos los datos del comercio y los guardamos en una variable
-let comercios = require('../data/comercios.json');
-const router = require('../routes/comercios');
+module.exports = {
+  getComercios,
+  getComercioById,
+  getComerciosByUserId,
+  getComerciosByAccessibility,
+  getComerciosByMenu,
+  getComerciosByName,
+  getComerciosByCategory,
+  getComerciosByCity,
+  getComerciosBySlug,
+  addComercio
+}

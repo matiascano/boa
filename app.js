@@ -1,5 +1,9 @@
 // Hacemos la llamada a express
 const express = require('express');
+
+// Conectamos la base de datos
+const db = require('./app/db/db');
+
 // Llamamos a body-parser
 const bodyParser = require('body-parser');
 // Importamos path para manejar rutas de archivos
@@ -13,6 +17,7 @@ const PORT = 3000;
 
 // Middleware para parsear JSON antes de definir las rutas
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Middleware para servir archivos estáticos
 app.use(express.static(path.join(__dirname, 'public')));
