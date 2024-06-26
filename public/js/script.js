@@ -30,3 +30,32 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error('El componente navbar-primary no fue encontrado en el DOM');
     }
 });
+
+document.getElementById('registroForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evitar el envío normal del formulario
+
+    const formData = new FormData(this);
+    const data = new URLSearchParams(formData);
+
+    fetch('/usuarios/create', {
+        method: 'POST',
+        body: data,
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded' // Especificar el tipo de contenido
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.error) {
+            document.getElementById('mensaje').innerHTML = `<p>${data.error}</p>`;
+        } else {
+            document.getElementById('mensaje').innerHTML = '<p>Usuario creado correctamente. ¡Gracias por registrarte!</p>';
+            this.reset(); // Opcional: reiniciar el formulario después del éxito
+        }
+    })
+    .catch(error => {
+        console.error('Error al registrar el usuario:', error);
+        document.getElementById('mensaje').innerHTML = '<p>Ocurrió un error al registrar el usuario. Por favor, inténtalo de nuevo.</p>';
+    });
+});
+
