@@ -1,17 +1,25 @@
 const db = require('../db/db')
 
 const addUsuario = (req, res) => {
-    const {
-        nombre, email, password, idRol
+    let {
+        nombre, email, password, password2,idRol
     } = req.body
     //si idRol es null, se pone 2 por defecto
     if (!idRol) {
         idRol = 2
     }
+
+    if (password !== password2) {
+        return res.status(400).json({ error: 'Las contraseñas no coinciden' });
+    }
+
     const sql = 'INSERT INTO usuarios (nombre, email, password, idRol) VALUES (?, ?, ?, ?)'
     db.query(sql, [nombre, email, password, idRol], (err, result) => {
-        if (err) throw err
-        res.json(result)
+        if (err) {
+            console.error('Error al insertar el usuario:', err);
+            return res.status(500).json({ error: 'Error al insertar el usuario en la base de datos' });
+        }
+        res.json({ message: 'Usuario creado correctamente', id: result.insertId });
     })
 }
 
