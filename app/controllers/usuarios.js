@@ -4,7 +4,10 @@ const addUsuario = (req, res) => {
     const {
         nombre, email, password, idRol
     } = req.body
-
+    //si idRol es null, se pone 2 por defecto
+    if (!idRol) {
+        idRol = 2
+    }
     const sql = 'INSERT INTO usuarios (nombre, email, password, idRol) VALUES (?, ?, ?, ?)'
     db.query(sql, [nombre, email, password, idRol], (err, result) => {
         if (err) throw err
