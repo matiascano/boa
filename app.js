@@ -26,6 +26,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 const comerciosRouter = require('./app/routes/comercios');
 app.use('/comercios', comerciosRouter);
 
+const usuariosRouter = require('./app/routes/usuarios');
+app.use('/usuarios', usuariosRouter);
+
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
