@@ -83,6 +83,14 @@ const getUsuarios = (req, res) => {
     })
 }
 
+const getRoles = (req, res) => {
+    const sql = 'SELECT * FROM roles'
+    db.query(sql, (err, result) => {
+        if (err) throw err
+        res.json(result)
+    })
+}
+
 const login = (req, res) => {
     const { email, password } = req.body
     const sql = 'SELECT * FROM usuarios WHERE email = ? AND password = ?'
@@ -98,5 +106,6 @@ module.exports = {
     deleteUsuario,
     getUsuarioById,
     getUsuarios,
+    getRoles,
     login
 }
