@@ -3,13 +3,24 @@ async function fetchData() {
     try {
         const response = await fetch('/comercios/data');
         const data = await response.json();
-        console.log(data);
         return data;
     } catch (error) {
         console.error('Error al leer el archivo JSON:', error);
+        throw error; // Lanza el error para manejarlo en la función que llama a fetchData
     }
 }
 
+// Función para leer el archivo JSON
+async function getCommerceCategory(commerce) {
+    try {
+        const response = await fetch(`/comercios/getCategoriesByCommerce/${commerce}`);
+        const data = await response.json();
+        return data.length > 0 ? data[0].nombre : 'sin categoria';
+    } catch (error) {
+        console.error('Error al obtener la categoría del comercio:', error);
+        return 'Sin categoria';
+    }
+}
 
 // Función para obtener el icono de accesibilidad y menúes correspondiente
 function getAccessibilityIcon(service) {
@@ -30,47 +41,64 @@ function getAccessibilityIcon(service) {
 }
 
 // Función para generar la estructura HTML para cada card del comercio
-function generateCommerceCard(commerce) {
-    return `
-        <a href="./comercio/?slug=${commerce.slug}" class="card" role="article">
-            <header class="card__header">
-                <img src="${commerce.imgHeader}" alt="${commerce.altHeader}" class="card__image">
-                <p class="card__category"><span class="badge">${commerce.category ? commerce.category : 'sin categoria'}</span></p>
-            </header>
-            <div class="card__body">
-                <h3 class="card__title">${commerce.nombre}</h3>
-                <div class="card__description">${commerce.descripcion}</div>
-            </div>
-            <footer class="card__footer">
-            <ul class="card__services">
-                ${commerce.accessibility ? commerce.accessibility.map(service => getAccessibilityIcon(service)).join('') : ''}
-                ${commerce.menu ? commerce.menu.map(service => getAccessibilityIcon(service)).join('') : ''}
-            </ul>
-        
-            </footer>
-        </a>
-    `;
+async function generateCommerceCard(commerce) {
+    try {
+        const categoria = await getCommerceCategory(commerce.id);
+
+        // Generamos la estructura HTML de la tarjeta
+        return `
+            <a href="./comercio/?slug=${commerce.slug}" class="card" role="article">
+                <header class="card__header">
+                    <img src="${commerce.imgHeader}" alt="${commerce.altHeader}" class="card__image">
+                    <p class="card__category"><span class="badge">${categoria}</span></p>
+                </header>
+                <div class="card__body">
+                    <h3 class="card__title">${commerce.nombre}</h3>
+                    <div class="card__description">${commerce.descripcion}</div>
+                </div>
+                <footer class="card__footer">
+                    <ul class="card__services">
+                        ${commerce.accessibility ? commerce.accessibility.map(service => getAccessibilityIcon(service)).join('') : ''}
+                        ${commerce.menu ? commerce.menu.map(service => getAccessibilityIcon(service)).join('') : ''}
+                    </ul>
+                </footer>
+            </a>
+        `;
+    } catch (error) {
+        console.error('Error al generar la tarjeta del comercio:', error);
+        return ''; // Retorna un string vacío en caso de error
+    }
 }
 
-// Función principal para generar y agregar las tarjetas al contenedor
+// Función para generar y agregar las tarjetas al contenedor
 async function generateCommerceCards() {
-    const comerciosContainer = document.getElementById('comercios-container');
-    const data = await fetchData();
-    console.log(data);
-    if (data) {
-        data.forEach(commerce => {
-            comerciosContainer.innerHTML += generateCommerceCard(commerce);
-        });
+    try {
+        const comerciosContainer = document.getElementById('comercios-container');
+        const data = await fetchData(); // Llama a fetchData para obtener los datos
+        console.log(data);
+        if (data) {
+            for (const commerce of data) {
+                const cardHtml = await generateCommerceCard(commerce);
+                comerciosContainer.innerHTML += cardHtml;
+            }
+        }
+    } catch (error) {
+        console.error('Error al generar las tarjetas de comercio:', error);
+        // Manejar el error adecuadamente (por ejemplo, mostrar un mensaje al usuario)
     }
 }
 
 // Función para generar la estructura HTML para cada card de los resultados
-function generateResultsCard(commerce) {
-    return `
+async function generateResultsCard(commerce) {
+    try {
+        const categoria =  await getCommerceCategory(commerce.id);
+
+        // Generamos la estructura HTML de la tarjeta
+        return `
     <a class="card-small" href="./comercio/?slug=${commerce.slug}" role="article">
     <img src="${commerce.imgPerfil}" alt="${commerce.altPerfil}" class="card-small__image">
         <h3 class="card-small__title">${commerce.nombre}</h3>
-        <p class="card-small__text">${commerce.category ? commerce.category : 'sin categoria'}</p>
+        <p class="card-small__text">${categoria}</p>
             <footer class="card-small__footer">
             <ul class="card__services">
                 ${commerce.accessibility ? commerce.accessibility.map(service => getAccessibilityIcon(service)).join('') : ''}
@@ -78,16 +106,29 @@ function generateResultsCard(commerce) {
             </ul>
             </footer>
     </a>`;
+        
+    } catch (error) {
+        console.error('Error al generar la tarjeta del comercio:', error);
+        return ''; // Retorna un string vacío en caso de error
+    }
 }
 
 //Funcion principal para generar y agregar cards de resultados
 async function generateResultsCards() {
-    const comerciosContainer = document.getElementById('comercios-container');
-    const data = await fetchData();
-    if (data) {
-        data.forEach(commerce => {
-            comerciosContainer.innerHTML += generateResultsCard(commerce);
-        });
+
+    try {
+        const comerciosContainer = document.getElementById('comercios-container');
+        const data = await fetchData(); // Llama a fetchData para obtener los datos
+        console.log(data);
+        if (data) {
+            for (const commerce of data) {
+                const cardHtml = await generateResultsCard(commerce);
+                comerciosContainer.innerHTML += cardHtml;
+            }
+        }
+    } catch (error) {
+        console.error('Error al generar las tarjetas de comercio:', error);
+        // Manejar el error adecuadamente (por ejemplo, mostrar un mensaje al usuario)
     }
 }
 

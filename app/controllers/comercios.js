@@ -187,6 +187,17 @@ const getCategories = (req, res) => {
   });
 }
 
+// Obtener categorías por comercio
+const getCategoriesByCommerce = (req, res) => {
+  const { id } = req.params;
+  const sql = 'SELECT nombre FROM categorias WHERE id IN ( SELECT idCategoria FROM categoria_comercio     WHERE idComercio = ? )';
+  db.query(sql, [id], (err, result) => {
+    if (err) return handleError(res, err);
+    res.json(result);
+  });
+
+}
+
 // Obtener menús
 const getMenus = (req, res) => {
   const sql = 'SELECT * FROM menues ORDER BY nombre';
@@ -250,5 +261,6 @@ module.exports = {
   getProvinces,
   getCities,
   holaMundo,
+  getCategoriesByCommerce,
   deleteComercio
 }

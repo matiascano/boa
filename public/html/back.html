@@ -59,7 +59,7 @@
                 </div>
                 <div class="form__block">
                     <label class="form__label" for="categorias">Categoría</label>
-                    <select name="categorias" id="categorias" class="form__select" multiple>
+                    <select name="categorias" id="categorias" class="form__select">
                         <script>
                             fetch('/comercios/getCategories')
                                 .then(response => response.json())

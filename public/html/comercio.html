@@ -67,7 +67,7 @@
                                 ${commerce.menu ? commerce.menu.map(service => getAccessibilityIcon(service)).join('') : ''}
                             </ul>
                         </header>
-                        <section class="comercios__ofertas">
+                        <!--<section class="comercios__ofertas">
                             <h3 class="comercio__subtitle">Ofertas</h3>
                             <div class="carrousel carrousel--noTablet">
                                 ${commerce.offersData ? commerce.offersData.map(offer => `
@@ -79,7 +79,7 @@
                                     </a>
                                 `).join(''):''}
                             </div>
-                        </section>
+                        </section>-->
                         <div class="comercio__body">
                             <section class="comercio__description">${commerce.descripcion}</section>
                         </div>
@@ -97,8 +97,8 @@
                             <div class="comercio__near cards cards--ani">
                                 <h3 class="comercio__h3">Otros comercios</h3>
                                 ${randomCommerce ? `
-                                <a class="card-small" href="./index.html?slug=${randomCommerce.slug}" role="article">
-                                    <img src="../img/${randomCommerce.imgPerfil}" alt="${randomCommerce.nombre}" class="card-small__image">
+                                <a class="card-small" href="./comercios/?slug=${randomCommerce.slug}" role="article">
+                                    <img src="${randomCommerce.imgPerfil}" alt="${randomCommerce.nombre}" class="card-small__image">
                                     <h3 class="card-small__title">${randomCommerce.nombre}</h3>
                                     <p class="card-small__text">${randomCommerce.categoria ? randomCommerce.categoria : 'sin categoria'}</p>
                                     <footer class="card-small__footer">
@@ -110,8 +110,8 @@
                                 </a>
                                 ` : ''}
     ${randomCommerce2 ? `
-                                <a class="card-small" href="./index.html?slug=${randomCommerce2.slug}" role="article">
-                                    <img src="../img/${randomCommerce2.imgPerfil}" alt="${randomCommerce2.nombre}" class="card-small__image">
+                                <a class="card-small" href="./comercios/slug=${randomCommerce2.slug}" role="article">
+                                    <img src="${randomCommerce2.imgPerfil}" alt="${randomCommerce2.nombre}" class="card-small__image">
                                     <h3 class="card-small__title">${randomCommerce2.nombre}</h3>
                                     <p class="card-small__text">${randomCommerce2.categoria ? randomCommerce2.categoria : 'sin categoria'}</p>
                                     <footer class="card-small__footer">
@@ -123,8 +123,8 @@
                                 </a>
                                 ` : ''}
     ${randomCommerce3 ? `
-                                <a class="card-small" href="./index.html?slug=${randomCommerce3.slug}" role="article">
-                                    <img src="../img/${randomCommerce3.imgPerfil}" alt="${randomCommerce3.nombre}" class="card-small__image">
+                                <a class="card-small" href="./comercios/?slug=${randomCommerce3.slug}" role="article">
+                                    <img src="${randomCommerce3.imgPerfil}" alt="${randomCommerce3.nombre}" class="card-small__image">
                                     <h3 class="card-small__title">${randomCommerce3.nombre}</h3>
                                     <p class="card-small__text">${randomCommerce3.categoria ? randomCommerce3.categoria : 'sin categoria'}</p>
                                     <footer class="card-small__footer">
