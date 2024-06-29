@@ -1,8 +1,14 @@
+
 // Hacemos la llamada a express
 const express = require('express');
 
 // Conectamos la base de datos
 const db = require('./app/db/db');
+
+// Limpia la caché de require
+Object.keys(require.cache).forEach(function(key) {
+    delete require.cache[key];
+});
 
 // Llamamos a body-parser
 const bodyParser = require('body-parser');
