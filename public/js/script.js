@@ -41,7 +41,7 @@ document.getElementById('registroForm').addEventListener('submit', function(even
         method: 'POST',
         body: data,
         headers: {
-            'Content-Type': 'application/x-www-form-urlencoded' // Especificar el tipo de contenido
+            'Content-Type': 'application/x-www-form-urlencoded' 
         }
     })
     .then(response => response.json())
@@ -50,7 +50,7 @@ document.getElementById('registroForm').addEventListener('submit', function(even
             document.getElementById('mensaje').innerHTML = `<p>${data.error}</p>`;
         } else {
             document.getElementById('mensaje').innerHTML = '<p>Usuario creado correctamente. ¡Gracias por registrarte!</p>';
-            this.reset(); // Opcional: reiniciar el formulario después del éxito
+            this.reset(); // Limpiar el formulario
         }
     })
     .catch(error => {

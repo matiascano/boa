@@ -31,80 +31,150 @@
                 <h2 class="commerceBack__title">Cargar comercio</h2>
                 <!-- <a class="commerceBack__preview" title="Previsualizar" href="./comercio.html"><span class="mdi mdi-eye"></span></a>-->
             </div>
-            <form action="./comercios/create/" class="form commerceProfile">
+            <form id="altaComercio" action="./comercios/create/" method="POST" class="form commerceProfile">
                 <div class="form__block">
-                    <label class="form__label" for="name">Nombre del comercio</label>
-                    <input type="text" name="name" id="name" class="form__input" required>
+                    <label class="form__label" for="nombre">Nombre del comercio</label>
+                    <input type="text" name="nombre" id="nombre" class="form__input" required>
                     <div class="form__textHelp">Este es un texto de ayuda</div>
                 </div>
                 <div class="form__block">
-                    <label class="form__label" for="profileImg">Imagen de perfil</label>
-                    <input type="file" name="profileImg" id="profileImg" class="form__input" required>
+                    <label class="form__label" for="imgPerfil">Imagen de perfil</label>
+                    <input type="file" name="imgPerfil" id="imgPerfil" class="form__input" required>
                     <div class="form__textHelp">Este es un texto de ayuda</div>
                 </div>
                 <div class="form__block">
-                    <label class="form__label" for="headerImg">Imagen de encabezado</label>
-                    <input type="file" name="headerImg" id="headerImg" class="form__input">
+                    <label class="form__label" for="altPerfil">Texto alternativo de la imagen</label>
+                    <input type="text" name="altPerfil" id="altPerfil" class="form__input" required>
                     <div class="form__textHelp">Este es un texto de ayuda</div>
                 </div>
                 <div class="form__block">
-                    <label class="form__label" for="headerAltImage">Texto alternativo de la imagen</label>
-                    <input type="text" name="headerAltImage" id="headerAltImage" class="form__input" required>
+                    <label class="form__label" for="imgHeader">Imagen de encabezado</label>
+                    <input type="file" name="imgHeader" id="imgHeader" class="form__input">
                     <div class="form__textHelp">Este es un texto de ayuda</div>
                 </div>
                 <div class="form__block">
-                    <label class="form__label" for="category">Categoría</label>
-                    <select name="category" id="category" class="form__select">
-                        <option value="Cat1">Categoría 1</option>
-                        <option value="Cat2">Categoría 2</option>
-                        <option value="Cat3">Categoría 3</option>
-                        <option value="Cat4">Categoría 4</option>
+                    <label class="form__label" for="altHeader">Texto alternativo de la imagen</label>
+                    <input type="text" name="altHeader" id="altHeader" class="form__input" required>
+                    <div class="form__textHelp">Este es un texto de ayuda</div>
+                </div>
+                <div class="form__block">
+                    <label class="form__label" for="categorias">Categoría</label>
+                    <select name="categorias" id="categorias" class="form__select">
+                        <script>
+                            fetch('/comercios/getCategories')
+                                .then(response => response.json())
+                                .then(data => {
+                                    data.forEach(category => {
+                                        const option = document.createElement('option');
+                                        option.value = category.id;
+                                        option.textContent = category.nombre;
+                                        document.getElementById('categorias').appendChild(option);
+                                    });
+                                });
+                        </script>
                     </select>
                     <div class="form__textHelp">Este es un texto de ayuda</div>
                 </div>
                 <div class="form__block">
-                    <label class="form__label" for="accessibility">Accesibilidad</label>
-                    <select name="accessibility" id="accessibility" class="form__select">
-                        <option value="Acc1">Accesibilidad 1</option>
-                        <option value="Acc2">Accesibilidad 2</option>
-                        <option value="Acc3">Accesibilidad 3</option>
-                        <option value="Acc4">Accesibilidad 4</option>
+                    <label class="form__label" for="accesibilidad">Accesibilidad</label>
+                    <select name="accesibilidad" id="accesibilidad" class="form__select" multiple>
+                        <script>
+                            //obtenemos el listado de accesibilidad y las insertamos en el select
+                            fetch('/comercios/getAccessibility')
+                                .then(response => response.json())
+                                .then(data => {
+                                    data.forEach(accessibility => {
+                                        const option = document.createElement('option');
+                                        option.value = accessibility.id;
+                                        option.textContent = accessibility.nombre;
+                                        document.getElementById('accesibilidad').appendChild(option);
+                                    });
+                                });
+                        </script>
                     </select>
                     <div class="form__textHelp">Este es un texto de ayuda</div>
                 </div>
                 <div class="form__block">
-                    <label class="form__label" for="menu">Menues aptos</label>
-                    <select name="menu" id="menu" class="form__select">
-                        <option value="menu1">Menú 1</option>
-                        <option value="menu2">Menú 2</option>
-                        <option value="menu3">Menú 3</option>
-                        <option value="menu4">Menú 4</option>
+                    <label class="form__label" for="menues">Menues aptos</label>
+                    <select name="menues" id="menues" class="form__select" multiple>
+                        <script>
+                            //obtenemos el listado de menues y las insertamos en el select
+                            fetch('/comercios/getMenus')
+                                .then(response => response.json())
+                                .then(data => {
+                                    data.forEach(menu => {
+                                        const option = document.createElement('option');
+                                        option.value = menu.id;
+                                        option.textContent = menu.nombre;
+                                        document.getElementById('menues').appendChild(option);
+                                    });
+                                });
+                        </script>
                     </select>
                     <div class="form__textHelp">Multiple selección. Sólo si es gastronmico el local.</div>
                 </div>
                 <div class="form__block">
                     <label class="form__label" for="province">Provincia</label>
                     <select name="province" id="province" class="form__select">
-                        <option value="Cat1" selected>Buenos Aires</option>
-                        <option value="Cat2">CABA</option>
-                        <option value="Cat3">La Pampa</option>
-                        <option value="Cat4">La Rioja</option>
+                        <script>
+                            //dejamos el primer opcion por defecto vacio
+                            const option = document.createElement('option');
+                            option.value = '';
+                            option.textContent = 'Seleccione una provincia';
+                            document.getElementById('province').appendChild(option);
+
+                            //obtenemos el listado de provincias y las insertamos en el select
+                            fetch('/comercios/getProvinces')
+                                .then(response => response.json())
+                                .then(data => {
+                                    data.forEach(province => {
+                                        const option = document.createElement('option');
+                                        option.value = province.id;
+                                        option.textContent = province.provincia_nombre;
+                                        document.getElementById('province').appendChild(option);
+                                    });
+                                });
+                        </script>
                     </select>
                     <div class="form__textHelp">Este es un texto de ayuda</div>
                 </div>
                 <div class="form__block">
                     <label class="form__label" for="city">Ciudad</label>
                     <select name="city" id="city" class="form__select">
-                        <option value="Cat1" selected>Mar del Plata</option>
-                        <option value="Cat2">Miramar</option>
-                        <option value="Cat3">Pinamar</option>
-                        <option value="Cat4">Bahía Blanca</option>
+                        <script>
+                            //obtenemos el listado de ciudades despues de seleccionar la provincia y las insertamos en el select
+                            document.getElementById('province').addEventListener('change', () => {
+                                const provinceId = document.getElementById('province').value;
+                                fetch('/comercios/getCities/' + provinceId)
+                                    .then(response => response.json())
+                                    .then(data => {
+                                        const citySelect = document.getElementById('city');
+                                        citySelect.innerHTML = '';
+                                        data.forEach(city => {
+                                            const option = document.createElement('option');
+                                            option.value = city.id;
+                                            option.textContent = city.ciudad_nombre;
+                                            citySelect.appendChild(option);
+                                        });
+                                    });
+                            });
+                        </script>
                     </select>
                     <div class="form__textHelp">Este es un texto de ayuda</div>
                 </div>
                 <div class="form__block">
-                    <label class="form__label" for="address">Domicilio</label>
-                    <input type="text" name="address" id="address" class="form__input" required>
+                    <label class="form__label" for="domicilio">Domicilio</label>
+                    <input type="text" name="domicilio" id="domicilio" class="form__input" required>
+                    <div class="form__textHelp">Este es un texto de ayuda</div>
+                </div>
+                <div class="form__block">
+                    <label class="form__label" for="latitud">Latitud</label>
+                    <input type="text" name="latitud" id="latitud" class="form__input" required>
+                    <div class="form__textHelp">Este es un texto de ayuda</div>
+                </div>
+                <div class="form__block">
+                    <label class="form__label" for="longitud">Longitud</label>
+                    <input type="text" name="longitud" id="longitud" class="form__input" required>
                     <div class="form__textHelp">Este es un texto de ayuda</div>
                 </div>
                 <div class="form__block">
@@ -119,27 +189,57 @@
                 </div>
                 
                 <div class="form__block">
-                    <label class="form__label" for="mail">Email</label>
-                    <input type="email" name="mail" id="mail" class="form__input" required>
+                    <label class="form__label" for="email">Email</label>
+                    <input type="email" name="email" id="email" class="form__input" required>
                     <div class="form__textHelp">Este es un texto de ayuda</div>
                 </div>
                 <div class="u-paddingBottom">
-                    <label class="form__label" for="description">Descripción</label>
-                    <div name="description" id="description"  class="form_wysiwyg"></div>
+                    <label class="form__label" for="descripcion">Descripción</label>
+                    <textarea name="descripcion" id="descripcion"  class="form_wysiwyg"></textarea>
                     <div class="form__textHelp">Este es un texto de ayuda</div>
                 </div>
                 <button class="form__button form__button--primary" type="submit">Publicar comercio</button>
-                <button class="form__button form__button--secondary" type="button" onclick="window.open('/ofertas', '_self')">Cargar ofertas</button>
-                <button class="form__button form__button--tertiary" type="button">Eliminar</button>
+                <!-- <button class="form__button form__button--secondary" type="button" onclick="window.open('/ofertas', '_self')">Cargar ofertas</button>-->
+                <!--<button class="form__button form__button--tertiary" type="button">Eliminar</button>-->
             </form>
         </div>
+        <div id="mensaje"></div>
+        <script>
+            document.getElementById('altaComercio').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evitar el envío normal del formulario
+
+    const formData = new FormData(this);
+    const data = new URLSearchParams(formData);
+
+    fetch('./comercios/create', {
+        method: 'POST',
+        body: data,
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded' 
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.error) {
+            document.getElementById('mensaje').innerHTML = `<p>${data.error}</p>`;
+        } else {
+            document.getElementById('mensaje').innerHTML = '<p>Comercio creado correctamente.</p>';
+            this.reset(); // Limpiar el formulario
+        }
+    })
+    .catch(error => {
+        console.error('Error al registrar el usuario:', error);
+        document.getElementById('mensaje').innerHTML = '<p>Ocurrió un error al registrar el comercio. Por favor, inténtalo de nuevo.</p>';
+    });
+});
+        </script>
     </main>
     <!-- Include the Quill library -->
 <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
 
 <!-- Initialize Quill editor -->
 <script>
-  const quill = new Quill('#description', {
+  const quill = new Quill('#descripcion', {
     theme: 'snow'
   });
 </script>
