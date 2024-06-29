@@ -1,8 +1,14 @@
+
 // Hacemos la llamada a express
 const express = require('express');
 
 // Conectamos la base de datos
 const db = require('./app/db/db');
+
+// Limpia la caché de require
+Object.keys(require.cache).forEach(function(key) {
+    delete require.cache[key];
+});
 
 // Llamamos a body-parser
 const bodyParser = require('body-parser');
@@ -25,6 +31,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Rutas
 const comerciosRouter = require('./app/routes/comercios');
 app.use('/comercios', comerciosRouter);
+
+const usuariosRouter = require('./app/routes/usuarios');
+app.use('/usuarios', usuariosRouter);
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
