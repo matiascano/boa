@@ -8,7 +8,7 @@ const handleError = (res, err) => {
 //GETS
 
 const getComercios = (req, res) => {
-  const sql = 'SELECT * FROM comercios'
+  const sql = 'SELECT * FROM comercios ORDER BY id DESC'
   db.query(sql, (err, result) => {
     if (err) return handleError(res, err);
     res.json(result)

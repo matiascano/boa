@@ -97,42 +97,44 @@
                             <div class="comercio__near cards cards--ani">
                                 <h3 class="comercio__h3">Otros comercios</h3>
                                 ${randomCommerce ? `
-                                <a class="card-small" href="./comercios/?slug=${randomCommerce.slug}" role="article">
+                                <a class="card-small" href="./comercio/?slug=${randomCommerce.slug}" role="article">
                                     <img src="${randomCommerce.imgPerfil}" alt="${randomCommerce.nombre}" class="card-small__image">
                                     <h3 class="card-small__title">${randomCommerce.nombre}</h3>
                                     <p class="card-small__text">${randomCommerce.categoria ? randomCommerce.categoria : 'sin categoria'}</p>
-                                    <footer class="card-small__footer">
-                                        <ul class="lists">
-                                            ${randomCommerce.accessibility ? randomCommerce.accessibility.map(service => getAccessibilityIcon(service)).join(''): ''}
-                                            ${randomCommerce.menu ? randomCommerce.menu.map(service => getAccessibilityIcon(service)).join(''): ''}
-                                        </ul>
-                                    </footer>
-                                </a>
-                                ` : ''}
-    ${randomCommerce2 ? `
-                                <a class="card-small" href="./comercios/slug=${randomCommerce2.slug}" role="article">
-                                    <img src="${randomCommerce2.imgPerfil}" alt="${randomCommerce2.nombre}" class="card-small__image">
-                                    <h3 class="card-small__title">${randomCommerce2.nombre}</h3>
-                                    <p class="card-small__text">${randomCommerce2.categoria ? randomCommerce2.categoria : 'sin categoria'}</p>
-                                    <footer class="card-small__footer">
-                                        <ul class="lists">
-                                            ${randomCommerce2.accessibility ? randomCommerce2.accessibility.map(service => getAccessibilityIcon(service)).join(''): ''}
-                                            ${randomCommerce2.menu ? randomCommerce2.menu.map(service => getAccessibilityIcon(service)).join(''): ''}
-                                        </ul>
-                                    </footer>
-                                </a>
-                                ` : ''}
-    ${randomCommerce3 ? `
-                                <a class="card-small" href="./comercios/?slug=${randomCommerce3.slug}" role="article">
-                                    <img src="${randomCommerce3.imgPerfil}" alt="${randomCommerce3.nombre}" class="card-small__image">
-                                    <h3 class="card-small__title">${randomCommerce3.nombre}</h3>
-                                    <p class="card-small__text">${randomCommerce3.categoria ? randomCommerce3.categoria : 'sin categoria'}</p>
+                                    <!--<p class="card-small__text">${randomCommerce3.categoria ? randomCommerce3.categoria : 'sin categoria'}</p>
                                     <footer class="card-small__footer">
                                         <ul class="lists">
                                             ${randomCommerce3.accessibility ? randomCommerce3.accessibility.map(service => getAccessibilityIcon(service)).join(''): ''}
                                             ${randomCommerce3.menu ? randomCommerce3.menu.map(service => getAccessibilityIcon(service)).join(''): ''}
                                         </ul>
-                                    </footer>
+                                    </footer>--!>
+                                </a>
+                                ` : ''}
+    ${randomCommerce2 ? `
+                                <a class="card-small" href="./comercio/?slug=${randomCommerce2.slug}" role="article">
+                                    <img src="${randomCommerce2.imgPerfil}" alt="${randomCommerce2.nombre}" class="card-small__image">
+                                    <h3 class="card-small__title">${randomCommerce2.nombre}</h3>
+                                    <p class="card-small__text">${randomCommerce2.categoria ? randomCommerce2.categoria : 'sin categoria'}</p>
+                                    <!--<p class="card-small__text">${randomCommerce3.categoria ? randomCommerce3.categoria : 'sin categoria'}</p>
+                                    <footer class="card-small__footer">
+                                        <ul class="lists">
+                                            ${randomCommerce3.accessibility ? randomCommerce3.accessibility.map(service => getAccessibilityIcon(service)).join(''): ''}
+                                            ${randomCommerce3.menu ? randomCommerce3.menu.map(service => getAccessibilityIcon(service)).join(''): ''}
+                                        </ul>
+                                    </footer>--!>
+                                </a>
+                                ` : ''}
+    ${randomCommerce3 ? `
+                                <a class="card-small" href="./comercio/?slug=${randomCommerce3.slug}" role="article">
+                                    <img src="${randomCommerce3.imgPerfil}" alt="${randomCommerce3.nombre}" class="card-small__image">
+                                    <h3 class="card-small__title">${randomCommerce3.nombre}</h3>
+                                    <!--<p class="card-small__text">${randomCommerce3.categoria ? randomCommerce3.categoria : 'sin categoria'}</p>
+                                    <footer class="card-small__footer">
+                                        <ul class="lists">
+                                            ${randomCommerce3.accessibility ? randomCommerce3.accessibility.map(service => getAccessibilityIcon(service)).join(''): ''}
+                                            ${randomCommerce3.menu ? randomCommerce3.menu.map(service => getAccessibilityIcon(service)).join(''): ''}
+                                        </ul>
+                                    </footer>--!>
                                 </a>
                                 ` : ''}
                             </div>
