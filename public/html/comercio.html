@@ -34,19 +34,11 @@
                     }
                 }
 
-                // Función para obtener el icono de accesibilidad y menúes correspondiente
-                function getAccessibilityIcon(service) {
-                    const icons = {
-                        "braille": "mdi-braille",
-                        "sign language": "mdi-sign-language",
-                        "dog friendly": "mdi-dog",
-                        "dog service": "mdi-dog-service",
-                        "wheelchair accessible": "mdi-wheelchair",
-                        "diabetic": "mdi-diabetes",
-                        "gluten free": "mdi-barley-off",
-                        "vegan": "mdi-sprout"
-                    };
-                    return icons[service] ? `<li class="card__service"><span class="mdi ${icons[service]}"></span></li>` : '';
+
+
+                // Función para generar el icono de accesibilidad
+                function getAccessibilityIcon(accessibility) {
+                    return `<li class="card__service"><span class="mdi ${accessibility.icon}"></span><span>${accessibility.nombre}</span></li>`;
                 }
 
                 // Función para generar el contenido del comercio
