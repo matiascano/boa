@@ -18,9 +18,6 @@ router.get('/getProvinces', controller.getProvinces);
 // Obtener ciudades por ID de provincia
 router.get('/getCities/:province', controller.getCities);
 
-// Ruta de prueba "Hola Mundo"
-router.get('/holamundo', controller.holaMundo);
-
 // Obtenemos datos de los comercios para mostrarlos en el index
 router.get('/data', controller.getComercios);
 
@@ -28,7 +25,7 @@ router.get('/data', controller.getComercios);
 router.get('/', controller.getComercios);
 
 // Obtenemos datos de un comercio
-router.get('/:id', controller.getComercioById);
+router.get('/byId/:id', controller.getComercioById);
 
 //Obtenemos la categoria por id de comercio
 router.get('/getCategoriesByCommerce/:id', controller.getCategoriesByCommerce);
@@ -45,10 +42,10 @@ router.get('/slug/:slug', controller.getComerciosBySlug);
 // Publicar comercio
 router.post('/create/', controller.addComercio);
 
-// Actualizar comercio
-router.patch('/update/:id', controller.updateComercio);
-
 // Eliminar comercio
 router.delete('/delete/:id', controller.deleteComercio);
+
+// Actualizar comercio
+router.put('/update/:id', controller.updateComercio);
 
 module.exports = router;
