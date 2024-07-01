@@ -42,44 +42,27 @@
                         "dog friendly": "mdi-dog",
                         "dog service": "mdi-dog-service",
                         "wheelchair accessible": "mdi-wheelchair",
-                        "diabetic": "medical_services",
+                        "diabetic": "mdi-diabetes",
                         "gluten free": "mdi-barley-off",
-                        "vegan": "mdi-sprout",
-                        "diabetic": "mdi-diabetes"
+                        "vegan": "mdi-sprout"
                     };
-                    if (icons[service]){
-                        return `<li class="card__service"><span class="mdi ${icons[service]}"></span></li>`;
-                    }
-                    return '';
+                    return icons[service] ? `<li class="card__service"><span class="mdi ${icons[service]}"></span></li>` : '';
                 }
 
                 // Función para generar el contenido del comercio
-                function generateCommerceContent(commerce, randomCommerce, randomCommerce2, randomCommerce3) {
+                function generateCommerceContent(commerce, categoriaActual, randomCommerce, randomCommerce2, randomCommerce3) {
                     return `
                         <header class="comercio__header">
                             <img src="${commerce.imgHeader}" alt="${commerce.altHeader}" class="comercio__photo">
                             <div class="comercio__profile u-shadow">
                                 <img src="${commerce.imgPerfil}" alt="${commerce.nombre}">
                             </div>
-                            <h2 class="comercio__title">${commerce.nombre} <span class="badge">${commerce.categoria ? commerce.categoria : 'sin categoria'}</span></h2>
+                            <h2 class="comercio__title">${commerce.nombre} <span class="badge">${categoriaActual ? categoriaActual.nombre : 'Sin categoría'}</span></h2>
                             <ul class="card__services">
                                 ${commerce.accessibility ? commerce.accessibility.map(service => getAccessibilityIcon(service)).join('') : ''}
                                 ${commerce.menu ? commerce.menu.map(service => getAccessibilityIcon(service)).join('') : ''}
                             </ul>
                         </header>
-                        <!--<section class="comercios__ofertas">
-                            <h3 class="comercio__subtitle">Ofertas</h3>
-                            <div class="carrousel carrousel--noTablet">
-                                ${commerce.offersData ? commerce.offersData.map(offer => `
-                                    <a class="card-small carrousel__item" href="#" role="article">
-                                        <img src="../img/${offer.offerImage}" alt="${offer.offerImageAltText}" class="card-small__image">
-                                        <h3 class="card-small__title">${offer.offerTitle}</h3>
-                                        <p class="card-small__text">${offer.offerDescription}</p>
-                                        <p class="card-small__footer">$${offer.offerPrice.toFixed(2)}</p>
-                                    </a>
-                                `).join(''):''}
-                            </div>
-                        </section>-->
                         <div class="comercio__body">
                             <section class="comercio__description">${commerce.descripcion}</section>
                         </div>
@@ -100,90 +83,67 @@
                                 <a class="card-small" href="./comercio/?slug=${randomCommerce.slug}" role="article">
                                     <img src="${randomCommerce.imgPerfil}" alt="${randomCommerce.nombre}" class="card-small__image">
                                     <h3 class="card-small__title">${randomCommerce.nombre}</h3>
-                                    <p class="card-small__text">${randomCommerce.categoria ? randomCommerce.categoria : 'sin categoria'}</p>
-                                    <!--<p class="card-small__text">${randomCommerce3.categoria ? randomCommerce3.categoria : 'sin categoria'}</p>
-                                    <footer class="card-small__footer">
-                                        <ul class="lists">
-                                            ${randomCommerce3.accessibility ? randomCommerce3.accessibility.map(service => getAccessibilityIcon(service)).join(''): ''}
-                                            ${randomCommerce3.menu ? randomCommerce3.menu.map(service => getAccessibilityIcon(service)).join(''): ''}
-                                        </ul>
-                                    </footer>--!>
-                                </a>
-                                ` : ''}
-    ${randomCommerce2 ? `
+                                </a>` : ''}
+                                ${randomCommerce2 ? `
                                 <a class="card-small" href="./comercio/?slug=${randomCommerce2.slug}" role="article">
                                     <img src="${randomCommerce2.imgPerfil}" alt="${randomCommerce2.nombre}" class="card-small__image">
                                     <h3 class="card-small__title">${randomCommerce2.nombre}</h3>
-                                    <p class="card-small__text">${randomCommerce2.categoria ? randomCommerce2.categoria : 'sin categoria'}</p>
-                                    <!--<p class="card-small__text">${randomCommerce3.categoria ? randomCommerce3.categoria : 'sin categoria'}</p>
-                                    <footer class="card-small__footer">
-                                        <ul class="lists">
-                                            ${randomCommerce3.accessibility ? randomCommerce3.accessibility.map(service => getAccessibilityIcon(service)).join(''): ''}
-                                            ${randomCommerce3.menu ? randomCommerce3.menu.map(service => getAccessibilityIcon(service)).join(''): ''}
-                                        </ul>
-                                    </footer>--!>
-                                </a>
-                                ` : ''}
-    ${randomCommerce3 ? `
+                                </a>` : ''}
+                                ${randomCommerce3 ? `
                                 <a class="card-small" href="./comercio/?slug=${randomCommerce3.slug}" role="article">
                                     <img src="${randomCommerce3.imgPerfil}" alt="${randomCommerce3.nombre}" class="card-small__image">
                                     <h3 class="card-small__title">${randomCommerce3.nombre}</h3>
-                                    <!--<p class="card-small__text">${randomCommerce3.categoria ? randomCommerce3.categoria : 'sin categoria'}</p>
-                                    <footer class="card-small__footer">
-                                        <ul class="lists">
-                                            ${randomCommerce3.accessibility ? randomCommerce3.accessibility.map(service => getAccessibilityIcon(service)).join(''): ''}
-                                            ${randomCommerce3.menu ? randomCommerce3.menu.map(service => getAccessibilityIcon(service)).join(''): ''}
-                                        </ul>
-                                    </footer>--!>
-                                </a>
-                                ` : ''}
+                                </a>` : ''}
                             </div>
                         </footer>
                     `;
                 }
 
-      // Función para cargar el contenido del comercio
-async function loadCommerceContent() {
-    const data = await fetchData();
-    if (data && data.length > 0) {
-        const urlParams = new URLSearchParams(window.location.search);
-        const slug = urlParams.get('slug');
-        console.log('Data:', data);
-        const commerce = data.find(item => item.slug === slug);
-        console.log('Commerce:', commerce);
+                // Función para cargar el contenido del comercio
+                async function loadCommerceContent() {
+                    const data = await fetchData();
+                    if (data && data.length > 0) {
+                        const commerce = data.find(item => item.slug === slug);
 
-        if (commerce) {
-            let randomCommerce, randomCommerce2, randomCommerce3;
+                        if (commerce) {
+                            // Obtener categoría del comercio actual
+                            try {
+                                const response = await fetch(`/comercios/getCategoriesByCommerce/${commerce.id}`);
+                                const categorias = await response.json();
+                                console.log(categorias);
+                                const categoriaActual = categorias.length > 0 ? categorias[0] : null;
 
-            // Filtrar los comercios distintos al actual
-            const filteredData = data.filter(item => item.id !== commerce.id);
+                                // Filtrar los comercios distintos al actual
+                                const filteredData = data.filter(item => item.id !== commerce.id);
 
-            // Obtener comercios aleatorios
-            if (filteredData.length > 0) {
-    randomCommerce = filteredData[Math.floor(Math.random() * filteredData.length)];
-    randomCommerce2 = filteredData[Math.floor(Math.random() * filteredData.length)];
-    randomCommerce3 = filteredData[Math.floor(Math.random() * filteredData.length)];
+                                // Obtener comercios aleatorios
+                                let randomCommerce, randomCommerce2, randomCommerce3;
+                                if (filteredData.length > 0) {
+                                    randomCommerce = filteredData[Math.floor(Math.random() * filteredData.length)];
+                                    randomCommerce2 = filteredData[Math.floor(Math.random() * filteredData.length)];
+                                    randomCommerce3 = filteredData[Math.floor(Math.random() * filteredData.length)];
 
-    // Evitar repetición de comercios aleatorios
-    while (randomCommerce.id === randomCommerce2.id || randomCommerce.id === randomCommerce3.id || randomCommerce2.id === randomCommerce3.id) {
-        randomCommerce2 = filteredData[Math.floor(Math.random() * filteredData.length)];
-        randomCommerce3 = filteredData[Math.floor(Math.random() * filteredData.length)];
-    }
-}
+                                    // Evitar repetición de comercios aleatorios
+                                    while (randomCommerce.id === randomCommerce2.id || randomCommerce.id === randomCommerce3.id || randomCommerce2.id === randomCommerce3.id) {
+                                        randomCommerce2 = filteredData[Math.floor(Math.random() * filteredData.length)];
+                                        randomCommerce3 = filteredData[Math.floor(Math.random() * filteredData.length)];
+                                    }
+                                }
 
+                                document.getElementById('commerce-details').innerHTML = generateCommerceContent(commerce, categoriaActual, randomCommerce, randomCommerce2, randomCommerce3);
+                            } catch (error) {
+                                console.error('Error al obtener las categorías:', error);
+                            }
+                        } else {
+                            console.error('Comercio no encontrado:', slug);
+                        }
+                    } else {
+                        console.error('No se encontraron comercios.');
+                    }
+                }
 
-            document.getElementById('commerce-details').innerHTML = generateCommerceContent(commerce, randomCommerce, randomCommerce2, randomCommerce3);
-        } else {
-            console.error('Comercio no encontrado:', slug);
-        }
-    } else {
-        console.error('No se encontraron comercios.');
-    }
-}
-
-// Cargar el contenido del comercio al cargar la página
-loadCommerceContent();
-
+                // Cargar el contenido del comercio al cargar la página
+                loadCommerceContent();
             </script>
         </section>
     </main>

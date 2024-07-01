@@ -67,6 +67,8 @@ app.get('/login', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'html', 'login.html'));
 });
 
+app.use('/uploads', express.static('uploads'));
+
 // Error 404
 /*app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'html', '404.html'));

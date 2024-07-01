@@ -1,1 +1,5 @@
-node_modules
+# Dependencias de Node.js
+node_modules/
+
+# Carpeta de imágenes subidas
+uploads/
