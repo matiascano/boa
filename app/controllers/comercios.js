@@ -1,4 +1,13 @@
 const db = require('../db/db')
+//Configuramos multer para subir archivos
+const multer = require('multer');
+const path = require('path');
+const fs = require('fs');
+
+const handleError = (res, err) => {
+  console.error(err);
+  res.status(500).json({ error: 'Internal Server Error' });
+};
 
 const handleError = (res, err) => {
   console.error(err);
@@ -8,7 +17,7 @@ const handleError = (res, err) => {
 //GETS
 
 const getComercios = (req, res) => {
-  const sql = 'SELECT * FROM comercios'
+  const sql = 'SELECT * FROM comercios ORDER BY id DESC'
   db.query(sql, (err, result) => {
     if (err) return handleError(res, err);
     res.json(result)
@@ -26,7 +35,7 @@ const getComercioById = (req, res) => {
 
 const getComerciosByUserId = (req, res) => {
   const { userId } = req.params
-  const sql = 'SELECT * FROM comercios WHERE userId = ?'
+  const sql = 'SELECT * FROM comercios WHERE idUsuario = ?'
   db.query(sql, [userId], (err, result) => {
     if (err) return handleError(res, err);
     res.json(result)
@@ -53,7 +62,24 @@ const getComerciosBySlug = (req, res) => {
 }
 
 //POSTS
+// Configuración de multer para almacenar archivos en la carpeta 'uploads'
+const storage = multer.diskStorage({
+  destination: function(req, file, cb) {
+    cb(null, 'uploads/');
+  },
+  filename: function(req, file, cb) {
+    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
+    cb(null, uniqueSuffix + path.extname(file.originalname));
+  }
+});
+
+const upload = multer({ storage: storage });
+
 const addComercio = (req, res) => {
+  upload.fields([{ name: 'imgPerfil' }, { name: 'imgHeader' }])(req, res, (err) => {
+    if (err) {
+      return handleError(res, err);
+    }
   let {
       nombre, descripcion, altPerfil, altHeader, domicilio, latitud, longitud,
       web, email, instagram, idCiudad, categorias, accesibilidad, menues
@@ -133,51 +159,6 @@ const addComercio = (req, res) => {
   });
 };
 
-
-
-
-
-//UPDATES
-const updateComercio = (req, res) => {
-  const { id } = req.params;
-  const fieldsToUpdate = req.body;
-
-  let sql = 'UPDATE comercios SET ';
-  let values = [];
-  let updateFields = [];
-
-  // Construir la consulta SQL y los valores a actualizar
-  Object.keys(fieldsToUpdate).forEach(key => {
-      if (key !== 'id') { // No permitir actualizar el ID
-          updateFields.push(`${key} = ?`);
-          values.push(fieldsToUpdate[key]);
-      }
-  });
-
-  // Si no se proporcionan campos para actualizar, devolver un error
-  if (updateFields.length === 0) {
-      return res.status(400).json({ error: 'No se proporcionaron campos para actualizar.' });
-  }
-
-  sql += updateFields.join(', ') + ' WHERE id = ?';
-  values.push(id);
-
-  db.query(sql, values, (err, result) => {
-      if (err) {
-          console.error('Error al actualizar el comercio:', err);
-          return res.status(500).json({ error: 'Error interno del servidor al actualizar el comercio.' });
-      }
-      res.json({ message: 'Comercio actualizado correctamente.' });
-  });
-};
-
-
-
-// Controlador de prueba
-const holaMundo = (req, res) => {
-  res.send('hola mundo');
-}
-
 // Obtener categorías
 const getCategories = (req, res) => {
   const sql = 'SELECT * FROM categorias ORDER BY nombre'; // Asegúrate que la tabla es "categorias"
@@ -235,17 +216,56 @@ const getCities = (req, res) => {
   });
 }
 
+//PUT
+const updateComercio = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { nombre, descripcion, altPerfil, altHeader, domicilio, latitud, longitud, web, email, instagram, idCiudad, categorias = [], accesibilidad = [], menues = [] } = req.body;
 
+    // Convert categories, accessibility, and menus to integers if they're strings
+    categorias = categorias.map(item => parseInt(item, 10));
+    accesibilidad = accesibilidad.map(item => parseInt(item, 10));
+    menues = menues.map(item => parseInt(item, 10));
+
+    const sql = 'UPDATE comercios SET nombre = ?, descripcion = ?, altPerfil = ?, altHeader = ?, domicilio = ?, latitud = ?, longitud = ?, web = ?, email = ?, instagram = ?, idCiudad = ? WHERE id = ?';
+    const values = [nombre, descripcion, altPerfil, altHeader, domicilio, latitud, longitud, web, email, instagram, idCiudad, id];
+
+    await db.query(sql, values); // Assuming db.query is a promise-based function
+
+    res.json({ message: 'Comercio actualizado correctamente' });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: 'Error al actualizar el comercio' });
+  }
+};
 
 //DELETES
 const deleteComercio = (req, res) => {
-  const { id } = req.params
-  const sql = 'DELETE FROM comercios WHERE id = ?'
-  db.query(sql, [id], (err, result) => {
+  const { id } = req.params;
+
+  const deleteCategoriesSql = 'DELETE FROM categoria_comercio WHERE idComercio = ?';
+  const deleteAccessibilitySql = 'DELETE FROM accesibilidad_comercio WHERE idComercio = ?';
+  const deleteMenusSql = 'DELETE FROM menues_comercio WHERE idComercio = ?';
+  const deleteComercioSql = 'DELETE FROM comercios WHERE id = ?';
+
+  db.query(deleteCategoriesSql, [id], (err, result) => {
     if (err) return handleError(res, err);
-    res.json(result)
-  })
-}
+
+    db.query(deleteAccessibilitySql, [id], (err, result) => {
+      if (err) return handleError(res, err);
+
+      db.query(deleteMenusSql, [id], (err, result) => {
+        if (err) return handleError(res, err);
+
+        db.query(deleteComercioSql, [id], (err, result) => {
+          if (err) return handleError(res, err);
+          res.json({ message: 'Comercio eliminado correctamente' });
+        });
+      });
+    });
+  });
+};
+
 
 module.exports = {
   getComercios,
@@ -260,7 +280,6 @@ module.exports = {
   getAccessibility,
   getProvinces,
   getCities,
-  holaMundo,
   getCategoriesByCommerce,
   deleteComercio
 }

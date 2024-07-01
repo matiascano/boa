@@ -21,16 +21,125 @@
 
     <aside class="asideBack">
         <h2 class="asideBack__title">Comercios</h2>
-                    <a href="#" class="card-extra-small" role="article">
-                    <img src="./assets/img/logoLoveMyGift.webp" alt="Logo de Love My Gift" class="card-extra-small__image">
-                        <h3 class="card-extra-small__title">Love My Gift</h3>
-                    </a>
+
+        <script>
+            // listamos los comercios por userID y ponemos botones de editar y borrar
+            const usrID = 1
+            fetch(`./comercios/user/${usrID}`)
+                .then(response => response.json())
+                .then(data => {
+                    const comercios = data;
+                    comercios.forEach(comercio => {
+                        const card = document.createElement('div')
+                        card.className = 'card-extra-small'
+                        card.innerHTML = `
+                            <h3 class="card-extra-small__title">${comercio.nombre}</h3>
+                            <a href="./comercio.html?slug=${comercio.slug}" target="_blank" class="card-extra-small__preview" title="Previsualizar"><span class="mdi mdi-eye"></span></a>
+                            <button class="card-extra-small__delete" data-id="${comercio.id}" title="Eliminar"><span class="mdi mdi-delete"></span></button>
+                            <a href="./back/?id=${comercio.id}" class="card-extra-small__preview" title="Editar"><span class="mdi mdi-pencil"></span></a>
+                        `;
+                        document.querySelector('.asideBack').appendChild(card);
+                    });
+    
+                    // Añadir funcionalidad de eliminación a los botones
+                    document.querySelectorAll('.card-extra-small__delete').forEach(button => {
+                        button.addEventListener('click', (event) => {
+                            const comercioId = event.target.closest('button').dataset.id;
+                            if (confirm('¿Estás seguro de que deseas eliminar este comercio?')) {
+                                fetch(`./comercios/delete/${comercioId}`, {
+                                    method: 'DELETE'
+                                })
+                                .then(response => response.json())
+                                .then(data => {
+                                    // Remover la tarjeta del DOM
+                                    event.target.closest('.card-extra-small').remove();
+                                    alert('Comercio eliminado correctamente');
+                                    // Cargar nuevamente los comercios
+                                    window.location.reload();
+                                })
+                                .catch(error => {
+                                    console.error('Error:', error);
+                                    alert('Ocurrió un error al eliminar el comercio');
+                                });
+                            }
+                        });
+                    });
+                });
+        </script>
     </aside>
         <div class="commerceBack">
             <div class="commerceBack__header">
                 <h2 class="commerceBack__title">Cargar comercio</h2>
                 <!-- <a class="commerceBack__preview" title="Previsualizar" href="./comercio.html"><span class="mdi mdi-eye"></span></a>-->
             </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    const comercioId = new URLSearchParams(window.location.search).get('id');
+                    
+
+                    if (comercioId) {
+                        document.getElementById('altaComercio').action = `./comercios/update/${comercioId}/`; // Agregar el ID del comercioId;
+                        //obtener los datos del comercio por id
+                        fetch(`./comercios/byId/${comercioId}`)
+                            .then(response => response.json())
+                            .then(data => {
+                                const comercio = data[0];
+                                document.getElementById('nombre').value = comercio.nombre;
+                                document.getElementById('descripcion').value = comercio.descripcion;
+                                document.getElementById('altPerfil').value = comercio.altPerfil;
+                                document.getElementById('altHeader').value = comercio.altHeader;
+                                document.getElementById('domicilio').value = comercio.domicilio;
+                                document.getElementById('latitud').value = comercio.latitud;
+                                document.getElementById('longitud').value = comercio.longitud;
+                                document.getElementById('web').value = comercio.web;
+                                document.getElementById('email').value = comercio.email;
+                                document.getElementById('instagram').value = comercio.instagram;
+                            }
+                        );
+                        //nos aseguramos que al hacer click en submit se envie el formulario por metodo PUT
+                        document.getElementById('altaComercio').addEventListener('submit', (event) => {
+                            event.preventDefault();
+                            const formData = new FormData(event.target);
+                            const comercioId = new URLSearchParams(window.location.search).get('id');
+                            fetch(`./comercios/update/${comercioId}/`, {
+                                method: 'PUT',
+                                body: formData
+                            })
+                            .then(response => response.json())
+                            .then(data => {
+                                alert('Comercio actualizado correctamente');
+                                // Cargar nuevamente los comercios
+                                window.location.reload();
+                            })
+                            .catch(error => {
+                                console.error('Error:', error);
+                                alert('Ocurrio un error al actualizar el comercio');
+                            });
+                        });
+                    }else{
+                        document.getElementById('altaComercio').addEventListener('submit', (event) => {
+                            event.preventDefault();
+                            const formData = new FormData(event.target);
+                            fetch('./comercios/create/', {
+                                method: 'POST',
+                                body: formData
+                            })
+                            .then(response => response.json())
+                            .then(data => {
+                                alert('Comercio creado correctamente');
+                                window.location.reload();
+                            })
+                            .catch(error => {
+                                console.error('Error:', error);
+                                alert('Ocurrio un error al crear el comercio');
+                            });
+                        });
+                    }
+                });
+
+
+
+            </script>
             <form id="altaComercio" action="./comercios/create/" method="POST" class="form commerceProfile">
                 <div class="form__block">
                     <label class="form__label" for="nombre">Nombre del comercio</label>
@@ -198,41 +307,12 @@
                     <textarea name="descripcion" id="descripcion"  class="form_wysiwyg"></textarea>
                     <div class="form__textHelp">Este es un texto de ayuda</div>
                 </div>
-                <button class="form__button form__button--primary" type="submit">Publicar comercio</button>
+                <button class="form__button form__button--primary" type="submit">Guardar</button>
                 <!-- <button class="form__button form__button--secondary" type="button" onclick="window.open('/ofertas', '_self')">Cargar ofertas</button>-->
                 <!--<button class="form__button form__button--tertiary" type="button">Eliminar</button>-->
             </form>
         </div>
         <div id="mensaje"></div>
-        <script>
-            document.getElementById('altaComercio').addEventListener('submit', function(event) {
-    event.preventDefault(); // Evitar el envío normal del formulario
-
-    const formData = new FormData(this);
-    const data = new URLSearchParams(formData);
-
-    fetch('./comercios/create', {
-        method: 'POST',
-        body: data,
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded' 
-        }
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.error) {
-            document.getElementById('mensaje').innerHTML = `<p>${data.error}</p>`;
-        } else {
-            document.getElementById('mensaje').innerHTML = '<p>Comercio creado correctamente.</p>';
-            this.reset(); // Limpiar el formulario
-        }
-    })
-    .catch(error => {
-        console.error('Error al registrar el usuario:', error);
-        document.getElementById('mensaje').innerHTML = '<p>Ocurrió un error al registrar el comercio. Por favor, inténtalo de nuevo.</p>';
-    });
-});
-        </script>
     </main>
     <!-- Include the Quill library -->
 <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
