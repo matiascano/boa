@@ -76,16 +76,15 @@ const addComercio = (req, res) => {
     if (err) {
       return handleError(res, err)
     }
-
-    let {
+  let {
       nombre, descripcion, altPerfil, altHeader, domicilio, latitud, longitud,
       web, email, instagram, idCiudad, categorias, accesibilidad, menues
     } = req.body
 
-    // Si categorias, accesibilidad o menues no existen, ponemos un array vacío
-    if (!categorias) categorias = [];
-    if (!accesibilidad) accesibilidad = [];
-    if (!menues) menues = [];
+  // Si categorias, accesibilidad o menues no existen, ponemos un array vacío
+  if (!categorias) categorias = [];
+  if (!accesibilidad) accesibilidad = [];
+  if (!menues) menues = [];
 
     // Si categorias, accesibilidad o menues es un string, lo convertimos en un array con un solo elemento
     if (typeof categorias === 'string') categorias = [categorias];
@@ -146,6 +145,7 @@ const addComercio = (req, res) => {
     })
   })
 }
+
 
 // Obtener categorías
 const getCategories = (req, res) => {

@@ -30,6 +30,9 @@ router.get('/byId/:id', controller.getComercioById);
 //Obtenemos la categoria por id de comercio
 router.get('/getCategoriesByCommerce/:id', controller.getCategoriesByCommerce);
 
+//Obtenemos la categoria por id de comercio
+router.get('/getCategoriesByCommerce/:id', controller.getCategoriesByCommerce);
+
 // Obtener comercios por user id
 router.get('/user/:userId', controller.getComerciosByUserId);
 
