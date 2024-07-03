@@ -19,7 +19,7 @@ const path = require('path');
 const app = express();
 
 // Creamos el puerto
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // Middleware para parsear JSON antes de definir las rutas
 app.use(bodyParser.json());

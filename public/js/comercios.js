@@ -87,3 +87,4 @@ async function generateCommerceCards() {
         // Manejar el error adecuadamente (por ejemplo, mostrar un mensaje al usuario)
     }
 }
+

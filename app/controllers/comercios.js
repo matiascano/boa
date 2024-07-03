@@ -117,7 +117,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage })
 
 const addComercio = (req, res) => {
-  upload.fields([{ name: 'imgPerfil' }, { name: 'imgHeader' }])(req, res, (err) => {
+  upload.fields([{ name: 'img_perfil' }, { name: 'img_header' }])(req, res, (err) => {
     if (err) {
       return handleError(res, err)
     }
@@ -163,6 +163,7 @@ const addComercio = (req, res) => {
       if (categorias && categorias.length > 0) {
         const sqlCategorias = 'INSERT INTO categoria_comercio (id_comercio, id_categoria) VALUES ?'
         const categoriasValues = categorias.map(id_categoria => [id_comercio, id_categoria])
+
         db.query(sqlCategorias, [categoriasValues], (err, result) => {
           if (err) return handleError(res, err)
         })
@@ -250,7 +251,7 @@ const getCities = (req, res) => {
 
 // PUT
 const updateComercio = async (req, res) => {
-  upload.fields([{ name: 'imgPerfil' }, { name: 'imgHeader' }])(req, res, async (err) => {
+  upload.fields([{ name: 'img_perfil' }, { name: 'img_header' }])(req, res, async (err) => {
     if (err) {
       return handleError(res, err)
     }
