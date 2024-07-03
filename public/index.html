@@ -15,10 +15,17 @@
     <navbar-primary></navbar-primary>
     <header class="headerPrincipal">
         <h2 class="headerPrincipal__title">¿Qué estás buscando?</h2>
-        <form action="/resultados" class="searchFrom">
+        <form action="/resultados" id="searchForm" class="searchFrom">
             <label for="busqueda" class="searchFrom__label u-onlyOCR">Campo de búsqueda</label>
             <input id="busqueda" name="busqueda" class="searchFrom__input" placeholder="Ej.: Tienda Los gallegos" type="text">
         </form>
+        <script>
+            document.getElementById('searchForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+                const searchValue = document.getElementById('busqueda').value;
+                window.location.href = `/resultados?query=${encodeURIComponent(searchValue)}`;
+            });
+        </script>
         <!--<section class="filters">
             <button class="filters__item" data-state="active">Filtro 1</button>
             <button class="filters__item" data-state="">Filtro 2</button>

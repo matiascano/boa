@@ -12,6 +12,51 @@ const handleError = (res, err) => {
 }
 
 // GETS
+// BUSQUEDA COMERCIO DESDE MUCHOS
+const searchComercios = async (req, res) => {
+  const { query } = req.query;
+  
+  if (!query) {
+    return res.status(400).send({ message: "Query is required" });
+  }
+
+  try {
+    const sql = `
+      SELECT 
+        c.id, c.nombre, c.slug, c.descripcion, c.img_perfil, c.alt_perfil, c.img_header, c.alt_header, 
+        c.domicilio, c.latitud, c.longitud, c.web, c.email, c.instagram, c.id_usuario, c.ts, c.id_ciudad,
+        ci.ciudad_nombre,
+        GROUP_CONCAT(DISTINCT cat.nombre) AS categorias,
+        GROUP_CONCAT(DISTINCT acc.nombre) AS accesibilidades,
+        GROUP_CONCAT(DISTINCT men.nombre) AS menues
+      FROM comercios c
+      LEFT JOIN ciudad ci ON c.id_ciudad = ci.id
+      LEFT JOIN categoria_comercio cc ON c.id = cc.id_comercio
+      LEFT JOIN categorias cat ON cc.id_categoria = cat.id
+      LEFT JOIN accesibilidad_comercio ac ON c.id = ac.id_comercio
+      LEFT JOIN accesibilidad acc ON ac.id_accesibilidad = acc.id
+      LEFT JOIN menues_comercio mc ON c.id = mc.id_comercio
+      LEFT JOIN menues men ON mc.id_menu = men.id
+      WHERE 
+        c.nombre LIKE ? OR 
+        c.descripcion LIKE ? OR
+        c.domicilio LIKE ? OR 
+        ci.ciudad_nombre LIKE ? OR
+        cat.nombre LIKE ? OR 
+        acc.nombre LIKE ? OR 
+        men.nombre LIKE ?
+      GROUP BY c.id, ci.ciudad_nombre
+    `;
+
+    db.query(sql, [`%${query}%`, `%${query}%`, `%${query}%`, `%${query}%`, `%${query}%`, `%${query}%`, `%${query}%`], (err, result) => {
+      if (err) return handleError(res, err)
+      res.json(result)
+    })
+  } catch (error) {
+    console.error(error)
+    res.status(500).json({ error: 'Internal Server Error' })
+  }
+}
 
 const getComercios = (req, res) => {
   const sql = 'SELECT * FROM comercios ORDER BY id DESC'
@@ -323,6 +368,9 @@ const deleteComercio = (req, res) => {
   })
 }
 
+
+
+
 module.exports = {
   getComercios,
   getComercioById,
@@ -337,5 +385,6 @@ module.exports = {
   getProvinces,
   getCities,
   getCategoriesByCommerce,
+  searchComercios,
   deleteComercio
 }

@@ -34,10 +34,51 @@
         <section class="lastPublications">
             <h2 class="lastPublications__title">Encontramos estos comercios</h2>
             <div id="comercios-container" class="cards cards--ani">
+                <div id="results"></div>
+
+                <script>
+                    async function fetchResults() {
+                        const urlParams = new URLSearchParams(window.location.search);
+                        const query = urlParams.get('query');
+                        
+                        const response = await fetch(`/comercios/buscar?query=${encodeURIComponent(query)}`);
+                        const data = await response.json();
+                        console.log(data);
+                        const resultsDiv = document.getElementById('results');
+                        
+                        if (data.length === 0) {
+                            resultsDiv.innerHTML = '<p>No se encontraron comercios.</p>';
+                            return;
+                        }
+                
+                        let html = '<ul>';
+                        data.forEach(comercio => {
+                            html += `
+                                <li>
+                                    <h2>${comercio.nombre}</h2>
+                                    <p>Descripción: ${comercio.descripcion}</p>
+                                    <p>Dirección: ${comercio.domicilio}</p>
+                                    <p>Ciudad: ${comercio.ciudad_nombre || 'N/A'}</p>
+                                    <p>Latitud: ${comercio.latitud || 'N/A'}</p>
+                                    <p>Longitud: ${comercio.longitud || 'N/A'}</p>
+                                    <p>Categorías: ${comercio.categorias || 'N/A'}</p>
+                                    <p>Accesibilidades: ${comercio.accesibilidades || 'N/A'}</p>
+                                    <p>Menúes: ${comercio.menues || 'N/A'}</p>
+                                </li>
+                            `;
+                        });
+                        html += '</ul>';
+                        resultsDiv.innerHTML = html;
+                    }
+                
+                    fetchResults();
+                </script>
+
+
                 <script src="../js/comercios.js"></script>
                 <script>
                     // Llamar a la función para generar las cards
-                    generateResultsCards();
+                   // generateResultsCards();
                     </script>
             </div>
         </section>

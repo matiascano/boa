@@ -3,6 +3,8 @@ const controller = require('../controllers/comercios');
 
 const router = express.Router();
 
+router.get('/buscar', controller.searchComercios)
+
 // Obtener categorías
 router.get('/getCategories', controller.getCategories);
 
