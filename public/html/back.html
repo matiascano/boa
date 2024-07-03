@@ -46,7 +46,7 @@
                         button.addEventListener('click', (event) => {
                             const comercioId = event.target.closest('button').dataset.id;
                             if (confirm('¿Estás seguro de que deseas eliminar este comercio?')) {
-                                fetch(`./comercios/delete/${comercioId}`, {
+                                fetch(`./comercios/delete/${comercio_id}`, {
                                     method: 'DELETE'
                                 })
                                 .then(response => response.json())
@@ -74,20 +74,20 @@
             </div>
             <script>
                 document.addEventListener("DOMContentLoaded", () => {
-                    const comercioId = new URLSearchParams(window.location.search).get('id');
+                    const comercio_id = new URLSearchParams(window.location.search).get('id');
                     
 
-                    if (comercioId) {
-                        document.getElementById('altaComercio').action = `./comercios/update/${comercioId}/`; // Agregar el ID del comercioId;
+                    if (comercio_id) {
+                        document.getElementById('altaComercio').action = `./comercios/update/${comercio_id}/`; // Agregar el ID del comercioId;
                         //obtener los datos del comercio por id
-                        fetch(`./comercios/byId/${comercioId}`)
+                        fetch(`./comercios/byId/${comercio_id}`)
                             .then(response => response.json())
                             .then(data => {
                                 const comercio = data[0];
                                 document.getElementById('nombre').value = comercio.nombre;
                                 document.getElementById('descripcion').value = comercio.descripcion;
-                                document.getElementById('altPerfil').value = comercio.altPerfil;
-                                document.getElementById('altHeader').value = comercio.altHeader;
+                                document.getElementById('altPerfil').value = comercio.alt_perfil;
+                                document.getElementById('altHeader').value = comercio.alt_header;
                                 document.getElementById('domicilio').value = comercio.domicilio;
                                 document.getElementById('latitud').value = comercio.latitud;
                                 document.getElementById('longitud').value = comercio.longitud;
@@ -101,7 +101,7 @@
                             event.preventDefault();
                             const formData = new FormData(event.target);
                             const comercioId = new URLSearchParams(window.location.search).get('id');
-                            fetch(`./comercios/update/${comercioId}/`, {
+                            fetch(`./comercios/update/${comercio_id}/`, {
                                 method: 'PUT',
                                 body: formData
                             })

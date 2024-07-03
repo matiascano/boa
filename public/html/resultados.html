@@ -34,7 +34,6 @@
         <section class="lastPublications">
             <h2 class="lastPublications__title">Encontramos estos comercios</h2>
             <div id="comercios-container" class="cards cards--ani">
-                <div id="results"></div>
 
                 <script>
                     async function fetchResults() {
@@ -44,30 +43,34 @@
                         const response = await fetch(`/comercios/buscar?query=${encodeURIComponent(query)}`);
                         const data = await response.json();
                         console.log(data);
-                        const resultsDiv = document.getElementById('results');
+                        const resultsDiv = document.getElementById('comercios-container');
                         
                         if (data.length === 0) {
                             resultsDiv.innerHTML = '<p>No se encontraron comercios.</p>';
                             return;
                         }
+
+                        /*<a class="card-small" href="./comercio/?slug=${commerce.slug}" role="article">
+    <img src="${commerce.imgPerfil}" alt="${commerce.altPerfil}" class="card-small__image">
+        <h3 class="card-small__title">${commerce.nombre}</h3>
+        <p class="card-small__text">${categoria}</p>
+            <footer class="card-small__footer">
+            <ul class="card__services">
+                ${commerce.accessibility ? commerce.accessibility.map(service => getAccessibilityIcon(service)).join('') : ''}
+                ${commerce.menu ? commerce.menu.map(service => getAccessibilityIcon(service)).join('') : ''}
+            </ul>
+            </footer>
+    </a>`;*/
                 
-                        let html = '<ul>';
+                        let html = ''
                         data.forEach(comercio => {
                             html += `
-                                <li>
-                                    <h2>${comercio.nombre}</h2>
-                                    <p>Descripción: ${comercio.descripcion}</p>
-                                    <p>Dirección: ${comercio.domicilio}</p>
-                                    <p>Ciudad: ${comercio.ciudad_nombre || 'N/A'}</p>
-                                    <p>Latitud: ${comercio.latitud || 'N/A'}</p>
-                                    <p>Longitud: ${comercio.longitud || 'N/A'}</p>
-                                    <p>Categorías: ${comercio.categorias || 'N/A'}</p>
-                                    <p>Accesibilidades: ${comercio.accesibilidades || 'N/A'}</p>
-                                    <p>Menúes: ${comercio.menues || 'N/A'}</p>
+                                <a class="card-small" href="./comercio/?slug=${comercio.slug}" role="article">
+                                    <img src="${comercio.img_perfil}" alt="${comercio.alt_perfil}" class="card-small__image">
+                                    <h3 class="card-small__title">${comercio.nombre}</h3>
                                 </li>
                             `;
                         });
-                        html += '</ul>';
                         resultsDiv.innerHTML = html;
                     }
                 

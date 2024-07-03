@@ -77,7 +77,7 @@ const getComercioById = (req, res) => {
 
 const getComerciosByUserId = (req, res) => {
   const { userId } = req.params
-  const sql = 'SELECT * FROM comercios WHERE idUsuario = ?'
+  const sql = 'SELECT * FROM comercios WHERE id_usuario = ?'
   db.query(sql, [userId], (err, result) => {
     if (err) return handleError(res, err)
     res.json(result)
@@ -152,7 +152,7 @@ const addComercio = (req, res) => {
     const imgHeaderUrl = req.files.imgHeader ? `/uploads/${req.files.imgHeader[0].filename}` : 'https://via.placeholder.com/350x150'
 
     // Insertar comercio
-    const sqlComercio = 'INSERT INTO comercios (nombre, slug, descripcion, imgPerfil, altPerfil, imgHeader, altHeader, domicilio, latitud, longitud, web, email, instagram, idUsuario, idCiudad) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'
+    const sqlComercio = 'INSERT INTO comercios (nombre, slug, descripcion, img_perfil, alt_perfil, img_header, alt_header, domicilio, latitud, longitud, web, email, instagram, id_usuario, id_ciudad) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'
     db.query(sqlComercio, [nombre, slug, descripcion, imgPerfilUrl, altPerfil, imgHeaderUrl, altHeader, domicilio, latitud, longitud, web, email, instagram, idUsuario, idCiudad], (err, result) => {
       if (err) return handleError(res, err)
 
@@ -161,8 +161,8 @@ const addComercio = (req, res) => {
 
       // Insertar categorías
       if (categorias && categorias.length > 0) {
-        const sqlCategorias = 'INSERT INTO categoria_comercio (idComercio, idCategoria) VALUES ?'
-        const categoriasValues = categorias.map(idCategoria => [idComercio, idCategoria])
+        const sqlCategorias = 'INSERT INTO categoria_comercio (id_comercio, id_categoria) VALUES ?'
+        const categoriasValues = categorias.map(id_categoria => [id_comercio, id_categoria])
         db.query(sqlCategorias, [categoriasValues], (err, result) => {
           if (err) return handleError(res, err)
         })
@@ -170,8 +170,8 @@ const addComercio = (req, res) => {
 
       // Insertar accesibilidad
       if (accesibilidad && accesibilidad.length > 0) {
-        const sqlAccesibilidad = 'INSERT INTO accesibilidad_comercio (idComercio, idAccesibilidad) VALUES ?'
-        const accesibilidadValues = accesibilidad.map(idAccesibilidad => [idComercio, idAccesibilidad])
+        const sqlAccesibilidad = 'INSERT INTO accesibilidad_comercio (id_comercio, id_accesibilidad) VALUES ?'
+        const accesibilidadValues = accesibilidad.map(id_accesibilidad => [idComercio, id_accesibilidad])
         db.query(sqlAccesibilidad, [accesibilidadValues], (err, result) => {
           if (err) return handleError(res, err)
         })
@@ -179,8 +179,8 @@ const addComercio = (req, res) => {
 
       // Insertar menús
       if (menues && menues.length > 0) {
-        const sqlMenues = 'INSERT INTO menues_comercio (idComercio, idMenu) VALUES ?'
-        const menuesValues = menues.map(idMenu => [idComercio, idMenu])
+        const sqlMenues = 'INSERT INTO menues_comercio (id_comercio, id_menu) VALUES ?'
+        const menuesValues = menues.map(id_menu => [id_comercio, id_menu])
         db.query(sqlMenues, [menuesValues], (err, result) => {
           if (err) return handleError(res, err)
         })
@@ -204,7 +204,7 @@ const getCategories = (req, res) => {
 // Obtener categorías por comercio
 const getCategoriesByCommerce = (req, res) => {
   const { id } = req.params
-  const sql = 'SELECT nombre FROM categorias WHERE id IN ( SELECT idCategoria FROM categoria_comercio     WHERE idComercio = ? )'
+  const sql = 'SELECT nombre FROM categorias WHERE id IN ( SELECT id_categoria FROM categoria_comercio WHERE id_comercio = ? )'
   db.query(sql, [id], (err, result) => {
     if (err) return handleError(res, err)
     res.json(result)
@@ -290,17 +290,17 @@ const updateComercio = async (req, res) => {
       if (nombre) { updateFields.push('nombre = ?'); updateValues.push(nombre) }
       if (slug) { updateFields.push('slug = ?'); updateValues.push(slug) }
       if (descripcion) { updateFields.push('descripcion = ?'); updateValues.push(descripcion) }
-      if (altPerfil) { updateFields.push('altPerfil = ?'); updateValues.push(altPerfil) }
-      if (altHeader) { updateFields.push('altHeader = ?'); updateValues.push(altHeader) }
+      if (altPerfil) { updateFields.push('alt_perfil = ?'); updateValues.push(altPerfil) }
+      if (altHeader) { updateFields.push('alt_header = ?'); updateValues.push(altHeader) }
       if (domicilio) { updateFields.push('domicilio = ?'); updateValues.push(domicilio) }
       if (latitud) { updateFields.push('latitud = ?'); updateValues.push(latitud) }
       if (longitud) { updateFields.push('longitud = ?'); updateValues.push(longitud) }
       if (web) { updateFields.push('web = ?'); updateValues.push(web) }
       if (email) { updateFields.push('email = ?'); updateValues.push(email) }
       if (instagram) { updateFields.push('instagram = ?'); updateValues.push(instagram) }
-      if (idCiudad) { updateFields.push('idCiudad = ?'); updateValues.push(idCiudad) }
-      if (imgPerfilUrl) { updateFields.push('imgPerfil = ?'); updateValues.push(imgPerfilUrl) }
-      if (imgHeaderUrl) { updateFields.push('imgHeader = ?'); updateValues.push(imgHeaderUrl) }
+      if (idCiudad) { updateFields.push('id_ciudad = ?'); updateValues.push(idCiudad) }
+      if (imgPerfilUrl) { updateFields.push('img_perfil = ?'); updateValues.push(imgPerfilUrl) }
+      if (imgHeaderUrl) { updateFields.push('img_header = ?'); updateValues.push(imgHeaderUrl) }
       
       updateValues.push(id)
 
@@ -308,28 +308,28 @@ const updateComercio = async (req, res) => {
       await query(sqlUpdateComercio, updateValues)
 
       // Eliminar relaciones existentes
-      await query('DELETE FROM categoria_comercio WHERE idComercio = ?', [id])
-      await query('DELETE FROM accesibilidad_comercio WHERE idComercio = ?', [id])
-      await query('DELETE FROM menues_comercio WHERE idComercio = ?', [id])
+      await query('DELETE FROM categoria_comercio WHERE id_comercio = ?', [id])
+      await query('DELETE FROM accesibilidad_comercio WHERE id_comercio = ?', [id])
+      await query('DELETE FROM menues_comercio WHERE id_comercio = ?', [id])
 
       // Insertar categorías
       if (categorias.length > 0) {
-        const sqlCategorias = 'INSERT INTO categoria_comercio (idComercio, idCategoria) VALUES ?'
-        const categoriasValues = categorias.map(idCategoria => [id, idCategoria])
+        const sqlCategorias = 'INSERT INTO categoria_comercio (id_comercio, id_categoria) VALUES ?'
+        const categoriasValues = categorias.map(id_categoria => [id, id_categoria])
         await query(sqlCategorias, [categoriasValues])
       }
 
       // Insertar accesibilidad
       if (accesibilidad.length > 0) {
-        const sqlAccesibilidad = 'INSERT INTO accesibilidad_comercio (idComercio, idAccesibilidad) VALUES ?'
-        const accesibilidadValues = accesibilidad.map(idAccesibilidad => [id, idAccesibilidad])
+        const sqlAccesibilidad = 'INSERT INTO accesibilidad_comercio (id_comercio, id_accesibilidad) VALUES ?'
+        const accesibilidadValues = accesibilidad.map(id_accesibilidad => [id, id_accesibilidad])
         await query(sqlAccesibilidad, [accesibilidadValues])
       }
 
       // Insertar menús
       if (menues.length > 0) {
-        const sqlMenues = 'INSERT INTO menues_comercio (idComercio, idMenu) VALUES ?'
-        const menuesValues = menues.map(idMenu => [id, idMenu])
+        const sqlMenues = 'INSERT INTO menues_comercio (id_comercio, id_menu) VALUES ?'
+        const menuesValues = menues.map(id_menu => [id, id_menu])
         await query(sqlMenues, [menuesValues])
       }
 
@@ -345,9 +345,9 @@ const updateComercio = async (req, res) => {
 const deleteComercio = (req, res) => {
   const { id } = req.params
 
-  const deleteCategoriesSql = 'DELETE FROM categoria_comercio WHERE idComercio = ?'
-  const deleteAccessibilitySql = 'DELETE FROM accesibilidad_comercio WHERE idComercio = ?'
-  const deleteMenusSql = 'DELETE FROM menues_comercio WHERE idComercio = ?'
+  const deleteCategoriesSql = 'DELETE FROM categoria_comercio WHERE id_comercio = ?'
+  const deleteAccessibilitySql = 'DELETE FROM accesibilidad_comercio WHERE id_comercio = ?'
+  const deleteMenusSql = 'DELETE FROM menues_comercio WHERE id_comercio = ?'
   const deleteComercioSql = 'DELETE FROM comercios WHERE id = ?'
 
   db.query(deleteCategoriesSql, [id], (err, result) => {
