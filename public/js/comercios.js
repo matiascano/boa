@@ -49,7 +49,7 @@ async function generateCommerceCard(commerce) {
         return `
             <a href="./comercio/?slug=${commerce.slug}" class="card" role="article">
                 <header class="card__header">
-                    <img src="${commerce.imgHeader}" alt="${commerce.altHeader}" class="card__image">
+                    <img src="${commerce.img_header}" alt="${commerce.alt_header}" class="card__image">
                     <p class="card__category"><span class="badge">${categoria}</span></p>
                 </header>
                 <div class="card__body">
@@ -96,7 +96,7 @@ async function generateResultsCard(commerce) {
         // Generamos la estructura HTML de la tarjeta
         return `
     <a class="card-small" href="./comercio/?slug=${commerce.slug}" role="article">
-    <img src="${commerce.imgPerfil}" alt="${commerce.altPerfil}" class="card-small__image">
+    <img src="${commerce.img_perfil}" alt="${commerce.alt_perfil}" class="card-small__image">
         <h3 class="card-small__title">${commerce.nombre}</h3>
         <p class="card-small__text">${categoria}</p>
             <footer class="card-small__footer">
