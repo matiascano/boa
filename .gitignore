@@ -3,3 +3,6 @@ node_modules/
 
 # Carpeta de imágenes subidas
 uploads/
+
+# Archivos
+backup.sql
