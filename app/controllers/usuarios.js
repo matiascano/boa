@@ -13,7 +13,7 @@ const addUsuario = (req, res) => {
         return res.status(400).json({ error: 'Las contraseñas no coinciden' });
     }
 
-    const sql = 'INSERT INTO usuarios (nombre, email, password, idRol) VALUES (?, ?, ?, ?)'
+    const sql = 'INSERT INTO usuarios (nombre, email, password, id_rol) VALUES (?, ?, ?, ?)'
     db.query(sql, [nombre, email, password, idRol], (err, result) => {
         if (err) {
             console.error('Error al insertar el usuario:', err);

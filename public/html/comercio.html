@@ -45,9 +45,9 @@
                 function generateCommerceContent(commerce, categoriaActual, randomCommerce, randomCommerce2, randomCommerce3) {
                     return `
                         <header class="comercio__header">
-                            <img src="${commerce.imgHeader}" alt="${commerce.altHeader}" class="comercio__photo">
+                            <img src="${commerce.img_header}" alt="${commerce.alt_header}" class="comercio__photo">
                             <div class="comercio__profile u-shadow">
-                                <img src="${commerce.imgPerfil}" alt="${commerce.nombre}">
+                                <img src="${commerce.img_perfil}" alt="${commerce.nombre}">
                             </div>
                             <h2 class="comercio__title">${commerce.nombre} <span class="badge">${categoriaActual ? categoriaActual.nombre : 'Sin categoría'}</span></h2>
                             <ul class="card__services">
@@ -73,17 +73,17 @@
                                 <h3 class="comercio__h3">Otros comercios</h3>
                                 ${randomCommerce ? `
                                 <a class="card-small" href="./comercio/?slug=${randomCommerce.slug}" role="article">
-                                    <img src="${randomCommerce.imgPerfil}" alt="${randomCommerce.nombre}" class="card-small__image">
+                                    <img src="${randomCommerce.img_perfil}" alt="${randomCommerce.nombre}" class="card-small__image">
                                     <h3 class="card-small__title">${randomCommerce.nombre}</h3>
                                 </a>` : ''}
                                 ${randomCommerce2 ? `
                                 <a class="card-small" href="./comercio/?slug=${randomCommerce2.slug}" role="article">
-                                    <img src="${randomCommerce2.imgPerfil}" alt="${randomCommerce2.nombre}" class="card-small__image">
+                                    <img src="${randomCommerce2.img_perfil}" alt="${randomCommerce2.nombre}" class="card-small__image">
                                     <h3 class="card-small__title">${randomCommerce2.nombre}</h3>
                                 </a>` : ''}
                                 ${randomCommerce3 ? `
                                 <a class="card-small" href="./comercio/?slug=${randomCommerce3.slug}" role="article">
-                                    <img src="${randomCommerce3.imgPerfil}" alt="${randomCommerce3.nombre}" class="card-small__image">
+                                    <img src="${randomCommerce3.img_perfil}" alt="${randomCommerce3.nombre}" class="card-small__image">
                                     <h3 class="card-small__title">${randomCommerce3.nombre}</h3>
                                 </a>` : ''}
                             </div>
