@@ -6,3 +6,4 @@ uploads/
 
 # Archivos
 backup.sql
+.env
