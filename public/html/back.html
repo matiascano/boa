@@ -24,7 +24,7 @@
         <script>
             // listamos los comercios por userID y ponemos botones de editar y borrar
             const usrID = 16
-            fetch(`./comercios/user/${usrID}`)
+            fetch(`../comercios/user/${usrID}`)
                 .then(response => response.json())
                 .then(data => {
                     const comercios = data;
