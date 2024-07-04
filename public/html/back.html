@@ -73,68 +73,54 @@
             </div>
             <script>
                 document.addEventListener("DOMContentLoaded", () => {
-                    const comercio_id = new URLSearchParams(window.location.search).get('id');
-                    
+    const comercio_id = new URLSearchParams(window.location.search).get('id');
 
-                    if (comercio_id) {
-                        document.getElementById('altaComercio').action = `./comercios/update/${comercio_id}/`; // Agregar el ID del comercioId;
-                        //obtener los datos del comercio por id
-                        fetch(`./comercios/byId/${comercio_id}`)
-                            .then(response => response.json())
-                            .then(data => {
-                                const comercio = data[0];
-                                document.getElementById('nombre').value = comercio.nombre;
-                                document.getElementById('descripcion').value = comercio.descripcion;
-                                document.getElementById('altPerfil').value = comercio.alt_perfil;
-                                document.getElementById('altHeader').value = comercio.alt_header;
-                                document.getElementById('domicilio').value = comercio.domicilio;
-                                document.getElementById('latitud').value = comercio.latitud;
-                                document.getElementById('longitud').value = comercio.longitud;
-                                document.getElementById('web').value = comercio.web;
-                                document.getElementById('email').value = comercio.email;
-                                document.getElementById('instagram').value = comercio.instagram;
-                            }
-                        );
-                        //nos aseguramos que al hacer click en submit se envie el formulario por metodo PUT
-                        document.getElementById('altaComercio').addEventListener('submit', (event) => {
-                            event.preventDefault();
-                            const formData = new FormData(event.target);
-                            const comercioId = new URLSearchParams(window.location.search).get('id');
-                            fetch(`./comercios/update/${comercio_id}/`, {
-                                method: 'PUT',
-                                body: formData
-                            })
-                            .then(response => response.json())
-                            .then(data => {
-                                alert('Comercio actualizado correctamente');
-                                // Cargar nuevamente los comercios
-                                window.location.reload();
-                            })
-                            .catch(error => {
-                                console.error('Error:', error);
-                                alert('Ocurrio un error al actualizar el comercio');
-                            });
-                        });
-                    }else{
-                        document.getElementById('altaComercio').addEventListener('submit', (event) => {
-                            event.preventDefault();
-                            const formData = new FormData(event.target);
-                            fetch('./comercios/create/', {
-                                method: 'POST',
-                                body: formData
-                            })
-                            .then(response => response.json())
-                            .then(data => {
-                                alert('Comercio creado correctamente');
-                                window.location.reload();
-                            })
-                            .catch(error => {
-                                console.error('Error:', error);
-                                alert('Ocurrio un error al crear el comercio');
-                            });
-                        });
-                    }
-                });
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const formData = new FormData(event.target);
+
+        fetch(event.target.action, {
+            method: event.target.method,
+            body: new URLSearchParams(formData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert('Operación realizada correctamente');
+            window.location.reload();
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Ocurrió un error al procesar la solicitud');
+        });
+    };
+
+    if (comercio_id) {
+        document.getElementById('altaComercio').action = `./comercios/update/${comercio_id}/`;
+        document.getElementById('altaComercio').method = 'PUT';
+        fetch(`./comercios/byId/${comercio_id}`)
+            .then(response => response.json())
+            .then(data => {
+                const comercio = data[0];
+                document.getElementById('nombre').value = comercio.nombre;
+                document.getElementById('descripcion').value = comercio.descripcion;
+                document.getElementById('imgPerfil').value = comercio.img_perfil;
+                document.getElementById('altPerfil').value = comercio.alt_perfil;
+                document.getElementById('imgHeader').value = comercio.img_header;
+                document.getElementById('altHeader').value = comercio.alt_header;
+                document.getElementById('domicilio').value = comercio.domicilio;
+                document.getElementById('latitud').value = comercio.latitud;
+                document.getElementById('longitud').value = comercio.longitud;
+                document.getElementById('web').value = comercio.web;
+                document.getElementById('email').value = comercio.email;
+                document.getElementById('instagram').value = comercio.instagram;
+            });
+
+        document.getElementById('altaComercio').addEventListener('submit', handleSubmit);
+    } else {
+        document.getElementById('altaComercio').addEventListener('submit', handleSubmit);
+    }
+});
+
 
 
 
@@ -147,7 +133,8 @@
                 </div>
                 <div class="form__block">
                     <label class="form__label" for="imgPerfil">Imagen de perfil</label>
-                    <input type="file" name="imgPerfil" id="imgPerfil" class="form__input" required>
+                    <!-- <input type="file" name="imgPerfil" id="imgPerfil" class="form__input" required> -->
+                    <input type="text" name="imgPerfil" id="imgPerfil" class="form__input" required>
                     <div class="form__textHelp">Este es un texto de ayuda</div>
                 </div>
                 <div class="form__block">
@@ -157,7 +144,8 @@
                 </div>
                 <div class="form__block">
                     <label class="form__label" for="imgHeader">Imagen de encabezado</label>
-                    <input type="file" name="imgHeader" id="imgHeader" class="form__input">
+                    <!-- <input type="file" name="imgHeader" id="imgHeader" class="form__input" required> -->
+                     <input type="text" name="imgHeader" id="imgHeader" class="form__input">
                     <div class="form__textHelp">Este es un texto de ayuda</div>
                 </div>
                 <div class="form__block">

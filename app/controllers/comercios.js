@@ -117,80 +117,88 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage })
 
 const addComercio = (req, res) => {
-  upload.fields([{ name: 'img_perfil' }, { name: 'img_header' }])(req, res, (err) => {
-    if (err) {
+  /* upload.fields([{ name: 'img_perfil' }, { name: 'img_header' }])(req, res, (err) => {
+  if (err) {
       return handleError(res, err)
-    }
+  } */
   let {
-      nombre, descripcion, altPerfil, altHeader, domicilio, latitud, longitud,
+      nombre, descripcion, imgPerfil, altPerfil, imgHeader, altHeader, domicilio, latitud, longitud,
       web, email, instagram, idCiudad, categorias, accesibilidad, menues
-    } = req.body
+  } = req.body;
 
+  console.log(req.body);
+  
   // Si categorias, accesibilidad o menues no existen, ponemos un array vacío
   if (!categorias) categorias = [];
   if (!accesibilidad) accesibilidad = [];
   if (!menues) menues = [];
 
-    // Si categorias, accesibilidad o menues es un string, lo convertimos en un array con un solo elemento
-    if (typeof categorias === 'string') categorias = [categorias];
-    if (typeof accesibilidad === 'string') accesibilidad = [accesibilidad];
-    if (typeof menues === 'string') menues = [menues]
+  // Si categorias, accesibilidad o menues es un string, lo convertimos en un array con un solo elemento
+  if (typeof categorias === 'string') categorias = [categorias];
+  if (typeof accesibilidad === 'string') accesibilidad = [accesibilidad];
+  if (typeof menues === 'string') menues = [menues];
 
-    // Convertimos los arrays de categorías, accesibilidad y menues con valores numéricos
-    categorias = categorias.map(item => parseInt(item))
-    accesibilidad = accesibilidad.map(item => parseInt(item))
-    menues = menues.map(item => parseInt(item))
+  // Convertimos los arrays de categorías, accesibilidad y menues con valores numéricos
+  categorias = categorias.map(item => parseInt(item));
+  accesibilidad = accesibilidad.map(item => parseInt(item));
+  menues = menues.map(item => parseInt(item));
 
-    // Slug
-    const slug = nombre.toLowerCase().replace(/ /g, '-')
+  // Slug
+  let slug;
+  if (typeof nombre === 'string') {
+      slug = nombre.toLowerCase().replace(/ /g, '-');
+  } else {
+      console.error('El nombre no es una cadena válida:', nombre);
+      slug = 'default-slug'; // Manejo del error o asignar un valor predeterminado a slug
+  }
 
-    // Por el momento ponemos el id de usuario a todos los comercios
-    const idUsuario = 1
+  // Por el momento ponemos el id de usuario a todos los comercios
+  const idUsuario = 1;
 
-    // Obtener URLs de imágenes subidas
-    const imgPerfilUrl = req.files.imgPerfil ? `/uploads/${req.files.imgPerfil[0].filename}` : 'https://via.placeholder.com/1920x1080'
-    const imgHeaderUrl = req.files.imgHeader ? `/uploads/${req.files.imgHeader[0].filename}` : 'https://via.placeholder.com/350x150'
+  // Obtener URLs de imágenes subidas
+  /* const imgPerfilUrl = req.files.imgPerfil ? `/uploads/${req.files.imgPerfil[0].filename}` : 'https://via.placeholder.com/1920x1080';
+  const imgHeaderUrl = req.files.imgHeader ? `/uploads/${req.files.imgHeader[0].filename}` : 'https://via.placeholder.com/350x150'; */
 
-    // Insertar comercio
-    const sqlComercio = 'INSERT INTO comercios (nombre, slug, descripcion, img_perfil, alt_perfil, img_header, alt_header, domicilio, latitud, longitud, web, email, instagram, id_usuario, id_ciudad) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'
-    db.query(sqlComercio, [nombre, slug, descripcion, imgPerfilUrl, altPerfil, imgHeaderUrl, altHeader, domicilio, latitud, longitud, web, email, instagram, idUsuario, idCiudad], (err, result) => {
-      if (err) return handleError(res, err)
+  // Insertar comercio
+  const sqlComercio = 'INSERT INTO comercios (nombre, slug, descripcion, img_perfil, alt_perfil, img_header, alt_header, domicilio, latitud, longitud, web, email, instagram, id_usuario, id_ciudad) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
+  db.query(sqlComercio, [nombre, slug, descripcion, imgPerfil, altPerfil, imgHeader, altHeader, domicilio, latitud, longitud, web, email, instagram, idUsuario, idCiudad], (err, result) => {
+      if (err) return handleError(res, err);
 
       // Una vez obtenemos el id del comercio, actualizamos la categoría, accesibilidad y el menú correspondiente
-      const idComercio = result.insertId
+      const idComercio = result.insertId;
 
       // Insertar categorías
       if (categorias && categorias.length > 0) {
-        const sqlCategorias = 'INSERT INTO categoria_comercio (id_comercio, id_categoria) VALUES ?'
-        const categoriasValues = categorias.map(id_categoria => [id_comercio, id_categoria])
-
-        db.query(sqlCategorias, [categoriasValues], (err, result) => {
-          if (err) return handleError(res, err)
-        })
+          const sqlCategorias = 'INSERT INTO categoria_comercio (id_comercio, id_categoria) VALUES ?';
+          const categoriasValues = categorias.map(id_categoria => [idComercio, id_categoria]);
+          db.query(sqlCategorias, [categoriasValues], (err, result) => {
+              if (err) return handleError(res, err);
+          });
       }
 
       // Insertar accesibilidad
       if (accesibilidad && accesibilidad.length > 0) {
-        const sqlAccesibilidad = 'INSERT INTO accesibilidad_comercio (id_comercio, id_accesibilidad) VALUES ?'
-        const accesibilidadValues = accesibilidad.map(id_accesibilidad => [idComercio, id_accesibilidad])
-        db.query(sqlAccesibilidad, [accesibilidadValues], (err, result) => {
-          if (err) return handleError(res, err)
-        })
+          const sqlAccesibilidad = 'INSERT INTO accesibilidad_comercio (id_comercio, id_accesibilidad) VALUES ?';
+          const accesibilidadValues = accesibilidad.map(id_accesibilidad => [idComercio, id_accesibilidad]);
+          db.query(sqlAccesibilidad, [accesibilidadValues], (err, result) => {
+              if (err) return handleError(res, err);
+          });
       }
 
       // Insertar menús
       if (menues && menues.length > 0) {
-        const sqlMenues = 'INSERT INTO menues_comercio (id_comercio, id_menu) VALUES ?'
-        const menuesValues = menues.map(id_menu => [id_comercio, id_menu])
-        db.query(sqlMenues, [menuesValues], (err, result) => {
-          if (err) return handleError(res, err)
-        })
+          const sqlMenues = 'INSERT INTO menues_comercio (id_comercio, id_menu) VALUES ?';
+          const menuesValues = menues.map(id_menu => [idComercio, id_menu]);
+          db.query(sqlMenues, [menuesValues], (err, result) => {
+              if (err) return handleError(res, err);
+          });
       }
 
-      res.json({ message: 'Comercio creado correctamente' })
-    })
-  })
-}
+      res.json({ message: 'Comercio creado correctamente' });
+  });
+  // )}
+};
+
 
 
 // Obtener categorías
