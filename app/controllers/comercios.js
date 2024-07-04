@@ -153,7 +153,7 @@ const addComercio = (req, res) => {
   }
 
   // Por el momento ponemos el id de usuario a todos los comercios
-  const idUsuario = 1;
+  const idUsuario = 16;
 
   // Obtener URLs de imágenes subidas
   /* const imgPerfilUrl = req.files.imgPerfil ? `/uploads/${req.files.imgPerfil[0].filename}` : 'https://via.placeholder.com/1920x1080';
