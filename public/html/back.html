@@ -45,7 +45,7 @@
                         button.addEventListener('click', (event) => {
                             const comercioId = event.target.closest('button').dataset.id;
                             if (confirm('¿Estás seguro de que deseas eliminar este comercio?')) {
-                                fetch(`./comercios/delete/${comercio_id}`, {
+                                fetch(`../comercios/delete/${comercio_id}`, {
                                     method: 'DELETE'
                                 })
                                 .then(response => response.json())
@@ -95,9 +95,9 @@
     };
 
     if (comercio_id) {
-        document.getElementById('altaComercio').action = `./comercios/update/${comercio_id}/`;
+        document.getElementById('altaComercio').action = `../comercios/update/${comercio_id}/`;
         document.getElementById('altaComercio').method = 'PUT';
-        fetch(`./comercios/byId/${comercio_id}`)
+        fetch(`../comercios/byId/${comercio_id}`)
             .then(response => response.json())
             .then(data => {
                 const comercio = data[0];
