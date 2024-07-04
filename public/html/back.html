@@ -33,9 +33,9 @@
                         card.className = 'card-extra-small'
                         card.innerHTML = `
                             <h3 class="card-extra-small__title">${comercio.nombre}</h3>
-                            <a href="./comercio/?slug=${comercio.slug}" target="_blank" class="card-extra-small__preview" title="Previsualizar"><span class="mdi mdi-eye"></span></a>
+                            <a href="../comercio/?slug=${comercio.slug}" target="_blank" class="card-extra-small__preview" title="Previsualizar"><span class="mdi mdi-eye"></span></a>
                             <button class="card-extra-small__delete" data-id="${comercio.id}" title="Eliminar"><span class="mdi mdi-delete"></span></button>
-                            <a href="./back/?id=${comercio.id}" class="card-extra-small__preview" title="Editar"><span class="mdi mdi-pencil"></span></a>
+                            <a href="./?id=${comercio.id}" class="card-extra-small__preview" title="Editar"><span class="mdi mdi-pencil"></span></a>
                         `;
                         document.querySelector('.asideBack').appendChild(card);
                     });
