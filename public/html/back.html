@@ -95,7 +95,7 @@
     };
 
     if (comercio_id) {
-        document.getElementById('altaComercio').action = `../comercios/update/${comercio_id}/`;
+        document.getElementById('altaComercio').action = `./comercios/update/${comercio_id}/`;
         document.getElementById('altaComercio').method = 'PUT';
         fetch(`../comercios/byId/${comercio_id}`)
             .then(response => response.json())
