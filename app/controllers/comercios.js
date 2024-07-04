@@ -259,16 +259,16 @@ const getCities = (req, res) => {
 
 // PUT
 const updateComercio = async (req, res) => {
-  upload.fields([{ name: 'img_perfil' }, { name: 'img_header' }])(req, res, async (err) => {
-    if (err) {
-      return handleError(res, err)
-    }
+  // upload.fields([{ name: 'img_perfil' }, { name: 'img_header' }])(req, res, async (err) => {
+  //   if (err) {
+  //     return handleError(res, err);
+  //   }
 
-    const { id } = req.params
+    const { id } = req.params;
     let {
-      nombre, descripcion, altPerfil, altHeader, domicilio, latitud, longitud,
+      nombre, descripcion, imgPerfil, altPerfil, imgHeader, altHeader, domicilio, latitud, longitud,
       web, email, instagram, idCiudad, categorias, accesibilidad, menues
-    } = req.body
+    } = req.body;
 
     // Si categorias, accesibilidad o menues no existen, ponemos un array vacío
     if (!categorias) categorias = [];
@@ -278,77 +278,80 @@ const updateComercio = async (req, res) => {
     // Si categorias, accesibilidad o menues es un string, lo convertimos en un array con un solo elemento
     if (typeof categorias === 'string') categorias = [categorias];
     if (typeof accesibilidad === 'string') accesibilidad = [accesibilidad];
-    if (typeof menues === 'string') menues = [menues]
+    if (typeof menues === 'string') menues = [menues];
 
     // Convertimos los arrays de categorías, accesibilidad y menues con valores numéricos
-    categorias = categorias.map(item => parseInt(item))
-    accesibilidad = accesibilidad.map(item => parseInt(item))
-    menues = menues.map(item => parseInt(item))
+    categorias = categorias.map(item => parseInt(item));
+    accesibilidad = accesibilidad.map(item => parseInt(item));
+    menues = menues.map(item => parseInt(item));
 
     // Slug
-    const slug = nombre.toLowerCase().replace(/ /g, '-')
+    const slug = nombre.toLowerCase().replace(/ /g, '-');
 
     // Obtener URLs de imágenes subidas
-    const imgPerfilUrl = req.files.imgPerfil ? `/uploads/${req.files.imgPerfil[0].filename}` : null
-    const imgHeaderUrl = req.files.imgHeader ? `/uploads/${req.files.imgHeader[0].filename}` : null
+    // const imgPerfilUrl = req.files.imgPerfil ? `/uploads/${req.files.imgPerfil[0].filename}` : null;
+    // const imgHeaderUrl = req.files.imgHeader ? `/uploads/${req.files.imgHeader[0].filename}` : null;
 
     try {
       // Actualizar comercio
-      let updateFields = []
-      let updateValues = []
-      if (nombre) { updateFields.push('nombre = ?'); updateValues.push(nombre) }
-      if (slug) { updateFields.push('slug = ?'); updateValues.push(slug) }
-      if (descripcion) { updateFields.push('descripcion = ?'); updateValues.push(descripcion) }
-      if (altPerfil) { updateFields.push('alt_perfil = ?'); updateValues.push(altPerfil) }
-      if (altHeader) { updateFields.push('alt_header = ?'); updateValues.push(altHeader) }
-      if (domicilio) { updateFields.push('domicilio = ?'); updateValues.push(domicilio) }
-      if (latitud) { updateFields.push('latitud = ?'); updateValues.push(latitud) }
-      if (longitud) { updateFields.push('longitud = ?'); updateValues.push(longitud) }
-      if (web) { updateFields.push('web = ?'); updateValues.push(web) }
-      if (email) { updateFields.push('email = ?'); updateValues.push(email) }
-      if (instagram) { updateFields.push('instagram = ?'); updateValues.push(instagram) }
-      if (idCiudad) { updateFields.push('id_ciudad = ?'); updateValues.push(idCiudad) }
-      if (imgPerfilUrl) { updateFields.push('img_perfil = ?'); updateValues.push(imgPerfilUrl) }
-      if (imgHeaderUrl) { updateFields.push('img_header = ?'); updateValues.push(imgHeaderUrl) }
+      let updateFields = [];
+      let updateValues = [];
+      if (nombre) { updateFields.push('nombre = ?'); updateValues.push(nombre); }
+      if (slug) { updateFields.push('slug = ?'); updateValues.push(slug); }
+      if (descripcion) { updateFields.push('descripcion = ?'); updateValues.push(descripcion); }
+      if (altPerfil) { updateFields.push('alt_perfil = ?'); updateValues.push(altPerfil); }
+      if (altHeader) { updateFields.push('alt_header = ?'); updateValues.push(altHeader); }
+      if (domicilio) { updateFields.push('domicilio = ?'); updateValues.push(domicilio); }
+      if (latitud) { updateFields.push('latitud = ?'); updateValues.push(latitud); }
+      if (longitud) { updateFields.push('longitud = ?'); updateValues.push(longitud); }
+      if (web) { updateFields.push('web = ?'); updateValues.push(web); }
+      if (email) { updateFields.push('email = ?'); updateValues.push(email); }
+      if (instagram) { updateFields.push('instagram = ?'); updateValues.push(instagram); }
+      if (idCiudad) { updateFields.push('id_ciudad = ?'); updateValues.push(idCiudad); }
+      if (imgHeader) { updateFields.push('img_header = ?'); updateValues.push(imgHeader); }
+      if (imgPerfil) { updateFields.push('img_perfil = ?'); updateValues.push(imgPerfil); }
+      // if (imgPerfilUrl) { updateFields.push('img_perfil = ?'); updateValues.push(imgPerfilUrl); }
+      // if (imgHeaderUrl) { updateFields.push('img_header = ?'); updateValues.push(imgHeaderUrl); }
       
-      updateValues.push(id)
+      updateValues.push(id);
 
-      const sqlUpdateComercio = `UPDATE comercios SET ${updateFields.join(', ')} WHERE id = ?`
-      await query(sqlUpdateComercio, updateValues)
+      const sqlUpdateComercio = `UPDATE comercios SET ${updateFields.join(', ')} WHERE id = ?`;
+      await query(sqlUpdateComercio, updateValues);
 
       // Eliminar relaciones existentes
-      await query('DELETE FROM categoria_comercio WHERE id_comercio = ?', [id])
-      await query('DELETE FROM accesibilidad_comercio WHERE id_comercio = ?', [id])
-      await query('DELETE FROM menues_comercio WHERE id_comercio = ?', [id])
+      await query('DELETE FROM categoria_comercio WHERE id_comercio = ?', [id]);
+      await query('DELETE FROM accesibilidad_comercio WHERE id_comercio = ?', [id]);
+      await query('DELETE FROM menues_comercio WHERE id_comercio = ?', [id]);
 
       // Insertar categorías
       if (categorias.length > 0) {
-        const sqlCategorias = 'INSERT INTO categoria_comercio (id_comercio, id_categoria) VALUES ?'
-        const categoriasValues = categorias.map(id_categoria => [id, id_categoria])
-        await query(sqlCategorias, [categoriasValues])
+        const sqlCategorias = 'INSERT INTO categoria_comercio (id_comercio, id_categoria) VALUES ?';
+        const categoriasValues = categorias.map(id_categoria => [id, id_categoria]);
+        await query(sqlCategorias, [categoriasValues]);
       }
 
       // Insertar accesibilidad
       if (accesibilidad.length > 0) {
-        const sqlAccesibilidad = 'INSERT INTO accesibilidad_comercio (id_comercio, id_accesibilidad) VALUES ?'
-        const accesibilidadValues = accesibilidad.map(id_accesibilidad => [id, id_accesibilidad])
-        await query(sqlAccesibilidad, [accesibilidadValues])
+        const sqlAccesibilidad = 'INSERT INTO accesibilidad_comercio (id_comercio, id_accesibilidad) VALUES ?';
+        const accesibilidadValues = accesibilidad.map(id_accesibilidad => [id, id_accesibilidad]);
+        await query(sqlAccesibilidad, [accesibilidadValues]);
       }
 
       // Insertar menús
       if (menues.length > 0) {
-        const sqlMenues = 'INSERT INTO menues_comercio (id_comercio, id_menu) VALUES ?'
-        const menuesValues = menues.map(id_menu => [id, id_menu])
-        await query(sqlMenues, [menuesValues])
+        const sqlMenues = 'INSERT INTO menues_comercio (id_comercio, id_menu) VALUES ?';
+        const menuesValues = menues.map(id_menu => [id, id_menu]);
+        await query(sqlMenues, [menuesValues]);
       }
 
-      res.json({ message: 'Comercio actualizado correctamente' })
+      res.json({ message: 'Comercio actualizado correctamente' });
     } catch (err) {
-      console.error(err)
-      res.status(500).json({ message: 'Error al actualizar el comercio' })
+      console.error(err);
+      res.status(500).json({ message: 'Error al actualizar el comercio' });
     }
-  })
-}
+  // });
+};
+
 
 // DELETES
 const deleteComercio = (req, res) => {
