@@ -35,7 +35,7 @@
                             <h3 class="card-extra-small__title">${comercio.nombre}</h3>
                             <a href="../comercio/?slug=${comercio.slug}" target="_blank" class="card-extra-small__preview" title="Previsualizar"><span class="mdi mdi-eye"></span></a>
                             <button class="card-extra-small__delete" data-id="${comercio.id}" title="Eliminar"><span class="mdi mdi-delete"></span></button>
-                            <a href="./?id=${comercio.id}" class="card-extra-small__preview" title="Editar"><span class="mdi mdi-pencil"></span></a>
+                            <a href="../back/?id=${comercio.id}" class="card-extra-small__preview" title="Editar"><span class="mdi mdi-pencil"></span></a>
                         `;
                         document.querySelector('.asideBack').appendChild(card);
                     });
@@ -45,7 +45,7 @@
                         button.addEventListener('click', (event) => {
                             const comercioId = event.target.closest('button').dataset.id;
                             if (confirm('¿Estás seguro de que deseas eliminar este comercio?')) {
-                                fetch(`../comercios/delete/${comercio_id}`, {
+                                fetch(`../comercios/delete/${comercioId}`, {
                                     method: 'DELETE'
                                 })
                                 .then(response => response.json())
@@ -73,57 +73,67 @@
             </div>
             <script>
                 document.addEventListener("DOMContentLoaded", () => {
-    const comercio_id = new URLSearchParams(window.location.search).get('id');
+                    const comercio_id = new URLSearchParams(window.location.search).get('id');
+                    const form = document.getElementById('altaComercio');
+                    
+                    const populateForm = (comercio) => {
+                        document.getElementById('nombre').value = comercio.nombre;
+                        document.getElementById('descripcion').value = comercio.descripcion;
+                        document.getElementById('imgPerfil').value = comercio.img_perfil;
+                        document.getElementById('altPerfil').value = comercio.alt_perfil;
+                        document.getElementById('imgHeader').value = comercio.img_header;
+                        document.getElementById('altHeader').value = comercio.alt_header;
+                        document.getElementById('domicilio').value = comercio.domicilio;
+                        document.getElementById('latitud').value = comercio.latitud;
+                        document.getElementById('longitud').value = comercio.longitud;
+                        document.getElementById('web').value = comercio.web;
+                        document.getElementById('email').value = comercio.email;
+                        document.getElementById('instagram').value = comercio.instagram;
+                    };
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        const formData = new FormData(event.target);
+                    const handleSubmit = (event) => {
+                        event.preventDefault();
+                        const formData = new FormData(form);
+                        console.log(...formData); // Verifica los datos del formulario
 
-        fetch(event.target.action, {
-            method: event.target.method,
-            body: new URLSearchParams(formData)
-        })
-        .then(response => response.json())
-        .then(data => {
-            alert('Operación realizada correctamente');
-            window.location.reload();
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('Ocurrió un error al procesar la solicitud');
-        });
-    };
+                        const data = {};
+                        formData.forEach((value, key) => {
+                            data[key] = value;
+                        });
 
-    if (comercio_id) {
-        document.getElementById('altaComercio').action = `./comercios/update/${comercio_id}/`;
-        document.getElementById('altaComercio').method = 'PUT';
-        fetch(`../comercios/byId/${comercio_id}`)
-            .then(response => response.json())
-            .then(data => {
-                const comercio = data[0];
-                document.getElementById('nombre').value = comercio.nombre;
-                document.getElementById('descripcion').value = comercio.descripcion;
-                document.getElementById('imgPerfil').value = comercio.img_perfil;
-                document.getElementById('altPerfil').value = comercio.alt_perfil;
-                document.getElementById('imgHeader').value = comercio.img_header;
-                document.getElementById('altHeader').value = comercio.alt_header;
-                document.getElementById('domicilio').value = comercio.domicilio;
-                document.getElementById('latitud').value = comercio.latitud;
-                document.getElementById('longitud').value = comercio.longitud;
-                document.getElementById('web').value = comercio.web;
-                document.getElementById('email').value = comercio.email;
-                document.getElementById('instagram').value = comercio.instagram;
-            });
+                        fetch(form.action, {
+                            method: form.dataset.method,
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify(data)
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            alert('Operación realizada correctamente');
+                            window.location.reload();
+                        })
+                        .catch(error => {
+                            console.error('Error:', error);
+                            alert('Ocurrió un error al procesar la solicitud');
+                        });
+                    };
 
-        document.getElementById('altaComercio').addEventListener('submit', handleSubmit);
-    } else {
-        document.getElementById('altaComercio').addEventListener('submit', handleSubmit);
-    }
-});
-
-
-
-
+                    if (comercio_id) {
+                        form.action = `../comercios/update/${comercio_id}/`;
+                        form.dataset.method = 'PUT';
+                        fetch(`../comercios/byId/${comercio_id}`)
+                            .then(response => response.json())
+                            .then(data => {
+                                const comercio = data[0];
+                                populateForm(comercio);
+                                form.addEventListener('submit', handleSubmit);
+                            });
+                    } else {
+                        form.dataset.method = 'POST';
+                        form.addEventListener('submit', handleSubmit);
+                    }
+                });
             </script>
             <form id="altaComercio" action="./comercios/create/" method="POST" class="form commerceProfile">
                 <div class="form__block">

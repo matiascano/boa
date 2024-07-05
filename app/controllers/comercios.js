@@ -270,6 +270,8 @@ const updateComercio = async (req, res) => {
       web, email, instagram, idCiudad, categorias, accesibilidad, menues
     } = req.body;
 
+    console.log(req.body)
+
     // Si categorias, accesibilidad o menues no existen, ponemos un array vacío
     if (!categorias) categorias = [];
     if (!accesibilidad) accesibilidad = [];
